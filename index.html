@@ -748,40 +748,46 @@
                     </div>
                   </div>
                   <style>
-                    /* Медиа-запрос для экранов от 320px до 420px */
+                    /* Медиа-запрос для экранов от 290px до 420px */
                     @media screen and (min-width: 290px) and (max-width: 420px) {
-                      /* Внутри контейнера таймера выбираем каждый внутренний блок (колонку):
-                         первый дочерний элемент – число, второй – подпись */
-                      #t415__timer855012360 > .t415__col > .t415__col > div:first-child {
-                        font-size: 25px !important;
-                      }
-                      #t415__timer855012360 > .t415__col > .t415__col > div:nth-child(2) {
-                        font-size: 12px !important;
-                      }
+                    /* Изменяем шрифт чисел */
+                    #t415__timer855012360 .t415__col > div:first-child {
+                      font-size: 20px !important; /* Уменьшаем размер чисел */
                     }
+                    
+                    /* Изменяем шрифт подписей */
+                    #t415__timer855012360 .t415__col > div:nth-child(2) {
+                      font-size: 10px !important; /* Уменьшаем размер подписей */
+                    }
+
+                    /* Настройка вертикальных отступов */
+                    #t415__timer855012360 .t415__col {
+                      margin-bottom: 10px; /* Увеличиваем расстояние между колонками */
+                    }
+                  }
                   </style>
                   
                   <div id="t415__timer855012360" class="t415__timer">
-                    <div class="t415__col">
-                      <div class="t415__col" style="text-align:center;">
-                        <div style="font-size:48px; font-weight:700; color:#000;" id="days"></div>
-                        <div style="font-size:20px; color:#999;">Дней</div>
-                      </div>
-                      
-                      <div class="t415__col" style="text-align:center;">
-                        <div style="font-size:48px; font-weight:700; color:#000;" id="hours"></div>
-                        <div style="font-size:20px; color:#999;">Часов</div>
-                      </div>
-                      
-                      <div class="t415__col" style="text-align:center;">
-                        <div style="font-size:48px; font-weight:700; color:#000;" id="minutes"></div>
-                        <div style="font-size:20px; color:#999;">Минут</div>
-                      </div>
-                      
-                      <div class="t415__col" style="text-align:center;">
-                        <div style="font-size:48px; font-weight:700; color:#000;" id="seconds"></div>
-                        <div style="font-size:20px; color:#999;">Секунд</div>
-                      </div>                      
+                    <div class="t415__col" style="text-align:center;">
+                      <div style="font-size:48px; font-weight:700; color:#000;" id="days"></div>
+                      <div style="font-size:20px; color:#999;">Дней</div>
+                    </div>
+                    
+                    <div class="t415__col" style="text-align:center;">
+                      <div style="font-size:48px; font-weight:700; color:#000;" id="hours"></div>
+                      <div style="font-size:20px; color:#999;">Часов</div>
+                    </div>
+                    
+                    <div class="t415__col" style="text-align:center;">
+                      <div style="font-size:48px; font-weight:700; color:#000;" id="minutes"></div>
+                      <div style="font-size:20px; color:#999;">Минут</div>
+                    </div>
+                    
+                    <div class="t415__col" style="text-align:center;">
+                      <div style="font-size:48px; font-weight:700; color:#000;" id="seconds"></div>
+                      <div style="font-size:20px; color:#999;">Секунд</div>
+                    </div>
+                  </div>                  
                     </div>
                   </div>                  
                     </div>
