@@ -1,0 +1,36 @@
+.page-notfound {
+
+  &__container {
+    @include adaptiveValue("padding-top", 46, 0, 1240, 480, 1);
+    @include adaptiveValue("padding-bottom", 40, 20, 1240, 480, 1);
+  }
+
+  &__main {
+    text-align: center;
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 100, 68, 1240, 480, 1);
+    }
+  }
+
+  &__big {
+    line-height: 1.2;
+    color: #111;
+    @include adaptiveValue("font-size", 96, 64, 1240, 480, 1);
+  }
+
+  &__text {
+    font-weight: 600;
+    color: #111;
+    line-height: 1.2;
+    @include adaptiveValue("font-size", 32, 18, 1240, 480, 1);
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 16, 12, 1240, 480, 1);
+    }
+  }
+
+  &__grey {
+    color: #8A8A8A;
+    line-height: 1.2;
+    @include adaptiveValue("font-size", 18, 15, 1240, 480, 1);
+  }
+}

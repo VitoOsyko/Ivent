@@ -1,0 +1,591 @@
+<!-- Авторизация по номеру телефона -->
+<div id="authPopup" aria-hidden="true" class="popup authPopup">
+	<div class="popup__wrapper authPopup__wrapper">
+		<div class="popup__content authPopup__content">
+      <div class="authPopup__top">
+        <button data-close type="button" class="popup__close authPopup__close"></button>
+      </div>
+			<div class="popup__text authPopup__text">
+        <div class="authPopup__head">
+          <h2 class="authPopup__title">Введите номер телефона</h2>
+        </div>
+        <form action="#" data-dev method="post" class="authPopup__form form-authPopup" data-validate>
+          <div class="form-authPopup__item form-authPopup__item_input">
+            <input 
+              type="text" 
+              data-phone 
+              data-inputmask="'mask':'+7 (###) ###-##-##', 'inputmode':'numeric'" 
+              class="form-authPopup__input" 
+              data-required="phone" 
+              data-error="Некорректный номер телефона" 
+            >
+            <label class="form-authPopup__label">Ваш телефон</label>
+            <div class="form-authPopup__description">Только для номеров РФ</div>
+          </div>
+          <div class="form-authPopup__item form-authPopup__item_btn">
+            <button type="submit" class="form-authPopup__button btn btn-lightblue" disabled>Продолжить</button>
+          </div>
+          <div class="form-authPopup__item">
+            <button type="button" data-popup="#authEmailPopup" class="form-authPopup__button btn btn-white">Вход и регистрация по почте</button>
+            <div class="form-authPopup__description text-center">Для граждан других стран</div>
+          </div>
+        </form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Пин код -->
+<a href="javascript:void(0);" data-popup="#pinPopup"></a>
+<div id="pinPopup" aria-hidden="true" class="popup authPopup">
+	<div class="popup__wrapper authPopup__wrapper">
+		<div class="popup__content authPopup__content">
+      <div class="authPopup__top">
+        <button data-popup="#authPopup" class="authPopup__back">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9.53125 15.625L3.90625 10L9.53125 4.375M4.6875 10L16.0937 10" stroke="#8A8A8A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <button data-close type="button" class="authPopup__close"></button>
+      </div>
+			<div class="popup__text authPopup__text">
+        <div class="authPopup__head">
+          <h2 class="authPopup__title">Введите код из смс</h2>
+          <h2 class="authPopup__subtitle">Отправили на номер <span></span></h2>
+        </div>
+        <form action="#" data-dev method="post" class="authPopup__form form-authPopup">
+          <div class="form-authPopup__item form-authPopup__item_input">
+            <input type="text" data-pincode="4" data-callback="myfn(this)" placeholder="____" class="form-authPopup__pin">
+            <!-- если накинуть инпуту атрибут "data-oncomplete-formsent" то при вводе четвёртого символа форма засабмитится, но аякс будет невозможен -->
+            <div class="authPopup__error">
+              Введён неверный код
+            </div>
+          </div>
+          <div class="form-authPopup__item form-authPopup__item_timer">
+            Получить новый код можно через 
+            <span data-timer="60">
+              <!-- время указываем в секундах -->
+            </span>
+          </div>
+          <div class="form-authPopup__item" hidden data-newcode>
+            <button type="button" class="form-authPopup__button btn btn-white">Получить новый код</button>
+          </div>
+        </form>
+			</div>
+      <div class="modal-loader" hidden>
+        <div class="modal-loader-circle">
+          <img src="@img/common/loader_circle.png" alt="image">
+        </div>
+      </div>
+		</div>
+	</div>
+</div>
+<script>
+  //коллбэк срабатывает как только введён последний символ. Можно эту функцию написать в любом месте, не только в инлайн скрипте
+  function myfn(input) {
+    console.log(input.value);
+    setTimeout(() => {
+      const popup = input.closest('.popup');
+      if (popup) {
+        const loader = popup.querySelector('.modal-loader');
+        if (loader) {
+          loader.hidden = false;
+          setTimeout(() => {
+            loader.hidden = true;
+            input.classList.add('_form-error');
+            input.parentElement.classList.add('_form-error');
+          }, 1500);
+        }
+      }
+    }, 500);
+  }
+</script>
+
+<!-- Вы врач? -->
+<a href="javascript:void(0);" data-popup="#registerTell"></a>
+<div id="registerTell" aria-hidden="true" class="popup authPopup">
+	<div class="popup__wrapper authPopup__wrapper">
+		<div class="popup__content authPopup__content">
+      <div class="authPopup__top">
+        <button data-close type="button" class="authPopup__close"></button>
+      </div>
+			<div class="popup__text authPopup__text">
+        <div class="authPopup__head">
+          <h2 class="authPopup__title">Вы врач?</h2>
+          <span class="authPopup__subtitle">Пожалуйста, ответьте на вопрос, для <br> персональных рекомендаций</span>
+        </div>
+        <form action="#" data-dev method="post" class="authPopup__form form-authPopup" data-radio-spollers data-radio-parent data-validate>
+          <div class="form-authPopup__item form-authPopup__item_radio">
+            <input type="radio" data-required data-error="Необходимо отметить хотя бы один вариант" name="specialization" id="form-authPopup__radio_1" class="form-authPopup__radio">
+            <label for="form-authPopup__radio_1" class="form-authPopup__label"><span></span>Ортодонт</label>
+          </div>
+          <div class="form-authPopup__item form-authPopup__item_radio">
+            <input type="radio" data-required data-error="Необходимо отметить хотя бы один вариант" name="specialization" id="form-authPopup__radio_2" class="form-authPopup__radio">
+            <label for="form-authPopup__radio_2" class="form-authPopup__label"><span></span>Хирург</label>
+          </div>
+          <div class="form-authPopup__item form-authPopup__item_radio" data-radio-spoller>
+            <input type="radio" checked data-required data-error="Необходимо отметить хотя бы один вариант" name="specialization" id="form-authPopup__radio_3" class="form-authPopup__radio">
+            <label for="form-authPopup__radio_3" class="form-authPopup__label"><span></span>Другая специализация</label>
+            <div class="form-authPopup__subitem" data-radio-spoller-drop>
+              <input type="text" class="form-authPopup__subinput" placeholder="Ваша специализация" data-need-required data-required>
+            </div>
+          </div>
+          <div class="form-authPopup__item form-authPopup__item_radio form-authPopup__item_student" data-radio-spoller>
+            <input type="radio" data-required data-error="Необходимо отметить хотя бы один вариант" name="specialization" id="form-authPopup__radio_4" class="form-authPopup__radio">
+            <label for="form-authPopup__radio_4" class="form-authPopup__label"><span></span>Студент</label>
+            <div class="form-authPopup__subitem" hidden data-radio-spoller-drop>
+              <select data-custom-select data-scroll data-search data-need-required>
+                <option value="">ВУЗ</option>
+                <option value="VUZ_1">ВУЗ_1</option>
+                <option value="VUZ_2">ВУЗ_2</option>
+                <option value="VUZ_3">ВУЗ_3</option>
+                <option value="VUZ_4">ВУЗ_4</option>
+                <option value="VUZ_5">ВУЗ_5</option>
+                <option value="VUZ_6">ВУЗ_6</option>
+                <option value="VUZ_7">ВУЗ_7</option>
+                <option value="VUZ_8">ВУЗ_8</option>
+                <option value="VUZ_9">ВУЗ_9</option>
+                <option value="VUZ_10">ВУЗ_10</option>
+                <option value="VUZ_11">ВУЗ_11</option>
+                <option value="VUZ_12">ВУЗ_12</option>
+                <option value="VUZ_13">ВУЗ_13</option>
+                <option value="VUZ_14">ВУЗ_14</option>
+                <option value="VUZ_15">ВУЗ_15</option>
+                <option value="VUZ_16">ВУЗ_16</option>
+                <option value="VUZ_17">ВУЗ_17</option>
+                <option value="VUZ_18">ВУЗ_18</option>
+                <option value="VUZ_19">ВУЗ_19</option>
+                <option value="VUZ_20">ВУЗ_20</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-authPopup__item form-authPopup__item_radio">
+            <input type="radio" data-required data-error="Необходимо отметить хотя бы один вариант" name="specialization" id="form-authPopup__radio_5" class="form-authPopup__radio">
+            <label for="form-authPopup__radio_5" class="form-authPopup__label"><span></span>Не врач</label>
+          </div>
+          <div class="form-authPopup__item form-authPopup__item_btn">
+            <button type="submit" class="form-authPopup__button btn btn-lightblue" disabled>Продолжить</button>
+          </div>
+        </form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Расскажите о себе первый вариант. Не знаю насколько он нужен, был в дизайне -->
+<a href="javascript:void(0);" data-popup="#registerAbout"></a>
+<div id="registerAbout" aria-hidden="true" class="popup authPopup">
+	<div class="popup__wrapper authPopup__wrapper">
+		<div class="popup__content authPopup__content">
+      <div class="authPopup__top">
+        <button data-popup="#registerStepTwo" class="authPopup__back">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9.53125 15.625L3.90625 10L9.53125 4.375M4.6875 10L16.0937 10" stroke="#8A8A8A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <button data-close type="button" class="authPopup__close"></button>
+      </div>
+			<div class="popup__text authPopup__text">
+        <div class="authPopup__head">
+          <h2 class="authPopup__title">Расскажите о себе</h2>
+          <span class="authPopup__subtitle">Заполните поля для завершения регистрации</span>
+        </div>
+        <form action="#" data-dev method="post" class="authPopup__form form-authPopup" data-validate>
+          <div class="form-authPopup__item form-authPopup__item_input">
+            <input type="text" class="form-authPopup__input" data-required>
+            <label class="form-authPopup__label">Имя*</label>
+          </div>
+          <div class="form-authPopup__item form-authPopup__item_input">
+            <input type="text" class="form-authPopup__input" data-required>
+            <label class="form-authPopup__label">Фамилия*</label>
+          </div>
+          <div class="form-authPopup__item form-authPopup__item_input">
+            <input type="text" class="form-authPopup__input" data-required="email" data-inputmask="'alias':'email'">
+            <label class="form-authPopup__label">Электронная почта*</label>
+          </div>
+          <div class="form-authPopup__item form-authPopup__item_input">
+            <input type="text" class="form-authPopup__input" data-required>
+            <label class="form-authPopup__label">Адрес*</label>
+          </div>
+					<div class="form-popupEventRegFull__row form-popupEventRegFull__row_agree">
+						<input type="checkbox" data-required data-error="Чтобы продолжить согласитесь с условиями" id="form-popupEventRegFull__checkbox_2" class="form-popupEventRegFull__checkbox">
+						<label for="form-popupEventRegFull__checkbox_2" class="form-popupEventRegFull__label">
+							<span>
+								Согласен с условиями <a href="#">Политики Конфиденциальности</a>, на обработку предоставленных данных <br>
+								ООО «Ормко», передачу данных аффилированным лицам, получение информационных рассылок и принимаю условия <a href="#">договора-оферты</a>. *
+							</span>
+						</label>
+					</div>
+          <div class="form-authPopup__item form-authPopup__item_btn">
+            <button type="submit" class="form-authPopup__button btn btn-lightblue" disabled>Зарегистрироваться</button>
+          </div>
+        </form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Введите e-mail и пароль -->
+<div id="authEmailPopup" aria-hidden="true" class="popup authPopup">
+	<div class="popup__wrapper authPopup__wrapper">
+		<div class="popup__content authPopup__content">
+      <div class="authPopup__top">
+        <button data-popup="#authPopup" class="authPopup__back">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9.53125 15.625L3.90625 10L9.53125 4.375M4.6875 10L16.0937 10" stroke="#8A8A8A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <button data-close type="button" class="popup__close authPopup__close"></button>
+      </div>
+			<div class="popup__text authPopup__text">
+        <div class="authPopup__head">
+          <h2 class="authPopup__title">Введите e-mail и пароль</h2>
+          <span class="authPopup__subtitle">Только для зарегистрированных пользователей</span>
+        </div>
+        <form action="#" data-dev method="post" class="authPopup__form form-authPopup" data-validate>
+          <div class="form-authPopup__item form-authPopup__item_input">
+            <input type="text" class="form-authPopup__input" data-inputmask="'alias':'email'" data-email-input data-required="email" data-error="Введите email">
+            <label class="form-authPopup__label">E-mail</label>
+          </div>
+          <div class="form-authPopup__item form-authPopup__item_input">
+            <input type="password" class="form-authPopup__input" data-required data-error="Введите пароль">
+            <label class="form-authPopup__label">Пароль</label>
+            <div class="form-authPopup__viewpass">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" class="forView">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.83192 13.9999C6.3757 17.5332 9.901 20 14.0001 20C18.0992 20 21.6245 17.5333 23.1683 14.0001C21.6245 10.4668 18.0992 8 14.0001 8C9.901 8 6.37573 10.4667 4.83192 13.9999ZM24.2502 14.0001C22.6501 9.90268 18.6641 7 14.0001 7C9.33615 7 5.35016 9.90261 3.75 13.9999C5.35012 18.0973 9.33616 21 14.0001 21C18.6641 21 22.6501 18.0974 24.2502 14.0001Z" fill="#8E8E93"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M14.0001 17C15.657 17 17.0001 15.6569 17.0001 14C17.0001 12.3431 15.657 11 14.0001 11C12.3433 11 11.0001 12.3431 11.0001 14C11.0001 15.6569 12.3433 17 14.0001 17ZM14.0001 18C16.2093 18 18.0001 16.2091 18.0001 14C18.0001 11.7909 16.2093 10 14.0001 10C11.791 10 10.0001 11.7909 10.0001 14C10.0001 16.2091 11.791 18 14.0001 18Z" fill="#8E8E93"/>
+              </svg>  
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" class="forNotView">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M22.8387 11.6007C22.6182 11.4346 22.3049 11.4785 22.1387 11.6988L22.1349 11.7037C22.1311 11.7086 22.1246 11.7169 22.1154 11.7283C22.0971 11.7511 22.0682 11.7863 22.0287 11.8323C21.9497 11.9243 21.8284 12.059 21.6649 12.2226C21.3377 12.55 20.843 12.9914 20.1814 13.4372C18.8599 14.3278 16.8748 15.2348 14.2198 15.2896C11.5746 15.3442 9.47874 14.44 8.03848 13.5167C7.31842 13.0551 6.76526 12.5904 6.39382 12.243C6.20826 12.0695 6.06856 11.9257 5.97656 11.8269C5.93058 11.7775 5.89656 11.7394 5.87473 11.7144C5.86382 11.702 5.85597 11.6928 5.85119 11.6872L5.84634 11.6815L5.84569 11.6807C5.66955 11.4685 5.35472 11.4389 5.14216 11.6148C4.92943 11.7909 4.8997 12.1061 5.07576 12.3188L5.46095 12C5.07576 12.3188 5.07644 12.3196 5.07644 12.3196L5.07742 12.3208L5.08028 12.3242L5.08958 12.3352C5.09737 12.3444 5.10833 12.3571 5.12244 12.3733C5.15064 12.4055 5.19144 12.4511 5.24462 12.5082C5.35093 12.6224 5.5069 12.7827 5.71077 12.9734C6.06278 13.3026 6.5591 13.7237 7.19067 14.1547L5.06961 17.2507C4.93451 17.4479 5.00022 17.7077 5.21637 17.8309C5.43253 17.9542 5.71727 17.8942 5.85237 17.697L7.95019 14.6349C8.88687 15.1821 10.043 15.697 11.3976 16.0034L10.5489 19.4878C10.4936 19.7148 10.6505 19.9397 10.8993 19.9901C11.1481 20.0406 11.3947 19.8975 11.45 19.6704L12.3024 16.1709C12.9139 16.2594 13.5605 16.3034 14.2404 16.2894C14.9134 16.2755 15.5475 16.211 16.1426 16.1079L17.0104 19.6704C17.0657 19.8975 17.3122 20.0406 17.561 19.9901C17.8099 19.9397 17.9667 19.7148 17.9114 19.4878L17.0416 15.9169C18.2358 15.6151 19.2488 15.1631 20.0797 14.6803L22.1464 17.697C22.2815 17.8942 22.5663 17.9542 22.7824 17.8309C22.9986 17.7077 23.0643 17.4479 22.9292 17.2507L20.8387 14.1994C21.5129 13.735 22.0239 13.278 22.3722 12.9295C22.5548 12.7468 22.6931 12.5935 22.7872 12.484C22.8342 12.4293 22.8702 12.3855 22.8952 12.3544C22.9077 12.3388 22.9174 12.3264 22.9244 12.3175L22.9328 12.3066L22.9355 12.3031L22.9364 12.3018L22.9371 12.3009C23.1033 12.0804 23.0592 11.7669 22.8387 11.6007Z" fill="#8E8E93"/>
+              </svg>
+            </div>
+          </div>
+          <div class="form-authPopup__item form-authPopup__item_btn">
+            <button type="submit" class="form-authPopup__button btn btn-lightblue" disabled>Войти</button>
+          </div>
+          <!-- <div class="form-authPopup__item">
+            <button type="button" data-popup="#recoveryPopup" class="form-authPopup__button btn btn-white">Забыли пароль?</button>
+          </div>
+          <div class="form-authPopup__item">
+            <button type="button" data-popup="#authPopup" class="form-authPopup__button btn btn-white">Войти по номеру телефона</button>
+          </div> -->
+          <div class="form-authPopup__item">
+            <button type="button" data-popup="#registerPopup" class="form-authPopup__button btn btn-white">Регистрация</button>
+          </div>
+        </form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Мы не нашли ваш email -->
+<a href="javascript:void(0);" data-popup="#registerNotFoundEmail"></a>
+<div id="registerNotFoundEmail" aria-hidden="true" class="popup authPopup">
+	<div class="popup__wrapper authPopup__wrapper">
+		<div class="popup__content authPopup__content">
+      <div class="authPopup__top">
+        <button data-popup="#authPopup" class="authPopup__back">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9.53125 15.625L3.90625 10L9.53125 4.375M4.6875 10L16.0937 10" stroke="#8A8A8A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <button data-close type="button" class="popup__close authPopup__close"></button>
+      </div>
+			<div class="popup__text authPopup__text">
+        <div class="authPopup__head">
+          <h2 class="authPopup__title">Регистрация</h2>
+          <span class="authPopup__subtitle">Мы не нашли ваш email. Хотите <br> зарегистрироваться?</span>
+        </div>
+        <form action="#" data-dev method="post" class="authPopup__form form-authPopup" data-validate>
+          <div class="form-authPopup__item form-authPopup__item_input">
+            <input type="text" data-inputmask="'alias':'email'" data-email-input class="form-authPopup__input" data-required="email" data-error="Укажите email">
+            <label class="form-authPopup__label">Электронная почта</label>
+          </div>
+          <div class="form-authPopup__item form-authPopup__item_btn">
+            <button type="submit" class="form-authPopup__button btn btn-lightblue" disabled>Зарегистрироваться</button>
+          </div>
+          <div class="form-authPopup__item">
+            <button type="button" data-popup="#authPopup" class="form-authPopup__button btn btn-white">Войти по номеру телефона</button>
+          </div>
+          <div class="form-authPopup__item">
+            <button type="button" data-popup="#authEmailPopup" class="form-authPopup__button btn btn-white">Войти по почте</button>
+          </div>
+        </form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Введите e-mail(Первый шаг регистрации) -->
+<a href="javascript:void(0);" data-popup="#registerPopup"></a>
+<div id="registerPopup" aria-hidden="true" class="popup authPopup">
+	<div class="popup__wrapper authPopup__wrapper">
+		<div class="popup__content authPopup__content">
+      <div class="authPopup__top">
+        <button data-popup="#authPopup" class="authPopup__back">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9.53125 15.625L3.90625 10L9.53125 4.375M4.6875 10L16.0937 10" stroke="#8A8A8A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <button data-close type="button" class="popup__close authPopup__close"></button>
+      </div>
+			<div class="popup__text authPopup__text">
+        <div class="authPopup__head">
+          <h2 class="authPopup__title">Введите e-mail</h2>
+        </div>
+        <form action="#" data-dev method="post" class="authPopup__form form-authPopup" data-validate>
+          <div class="form-authPopup__item form-authPopup__item_input">
+            <input type="text" data-inputmask="'alias':'email'" data-email-input class="form-authPopup__input" data-required="email" data-error="Укажите email">
+            <label class="form-authPopup__label">E-mail</label>
+          </div>
+          <div class="form-authPopup__item form-authPopup__item_btn">
+            <button type="submit" class="form-authPopup__button btn btn-lightblue" disabled>Продолжить</button>
+          </div>
+        </form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Придумайте пароль -->
+<a href="javascript:void(0);" data-popup="#registerSetPass"></a>
+<div id="registerSetPass" aria-hidden="true" class="popup authPopup">
+	<div class="popup__wrapper authPopup__wrapper">
+		<div class="popup__content authPopup__content">
+      <div class="authPopup__top">
+        <button data-popup="#authPopup" class="authPopup__back">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9.53125 15.625L3.90625 10L9.53125 4.375M4.6875 10L16.0937 10" stroke="#8A8A8A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <button data-close type="button" class="popup__close authPopup__close"></button>
+      </div>
+			<div class="popup__text authPopup__text">
+        <div class="authPopup__head">
+          <h2 class="authPopup__title">Придумайте пароль</h2>
+          <span class="authPopup__subtitle">Пароль должен быть не менее восьми символов, в том числе цифры, прописные и строчные буквы, специальные символы</span>
+        </div>
+        <form action="#" data-dev method="post" class="authPopup__form form-authPopup" data-validate>
+          <div class="form-authPopup__item form-authPopup__item_input">
+            <!-- Главный инпут password - всегда первый. На нём же и висит паттерн, и текст ошибки. Ошибка из data-error выводится при отсутствии value или при непрохождении теста по паттерну(RegExp) -->
+            <input 
+              type="password" 
+              class="form-authPopup__input" 
+              data-required="password" 
+              data-pattern="(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*]{8,}"
+              data-error="Пароль не соответствует требованиям"
+            >
+            <label class="form-authPopup__label">Пароль*</label>
+            <div class="form-authPopup__viewpass">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" class="forView">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.83192 13.9999C6.3757 17.5332 9.901 20 14.0001 20C18.0992 20 21.6245 17.5333 23.1683 14.0001C21.6245 10.4668 18.0992 8 14.0001 8C9.901 8 6.37573 10.4667 4.83192 13.9999ZM24.2502 14.0001C22.6501 9.90268 18.6641 7 14.0001 7C9.33615 7 5.35016 9.90261 3.75 13.9999C5.35012 18.0973 9.33616 21 14.0001 21C18.6641 21 22.6501 18.0974 24.2502 14.0001Z" fill="#8E8E93"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M14.0001 17C15.657 17 17.0001 15.6569 17.0001 14C17.0001 12.3431 15.657 11 14.0001 11C12.3433 11 11.0001 12.3431 11.0001 14C11.0001 15.6569 12.3433 17 14.0001 17ZM14.0001 18C16.2093 18 18.0001 16.2091 18.0001 14C18.0001 11.7909 16.2093 10 14.0001 10C11.791 10 10.0001 11.7909 10.0001 14C10.0001 16.2091 11.791 18 14.0001 18Z" fill="#8E8E93"/>
+              </svg>  
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" class="forNotView">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M22.8387 11.6007C22.6182 11.4346 22.3049 11.4785 22.1387 11.6988L22.1349 11.7037C22.1311 11.7086 22.1246 11.7169 22.1154 11.7283C22.0971 11.7511 22.0682 11.7863 22.0287 11.8323C21.9497 11.9243 21.8284 12.059 21.6649 12.2226C21.3377 12.55 20.843 12.9914 20.1814 13.4372C18.8599 14.3278 16.8748 15.2348 14.2198 15.2896C11.5746 15.3442 9.47874 14.44 8.03848 13.5167C7.31842 13.0551 6.76526 12.5904 6.39382 12.243C6.20826 12.0695 6.06856 11.9257 5.97656 11.8269C5.93058 11.7775 5.89656 11.7394 5.87473 11.7144C5.86382 11.702 5.85597 11.6928 5.85119 11.6872L5.84634 11.6815L5.84569 11.6807C5.66955 11.4685 5.35472 11.4389 5.14216 11.6148C4.92943 11.7909 4.8997 12.1061 5.07576 12.3188L5.46095 12C5.07576 12.3188 5.07644 12.3196 5.07644 12.3196L5.07742 12.3208L5.08028 12.3242L5.08958 12.3352C5.09737 12.3444 5.10833 12.3571 5.12244 12.3733C5.15064 12.4055 5.19144 12.4511 5.24462 12.5082C5.35093 12.6224 5.5069 12.7827 5.71077 12.9734C6.06278 13.3026 6.5591 13.7237 7.19067 14.1547L5.06961 17.2507C4.93451 17.4479 5.00022 17.7077 5.21637 17.8309C5.43253 17.9542 5.71727 17.8942 5.85237 17.697L7.95019 14.6349C8.88687 15.1821 10.043 15.697 11.3976 16.0034L10.5489 19.4878C10.4936 19.7148 10.6505 19.9397 10.8993 19.9901C11.1481 20.0406 11.3947 19.8975 11.45 19.6704L12.3024 16.1709C12.9139 16.2594 13.5605 16.3034 14.2404 16.2894C14.9134 16.2755 15.5475 16.211 16.1426 16.1079L17.0104 19.6704C17.0657 19.8975 17.3122 20.0406 17.561 19.9901C17.8099 19.9397 17.9667 19.7148 17.9114 19.4878L17.0416 15.9169C18.2358 15.6151 19.2488 15.1631 20.0797 14.6803L22.1464 17.697C22.2815 17.8942 22.5663 17.9542 22.7824 17.8309C22.9986 17.7077 23.0643 17.4479 22.9292 17.2507L20.8387 14.1994C21.5129 13.735 22.0239 13.278 22.3722 12.9295C22.5548 12.7468 22.6931 12.5935 22.7872 12.484C22.8342 12.4293 22.8702 12.3855 22.8952 12.3544C22.9077 12.3388 22.9174 12.3264 22.9244 12.3175L22.9328 12.3066L22.9355 12.3031L22.9364 12.3018L22.9371 12.3009C23.1033 12.0804 23.0592 11.7669 22.8387 11.6007Z" fill="#8E8E93"/>
+              </svg>
+            </div>
+          </div>
+          <div class="form-authPopup__item form-authPopup__item_input">
+            <input type="password" class="form-authPopup__input" data-required="password">
+            <label class="form-authPopup__label">Повторите пароль*</label>
+            <div class="form-authPopup__viewpass">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" class="forView">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.83192 13.9999C6.3757 17.5332 9.901 20 14.0001 20C18.0992 20 21.6245 17.5333 23.1683 14.0001C21.6245 10.4668 18.0992 8 14.0001 8C9.901 8 6.37573 10.4667 4.83192 13.9999ZM24.2502 14.0001C22.6501 9.90268 18.6641 7 14.0001 7C9.33615 7 5.35016 9.90261 3.75 13.9999C5.35012 18.0973 9.33616 21 14.0001 21C18.6641 21 22.6501 18.0974 24.2502 14.0001Z" fill="#8E8E93"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M14.0001 17C15.657 17 17.0001 15.6569 17.0001 14C17.0001 12.3431 15.657 11 14.0001 11C12.3433 11 11.0001 12.3431 11.0001 14C11.0001 15.6569 12.3433 17 14.0001 17ZM14.0001 18C16.2093 18 18.0001 16.2091 18.0001 14C18.0001 11.7909 16.2093 10 14.0001 10C11.791 10 10.0001 11.7909 10.0001 14C10.0001 16.2091 11.791 18 14.0001 18Z" fill="#8E8E93"/>
+              </svg>  
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" class="forNotView">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M22.8387 11.6007C22.6182 11.4346 22.3049 11.4785 22.1387 11.6988L22.1349 11.7037C22.1311 11.7086 22.1246 11.7169 22.1154 11.7283C22.0971 11.7511 22.0682 11.7863 22.0287 11.8323C21.9497 11.9243 21.8284 12.059 21.6649 12.2226C21.3377 12.55 20.843 12.9914 20.1814 13.4372C18.8599 14.3278 16.8748 15.2348 14.2198 15.2896C11.5746 15.3442 9.47874 14.44 8.03848 13.5167C7.31842 13.0551 6.76526 12.5904 6.39382 12.243C6.20826 12.0695 6.06856 11.9257 5.97656 11.8269C5.93058 11.7775 5.89656 11.7394 5.87473 11.7144C5.86382 11.702 5.85597 11.6928 5.85119 11.6872L5.84634 11.6815L5.84569 11.6807C5.66955 11.4685 5.35472 11.4389 5.14216 11.6148C4.92943 11.7909 4.8997 12.1061 5.07576 12.3188L5.46095 12C5.07576 12.3188 5.07644 12.3196 5.07644 12.3196L5.07742 12.3208L5.08028 12.3242L5.08958 12.3352C5.09737 12.3444 5.10833 12.3571 5.12244 12.3733C5.15064 12.4055 5.19144 12.4511 5.24462 12.5082C5.35093 12.6224 5.5069 12.7827 5.71077 12.9734C6.06278 13.3026 6.5591 13.7237 7.19067 14.1547L5.06961 17.2507C4.93451 17.4479 5.00022 17.7077 5.21637 17.8309C5.43253 17.9542 5.71727 17.8942 5.85237 17.697L7.95019 14.6349C8.88687 15.1821 10.043 15.697 11.3976 16.0034L10.5489 19.4878C10.4936 19.7148 10.6505 19.9397 10.8993 19.9901C11.1481 20.0406 11.3947 19.8975 11.45 19.6704L12.3024 16.1709C12.9139 16.2594 13.5605 16.3034 14.2404 16.2894C14.9134 16.2755 15.5475 16.211 16.1426 16.1079L17.0104 19.6704C17.0657 19.8975 17.3122 20.0406 17.561 19.9901C17.8099 19.9397 17.9667 19.7148 17.9114 19.4878L17.0416 15.9169C18.2358 15.6151 19.2488 15.1631 20.0797 14.6803L22.1464 17.697C22.2815 17.8942 22.5663 17.9542 22.7824 17.8309C22.9986 17.7077 23.0643 17.4479 22.9292 17.2507L20.8387 14.1994C21.5129 13.735 22.0239 13.278 22.3722 12.9295C22.5548 12.7468 22.6931 12.5935 22.7872 12.484C22.8342 12.4293 22.8702 12.3855 22.8952 12.3544C22.9077 12.3388 22.9174 12.3264 22.9244 12.3175L22.9328 12.3066L22.9355 12.3031L22.9364 12.3018L22.9371 12.3009C23.1033 12.0804 23.0592 11.7669 22.8387 11.6007Z" fill="#8E8E93"/>
+              </svg>
+            </div>
+            <div class="form-authPopup__forerror" data-forerror></div>
+          </div>
+          <div class="form-authPopup__item form-authPopup__item_btn">
+            <button type="submit" class="form-authPopup__button btn btn-lightblue" disabled>Продолжить</button>
+          </div>
+        </form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Расскажите о себе 2 -->
+<a href="javascript:void(0);" data-popup="#registerTellAbout"></a>
+<div id="registerTellAbout" aria-hidden="true" class="popup authPopup">
+	<div class="popup__wrapper authPopup__wrapper">
+		<div class="popup__content authPopup__content">
+      <div class="authPopup__top">
+        <button data-popup="#registerStepTwo" class="authPopup__back">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9.53125 15.625L3.90625 10L9.53125 4.375M4.6875 10L16.0937 10" stroke="#8A8A8A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <button data-close type="button" class="authPopup__close"></button>
+      </div>
+			<div class="popup__text authPopup__text">
+        <div class="authPopup__head">
+          <h2 class="authPopup__title">Расскажите о себе</h2>
+          <span class="authPopup__subtitle">Заполните поля для завершения регистрации</span>
+        </div>
+        <form action="#" data-dev method="post" class="authPopup__form form-authPopup" data-validate>
+          <div class="form-authPopup__item form-authPopup__item_input">
+            <input type="text" class="form-authPopup__input" data-required>
+            <label class="form-authPopup__label">Имя*</label>
+          </div>
+          <div class="form-authPopup__item form-authPopup__item_input">
+            <input type="text" class="form-authPopup__input" data-required>
+            <label class="form-authPopup__label">Фамилия*</label>
+          </div>
+          <div class="form-authPopup__item form-authPopup__item_select">
+            <label class="form-authPopup__label">Страна*</label>
+            <select data-custom-select data-scroll data-required>
+              <option value=""></option>
+              <option data-mask="+7 (###) ###-##-##" value="Россия">Россия</option>
+              <option data-mask="+994-#{1,4}-##-##-##" value="Азербайджан">Азербайджан</option>
+              <option data-mask="+374-#{1,4}-##-##-##" value="Армения">Армения</option>
+              <option data-mask="+375##-###-##-##" value="Белорусия">Беларусь</option>
+              <option data-mask="+995 (###) ###-##-##" value="Грузия">Грузия</option>
+              <option data-mask="+380-##-###-##-##" value="Украина">Украина</option>
+              <option data-mask="+7 (#{3,5}) #{5-7}" value="Казахстан">Казахстан</option>
+              <option data-mask="+998-#{2,4}-###-##-##" value="Узбекистан">Узбекистан</option>
+              <option data-mask="+996-#{2,4}-###-##-##" value="Киргизия">Киргизия</option>
+              <option value="Другие">Другие</option>
+            </select>
+          </div>
+          <div class="form-authPopup__item form-authPopup__item_input">
+            <input type="text" class="form-authPopup__input" data-required>
+            <label class="form-authPopup__label">Город*</label>
+          </div>
+          <div class="form-authPopup__item form-authPopup__item_input">
+            <input type="text" class="form-authPopup__input" data-phone-input data-inputmask="'mask':'+7 (###) ###-##-##', 'inputmode':'numeric'" data-required>
+            <label class="form-authPopup__label">Номер телефона*</label>
+          </div>
+          <!-- <div class="form-authPopup__item form-authPopup__item_checkbox">
+            <input type="checkbox" class="form-authPopup__checkbox" id="form-authPopup__checkbox" data-required>
+            <label class="form-authPopup__label" for="form-authPopup__checkbox"><span>Согласие на обработку данных и с  <br> <a href="#">политикой конфиденциальности</a></span></label>
+          </div> -->
+					<div class="form-popupEventRegFull__row form-popupEventRegFull__row_agree">
+						<input type="checkbox" data-required data-error="Чтобы продолжить согласитесь с условиями" id="form-popupEventRegFull__checkbox_1" class="form-popupEventRegFull__checkbox">
+						<label for="form-popupEventRegFull__checkbox_1" class="form-popupEventRegFull__label">
+							<span>
+								Согласен с условиями <a href="#">Политики Конфиденциальности</a>, на обработку предоставленных данных <br>
+								ООО «Ормко», передачу данных аффилированным лицам, получение информационных рассылок и принимаю условия <a href="#">договора-оферты</a>. *
+							</span>
+						</label>
+					</div>
+          <div class="form-authPopup__item form-authPopup__item_btn">
+            <button type="submit" class="form-authPopup__button btn btn-lightblue" disabled>Зарегистрироваться</button>
+          </div>
+        </form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Активируйте аккаунт -->
+<a href="javascript:void(0);" data-popup="#registerNeedActivate"></a>
+<div id="registerNeedActivate" aria-hidden="true" class="popup authPopup">
+	<div class="popup__wrapper authPopup__wrapper">
+		<div class="popup__content authPopup__content">
+      <div class="authPopup__top">
+        <button data-close type="button" class="popup__close authPopup__close"></button>
+      </div>
+			<div class="popup__text authPopup__text">
+        <div class="authPopup__head">
+          <h2 class="authPopup__title">Активируйте аккаунт</h2>
+          <span class="authPopup__subtitle">На ваш e-mail отправлено письмо со ссылкой для активацию аккаунта.</span>
+        </div>
+        <button type="button" class="form-authPopup__button btn btn-white">Отправить еще раз</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Аккаунт успешно активирован. -->
+<a href="javascript:void(0);" data-popup="#registerActivated"></a>
+<div id="registerActivated" aria-hidden="true" class="popup authPopup">
+	<div class="popup__wrapper authPopup__wrapper">
+		<div class="popup__content authPopup__content">
+      <div class="authPopup__top">
+        <button data-close type="button" class="popup__close authPopup__close"></button>
+      </div>
+			<div class="popup__text authPopup__text">
+        <div class="authPopup__head">
+          <h2 class="authPopup__title">Активация аккаунта</h2>
+          <div class="form__success">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5.25 8.25V14.25C5.25 14.6642 4.91421 15 4.5 15H3C2.58579 15 2.25 14.6642 2.25 14.25V9C2.25 8.58579 2.58579 8.25 3 8.25H5.25C6.90685 8.25 8.25 6.90685 8.25 5.25V4.5C8.25 3.67157 8.92157 3 9.75 3C10.5784 3 11.25 3.67157 11.25 4.5V8.25H13.5C14.3284 8.25 15 8.92157 15 9.75L14.25 13.5C14.0284 14.4452 13.4169 15.0567 12.75 15H7.5C6.25736 15 5.25 13.9926 5.25 12.75" stroke="#2FCB71" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>Аккаунт успешно активирован.</span>
+          </div>
+        </div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Пожалуйста зарегистрируйтесь -->
+<a href="javascript:void(0);" data-popup="#pleaseRegPopup"></a>
+<div id="pleaseRegPopup" aria-hidden="true" class="popup authPopup">
+	<div class="popup__wrapper authPopup__wrapper">
+		<div class="popup__content authPopup__content">
+      <div class="authPopup__top">
+        <button data-close type="button" class="popup__close authPopup__close"></button>
+      </div>
+			<div class="popup__text authPopup__text">
+        <div class="authPopup__head">
+          <h2 class="authPopup__title">Для доступа к странице пожалуйста, авторизуйтесь или зарегистрируйтесь на сайте.</h2>
+        </div>
+        <form action="#" data-dev method="post" class="authPopup__form form-authPopup" data-validate>
+          <div class="form-authPopup__item form-authPopup__item_input">
+            <input type="text" data-phone data-inputmask="'mask':'+7 (###) ###-##-##'" class="form-authPopup__input" data-required="phone" data-error="Некорректный номер телефона" data-inputmode="numeric">
+            <label class="form-authPopup__label">Ваш телефон</label>
+          </div>
+          <div class="form-authPopup__item form-authPopup__item_btn">
+            <button type="submit" class="form-authPopup__button btn btn-lightblue" disabled>Продолжить</button>
+          </div>
+          <div class="form-authPopup__item">
+            <button type="button" data-popup="#authEmailPopup" class="form-authPopup__button btn btn-white">Войти по почте</button>
+          </div>
+        </form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Восстановление пароля -->
+<a href="javascript:void(0);" data-popup="#recoveryPopup"></a>
+<div id="recoveryPopup" aria-hidden="true" class="popup authPopup">
+	<div class="popup__wrapper authPopup__wrapper">
+		<div class="popup__content authPopup__content">
+      <div class="authPopup__top">
+        <button data-popup="#authPopup" class="authPopup__back">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9.53125 15.625L3.90625 10L9.53125 4.375M4.6875 10L16.0937 10" stroke="#8A8A8A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <button data-close type="button" class="popup__close authPopup__close"></button>
+      </div>
+			<div class="popup__text authPopup__text">
+        <div class="authPopup__head">
+          <h2 class="authPopup__title">Восстановление пароля</h2>
+        </div>
+        <form action="#" data-dev method="post" class="authPopup__form form-authPopup" data-validate>
+          <div class="form-authPopup__item form-authPopup__item_input">
+            <input type="text" data-inputmask="'alias':'email'" class="form-authPopup__input" data-required="email" data-error="Введите email">
+            <label class="form-authPopup__label">E-mail</label>
+          </div>
+          <div class="form-authPopup__item form-authPopup__item_btn">
+            <button type="submit" class="form-authPopup__button btn btn-lightblue" disabled>Отправить письмо</button>
+          </div>
+          <div class="form-authPopup__item">
+            <button type="button" data-popup="#authPopup" class="form-authPopup__button btn btn-white">Войти по номеру телефона</button>
+          </div>
+          <div class="form-authPopup__item">
+            <button type="button" data-popup="#authEmailPopup" class="form-authPopup__button btn btn-white">Войти по почте</button>
+          </div>
+        </form>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,43 @@
+
+<div id="yurPopup" aria-hidden="true" class="popup authPopup yurPopup" data-nohash>
+	<div class="popup__wrapper authPopup__wrapper">
+		<div class="popup__content authPopup__content">
+      <div class="authPopup__top">
+        <button data-close type="button" class="authPopup__close"></button>
+      </div>
+			<div class="popup__text authPopup__text">
+        <div class="authPopup__head">
+          <h2 class="authPopup__title">Добавление юр. лица</h2>
+        </div>
+        <form action="#" data-dev method="post" class="authPopup__form form-authPopup" data-validate data-noclean>
+          <div class="form-authPopup__subtitle">Реквизиты организации</div>
+          <div class="form-authPopup__item form-authPopup__item_input">
+            <input type="text" class="form-authPopup__input" data-required data-name>
+            <label class="form-authPopup__label">Название*</label>
+          </div>
+          <div class="form-authPopup__row">
+            <div class="form-authPopup__item form-authPopup__item_input">
+              <input type="text" class="form-authPopup__input" data-required data-inputmask="'mask':'#{10}', 'inputmode': 'numeric'" data-inputmask-clearincomplete="true" data-inn>
+              <label class="form-authPopup__label">ИНН*</label>
+            </div>
+            <div class="form-authPopup__item form-authPopup__item_input">
+              <input type="text" class="form-authPopup__input" data-required data-inputmask="'mask':'#{9}', 'inputmode': 'numeric'" data-inputmask-clearincomplete="true" data-bik>
+              <label class="form-authPopup__label">БИК*</label>
+            </div>
+          </div>
+          <div class="form-authPopup__item form-authPopup__item_input">
+            <input type="text" class="form-authPopup__input" data-required data-inputmask="'mask':'#{20}', 'inputmode': 'numeric'" data-inputmask-clearincomplete="true" data-check>
+            <label class="form-authPopup__label">Расчетный счет*</label>
+          </div>
+          <div class="form-authPopup__item form-authPopup__item_input">
+            <input type="text" class="form-authPopup__input" data-inputmask="'mask':'+7 (9##) ### ## ##', 'inputmode': 'numeric'" data-phone>
+            <label class="form-authPopup__label">Контактный телефон</label>
+          </div>
+          <div class="form-authPopup__item form-authPopup__item_btn">
+            <button type="submit" class="form-authPopup__button btn btn-lightblue">Сохранить</button>
+          </div>
+        </form>
+			</div>
+		</div>
+	</div>
+</div>

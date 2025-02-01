@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('html/_head.htm',{
+	"title":"Записи вебинаров"
+	})
+	<body>
+		<div class="wrapper">
+			@@include('html/_loader.htm',{})
+			@@include('html/_header.htm',{
+        "active_events": "_inpage"
+      })
+			<main class="page">
+        <section class="breadcumps" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <div class="breadcumps__container container">
+              <ul class="breadcumps__body">
+                <li class="breadcumps__item" itemscope itemprop="itemListElement" itemtype="http://schema.org/ListItem">
+                  <a href="home.html" itemprop="item">
+                    <span itemprop="name">Главная страница</span>
+                    <div itemprop="item.name" class="breadcumps_onhover">Главная страница</div>
+                    <meta itemprop="position" content="1">
+                  </a>
+                </li>
+                <li class="breadcumps__item" itemscope itemprop="itemListElement" itemtype="http://schema.org/ListItem">
+                  <a href="home.html" itemprop="item">
+                    <span itemprop="name">Мероприятия</span>
+                    <div itemprop="item.name" class="breadcumps_onhover">Мероприятия</div>
+                    <meta itemprop="position" content="2">
+                  </a>
+                </li>
+                <li class="breadcumps__item" itemscope itemprop="itemListElement" itemtype="http://schema.org/ListItem">
+                  <span itemprop="item">
+                    <span itemprop="name">Записи вебинаров</span>
+                    <div itemprop="item.name" class="breadcumps_onhover">Записи вебинаров</div>
+                    <meta itemprop="position" content="3">
+                  </span>
+                </li>
+              </ul>
+          </div>
+        </section>
+        <section class="common-head">
+          <div class="common-head__container">
+            <h1 class="common-head__title">Записи вебинаров</h1>
+          </div>
+        </section>
+        <section class="filters">
+          <div class="filters__container spollers-filters" data-spollers data-one-spoller data-spollers-speed="300">
+            <div class="spollers-filters__item" data-filter-item="Дата">
+              <button type="button" data-spoller data-spoller-close class="spollers-filters__title">Дата</button>
+              <div class="spollers-filters__body spollers-filters__body_date" hidden>
+                <div class="spollers-filters__mobile _mmd3dn">
+                  <div class="spollers-filters__close"></div>
+                </div>
+                <div class="spollers-filters__name _mmd3dn">
+                  Дата
+                </div>
+                <form action="#" data-dev data-noclean class="spollers-filters__form">
+                  <label class="spollers-filters__date" data-datepicker>
+                    <!-- input type="hidden" не поставить так как возникает какой-то непонятный баг со сменой месяца -->
+                    <input type="text" name="date" data-fordate data-required readonly>
+                  </label>
+                  <button type="submit" class="spollers-filters__submit btn btn-lightblue" hidden>Применить</button>
+                </form>
+              </div>
+            </div>
+            <div class="spollers-filters__item" data-filter-item="Спикер">
+              <button type="button" data-spoller data-spoller-close class="spollers-filters__title">Спикер</button>
+              <div class="spollers-filters__body" hidden>
+                <div class="spollers-filters__mobile _mmd3dn">
+                  <div class="spollers-filters__close"></div>
+                </div>
+                <div class="spollers-filters__name _mmd3dn">
+                  Спикер
+                </div>
+                <form action="#" data-dev data-noclean class="spollers-filters__form">
+                  <div class="spollers-filters__rows">
+                    <label class="spollers-filters__row">
+                      <input type="checkbox" name="Спикер" value="Дьячкова Яна Юрьевна" class="spollers-filters__checkbox">
+                      <div class="spollers-filters__label">Дьячкова Яна Юрьевна</div>
+                    </label>
+                    <label class="spollers-filters__row">
+                      <input type="checkbox" name="Спикер" value="Денисова Александра Алексеевна" class="spollers-filters__checkbox">
+                      <div class="spollers-filters__label">Денисова Александра Алексеевна</div>
+                    </label>
+                    <label class="spollers-filters__row">
+                      <input type="checkbox" name="Спикер" value="Дубовская Марина Анатольевна" class="spollers-filters__checkbox">
+                      <div class="spollers-filters__label">Дубовская Марина Анатольевна</div>
+                    </label>
+                    <label class="spollers-filters__row">
+                      <input type="checkbox" name="Спикер" value="Корел Марк" class="spollers-filters__checkbox">
+                      <div class="spollers-filters__label">Корел Марк</div>
+                    </label>
+                    <label class="spollers-filters__row">
+                      <input type="checkbox" name="Спикер" value="Шам Ангелина Николаевна" class="spollers-filters__checkbox">
+                      <div class="spollers-filters__label">Шам Ангелина Николаевна</div>
+                    </label>
+                  </div>
+                  <button type="submit" class="spollers-filters__submit btn btn-lightblue" hidden>Применить</button>
+                </form>
+              </div>
+            </div>
+            <div class="spollers-filters__item" data-filter-item="Доступ">
+              <button type="button" data-spoller data-spoller-close class="spollers-filters__title">Доступ</button>
+              <div class="spollers-filters__body" hidden>
+                <div class="spollers-filters__mobile _mmd3dn">
+                  <div class="spollers-filters__close"></div>
+                </div>
+                <div class="spollers-filters__name _mmd3dn">
+                  Доступ
+                </div>
+                <form action="#" data-dev data-noclean class="spollers-filters__form">
+                  <div class="spollers-filters__rows">
+                    <label class="spollers-filters__row">
+                      <input type="checkbox" name="Доступ" value="Абсолютный анкораж (Vector TAS)" class="spollers-filters__checkbox">
+                      <div class="spollers-filters__label">Только для зарегистрированных</div>
+                    </label>
+                    <label class="spollers-filters__row">
+                      <input type="checkbox" name="Доступ" value="Damon system" class="spollers-filters__checkbox">
+                      <div class="spollers-filters__label">Все пользователи</div>
+                    </label>
+                  </div>
+                  <button type="submit" class="spollers-filters__submit btn btn-lightblue" hidden>Применить</button>
+                </form>
+              </div>
+            </div>
+            <div class="spollers-filters__item" data-filter-item="Тематика">
+              <button type="button" data-spoller data-spoller-close class="spollers-filters__title">Тематика</button>
+              <div class="spollers-filters__body" hidden>
+                <div class="spollers-filters__mobile _mmd3dn">
+                  <div class="spollers-filters__close"></div>
+                </div>
+                <div class="spollers-filters__name _mmd3dn">
+                  Тематика
+                </div>
+                <form action="#" data-dev data-noclean class="spollers-filters__form">
+                  <div class="spollers-filters__rows">
+                    <label class="spollers-filters__row">
+                      <input type="checkbox" name="Тематика" value="Damon system" class="spollers-filters__checkbox">
+                      <div class="spollers-filters__label">Damon system</div>
+                    </label>
+                    <label class="spollers-filters__row">
+                      <input type="checkbox" name="Тематика" value="Абсолютный анкораж (Vector TAS)" class="spollers-filters__checkbox">
+                      <div class="spollers-filters__label">Абсолютный анкораж (Vector TAS)</div>
+                    </label>
+                    <label class="spollers-filters__row">
+                      <input type="checkbox" name="Тематика" value="ВНЧС" class="spollers-filters__checkbox">
+                      <div class="spollers-filters__label">ВНЧС</div>
+                    </label>
+                    <label class="spollers-filters__row">
+                      <input type="checkbox" name="Тематика" value="Диагностика" class="spollers-filters__checkbox">
+                      <div class="spollers-filters__label">Диагностика</div>
+                    </label>
+                    <label class="spollers-filters__row">
+                      <input type="checkbox" name="Тематика" value="Другое" class="spollers-filters__checkbox">
+                      <div class="spollers-filters__label">Другое</div>
+                    </label>
+                  </div>
+                  <button type="submit" class="spollers-filters__submit btn btn-lightblue" hidden>Применить</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="checked-filters">
+          <div class="checked-filters__container">
+            <div class="checked-filters__wrapper"></div>
+            <button type="button" class="checked-filters__button" hidden>Очистить фильтры</button>
+          </div>
+        </section>
+        <section class="eventsfull">
+          <div class="eventsfull__container">
+            <div class="item-records">
+              <a href="#" class="item-records__image">
+                <img src="@img/records/image.png" alt="image">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 159 110" width="159" height="110"><path d="m154 17.5c-1.82-6.73-7.07-12-13.8-13.8-9.04-3.49-96.6-5.2-122 0.1-6.73 1.82-12 7.07-13.8 13.8-4.08 17.9-4.39 56.6 0.1 74.9 1.82 6.73 7.07 12 13.8 13.8 17.9 4.12 103 4.7 122 0 6.73-1.82 12-7.07 13.8-13.8 4.35-19.5 4.66-55.8-0.1-75z" fill="#f00"/><path d="m105 55-40.8-23.4v46.8z" fill="#fff"/></svg>
+              </a>
+              <div class="item-records__body">
+                <a href="#" class="item-records__actions">
+                  <div class="item-records__title">Преимущества работы <br> на пассивном самолигировании</div>
+                  <div class="item-records__descr">Анализ и лечение открытого прикуса.</div>
+                  <div class="item-records__date">
+                    <svg width="15" height="20" viewBox="0 0 15 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="1.66669" y="4.81445" width="11.8519" height="11.8519" rx="1.48148" stroke="#111111" stroke-width="1.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M10.5559 3.33337V6.29634" stroke="#111111" stroke-width="1.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M4.62983 3.33337V6.29634" stroke="#111111" stroke-width="1.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M1.66669 9.25953H13.5185" stroke="#111111" stroke-width="1.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>2 октября 2022 г.</span>
+                  </div>
+                </a>
+                <a href="#" class="item-records__speaker">
+                  <div class="item-records__avatar">
+                    <img src="@img/events/speaker.png" alt="image">
+                  </div>
+                  <div class="item-records__speakername">Дьячкова Яна Юрьевна</div>
+                </a>
+              </div>
+            </div>
+            <div class="item-records" disabled data-popup="#pleaseRegPopup">
+              <a href="#" class="item-records__image">
+                <img src="@img/records/image.png" alt="image">
+                <svg width="57" height="56" viewBox="0 0 57 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="0.5" width="56" height="56" rx="28" fill="white"/>
+                  <rect x="16.6212" y="26.303" width="23.7575" height="16.9698" rx="3.39394" stroke="#111111" stroke-width="2.9697" stroke-linecap="round" stroke-linejoin="round"/>
+                  <ellipse cx="28.5" cy="34.7879" rx="1.69696" ry="1.69697" stroke="#111111" stroke-width="2.9697" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M21.7121 26.3031V19.5152C21.7121 15.7663 24.7512 12.7273 28.5 12.7273C32.2488 12.7273 35.2879 15.7663 35.2879 19.5152V26.3031" stroke="#111111" stroke-width="2.9697" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+              <div class="item-records__body">
+                <a href="#" class="item-records__actions">
+                  <div class="item-records__title">Преимущества работы <br> на пассивном самолигировании</div>
+                  <div class="item-records__descr">Анализ и лечение открытого прикуса.</div>
+                  <div class="item-records__date">
+                    <svg width="15" height="20" viewBox="0 0 15 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="1.66669" y="4.81445" width="11.8519" height="11.8519" rx="1.48148" stroke="#111111" stroke-width="1.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M10.5559 3.33337V6.29634" stroke="#111111" stroke-width="1.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M4.62983 3.33337V6.29634" stroke="#111111" stroke-width="1.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M1.66669 9.25953H13.5185" stroke="#111111" stroke-width="1.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>2 октября 2022 г.</span>
+                  </div>
+                </a>
+                <a href="#" class="item-records__speaker">
+                  <div class="item-records__avatar">
+                    <img src="@img/events/speaker.png" alt="image">
+                  </div>
+                  <div class="item-records__speakername">Дьячкова Яна Юрьевна</div>
+                </a>
+              </div>
+            </div>
+            <div class="item-records" disabled data-popup="#pleaseRegPopup">
+              <a href="#" class="item-records__image">
+                <img src="@img/records/image.png" alt="image">
+                <svg width="57" height="56" viewBox="0 0 57 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="0.5" width="56" height="56" rx="28" fill="white"/>
+                  <rect x="16.6212" y="26.303" width="23.7575" height="16.9698" rx="3.39394" stroke="#111111" stroke-width="2.9697" stroke-linecap="round" stroke-linejoin="round"/>
+                  <ellipse cx="28.5" cy="34.7879" rx="1.69696" ry="1.69697" stroke="#111111" stroke-width="2.9697" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M21.7121 26.3031V19.5152C21.7121 15.7663 24.7512 12.7273 28.5 12.7273C32.2488 12.7273 35.2879 15.7663 35.2879 19.5152V26.3031" stroke="#111111" stroke-width="2.9697" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+              <div class="item-records__body">
+                <a href="#" class="item-records__actions">
+                  <div class="item-records__title">Преимущества работы <br> на пассивном самолигировании</div>
+                  <div class="item-records__descr">Анализ и лечение открытого прикуса.</div>
+                  <div class="item-records__date">
+                    <svg width="15" height="20" viewBox="0 0 15 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="1.66669" y="4.81445" width="11.8519" height="11.8519" rx="1.48148" stroke="#111111" stroke-width="1.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M10.5559 3.33337V6.29634" stroke="#111111" stroke-width="1.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M4.62983 3.33337V6.29634" stroke="#111111" stroke-width="1.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M1.66669 9.25953H13.5185" stroke="#111111" stroke-width="1.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>2 октября 2022 г.</span>
+                  </div>
+                </a>
+                <a href="#" class="item-records__speaker">
+                  <div class="item-records__avatar">
+                    <img src="@img/events/speaker.png" alt="image">
+                  </div>
+                  <div class="item-records__speakername">Дьячкова Яна Юрьевна</div>
+                </a>
+              </div>
+            </div>
+            <div class="item-records" disabled data-popup="#pleaseRegPopup">
+              <a href="#" class="item-records__image">
+                <img src="@img/records/image.png" alt="image">
+                <svg width="57" height="56" viewBox="0 0 57 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="0.5" width="56" height="56" rx="28" fill="white"/>
+                  <rect x="16.6212" y="26.303" width="23.7575" height="16.9698" rx="3.39394" stroke="#111111" stroke-width="2.9697" stroke-linecap="round" stroke-linejoin="round"/>
+                  <ellipse cx="28.5" cy="34.7879" rx="1.69696" ry="1.69697" stroke="#111111" stroke-width="2.9697" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M21.7121 26.3031V19.5152C21.7121 15.7663 24.7512 12.7273 28.5 12.7273C32.2488 12.7273 35.2879 15.7663 35.2879 19.5152V26.3031" stroke="#111111" stroke-width="2.9697" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+              <div class="item-records__body">
+                <a href="#" class="item-records__actions">
+                  <div class="item-records__title">Преимущества работы <br> на пассивном самолигировании</div>
+                  <div class="item-records__descr">Анализ и лечение открытого прикуса.</div>
+                  <div class="item-records__date">
+                    <svg width="15" height="20" viewBox="0 0 15 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="1.66669" y="4.81445" width="11.8519" height="11.8519" rx="1.48148" stroke="#111111" stroke-width="1.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M10.5559 3.33337V6.29634" stroke="#111111" stroke-width="1.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M4.62983 3.33337V6.29634" stroke="#111111" stroke-width="1.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M1.66669 9.25953H13.5185" stroke="#111111" stroke-width="1.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>2 октября 2022 г.</span>
+                  </div>
+                </a>
+                <a href="#" class="item-records__speaker">
+                  <div class="item-records__avatar">
+                    <img src="@img/events/speaker.png" alt="image">
+                  </div>
+                  <div class="item-records__speakername">Дьячкова Яна Юрьевна</div>
+                </a>
+              </div>
+            </div>
+            <div class="item-records">
+              <a href="#" class="item-records__image">
+                <img src="@img/records/image.png" alt="image">
+                <svg width="45" height="44" viewBox="0 0 45 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="0.5" width="44" height="44" rx="22" fill="#FF6C2C"/>
+                  <path d="M27.8502 21.7621L19.1982 16.098C19.0983 16.0315 19.0125 16.0239 18.9408 16.075C18.8692 16.1262 18.8333 16.2183 18.8333 16.3513V27.6487C18.8333 27.7817 18.8692 27.8738 18.9408 27.9249C19.0125 27.9761 19.0983 27.9684 19.1982 27.9019L27.8502 22.2379C27.9501 22.1714 28 22.0921 28 22C28 21.9079 27.9501 21.8286 27.8502 21.7621Z" fill="white"/>
+                </svg>
+              </a>
+              <div class="item-records__body">
+                <a href="#" class="item-records__actions">
+                  <div class="item-records__title">Преимущества работы <br> на пассивном самолигировании</div>
+                  <div class="item-records__descr">Анализ и лечение открытого прикуса.</div>
+                  <div class="item-records__date">
+                    <svg width="15" height="20" viewBox="0 0 15 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="1.66669" y="4.81445" width="11.8519" height="11.8519" rx="1.48148" stroke="#111111" stroke-width="1.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M10.5559 3.33337V6.29634" stroke="#111111" stroke-width="1.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M4.62983 3.33337V6.29634" stroke="#111111" stroke-width="1.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M1.66669 9.25953H13.5185" stroke="#111111" stroke-width="1.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>2 октября 2022 г.</span>
+                  </div>
+                </a>
+                <a href="#" class="item-records__speaker">
+                  <div class="item-records__avatar">
+                    <img src="@img/events/speaker.png" alt="image">
+                  </div>
+                  <div class="item-records__speakername">Дьячкова Яна Юрьевна</div>
+                </a>
+              </div>
+            </div>
+            <div class="item-records">
+              <a href="#" class="item-records__image">
+                <img src="@img/records/image.png" alt="image">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 159 110" width="159" height="110"><path d="m154 17.5c-1.82-6.73-7.07-12-13.8-13.8-9.04-3.49-96.6-5.2-122 0.1-6.73 1.82-12 7.07-13.8 13.8-4.08 17.9-4.39 56.6 0.1 74.9 1.82 6.73 7.07 12 13.8 13.8 17.9 4.12 103 4.7 122 0 6.73-1.82 12-7.07 13.8-13.8 4.35-19.5 4.66-55.8-0.1-75z" fill="#f00"/><path d="m105 55-40.8-23.4v46.8z" fill="#fff"/></svg>
+              </a>
+              <div class="item-records__body">
+                <a href="#" class="item-records__actions">
+                  <div class="item-records__title">Преимущества работы <br> на пассивном самолигировании</div>
+                  <div class="item-records__descr">Анализ и лечение открытого прикуса.</div>
+                  <div class="item-records__date">
+                    <svg width="15" height="20" viewBox="0 0 15 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="1.66669" y="4.81445" width="11.8519" height="11.8519" rx="1.48148" stroke="#111111" stroke-width="1.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M10.5559 3.33337V6.29634" stroke="#111111" stroke-width="1.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M4.62983 3.33337V6.29634" stroke="#111111" stroke-width="1.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M1.66669 9.25953H13.5185" stroke="#111111" stroke-width="1.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>2 октября 2022 г.</span>
+                  </div>
+                </a>
+                <a href="#" class="item-records__speaker">
+                  <div class="item-records__avatar">
+                    <img src="@img/events/speaker.png" alt="image">
+                  </div>
+                  <div class="item-records__speakername">Дьячкова Яна Юрьевна</div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="eventsfull__banner banner-eventsfull">
+            <div class="event-banner__container">
+              <div class="event-banner__content">
+                <div class="event-banner__title">Современные инструменты врача-ортодонта </div>
+                <div class="event-banner__text">Современный взгляд на решение старых проблем, 02.12.22, А.В. Спесивцев, Хабаровск</div>
+                <div class="event-banner__footer">
+                  <div class="event-banner__prices">
+                    <div class="event-banner__price">35 000 <font class='rub'>i</font></div>
+                    <div class="event-banner__stars"
+                      data-tippy-stars="Количество звезд, которое вы получите за участие в мероприятии" 
+                      data-position="right"
+                    >
+                      <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.77039 1.03318C3.85716 0.831694 4.14284 0.831695 4.22961 1.03319L5.02281 2.87507C5.059 2.95911 5.13822 3.01667 5.22934 3.02512L7.22618 3.21032C7.44462 3.23058 7.53291 3.50228 7.36809 3.64707L5.86147 4.97062C5.79272 5.03101 5.76246 5.12414 5.78258 5.2134L6.2235 7.16975C6.27174 7.38376 6.04061 7.55168 5.85198 7.43968L4.12764 6.41579C4.04896 6.36907 3.95104 6.36907 3.87236 6.41579L2.14802 7.43967C1.95939 7.55168 1.72826 7.38376 1.7765 7.16975L2.21742 5.2134C2.23754 5.12414 2.20728 5.03101 2.13853 4.97062L0.631909 3.64707C0.467093 3.50228 0.555375 3.23058 0.773818 3.21032L2.77066 3.02512C2.86178 3.01667 2.941 2.95911 2.97719 2.87507L3.77039 1.03318Z" fill="white"/>
+                      </svg>
+                      <span>50</span>
+                    </div>
+                    <div class="event-banner__oldprice">38 600 <font class='rub'>i</font></div>
+                  </div>
+                  <a href="#" class="event-banner__button btn">Подробнее</a>
+                </div>
+              </div>
+              <div class="event-banner__image">
+                <img src="@img/home/hero_1.png" alt="image">
+              </div>
+            </div>
+          </div>
+          <div class="eventsfull__container">
+            <div class="item-records">
+              <a href="#" class="item-records__image">
+                <img src="@img/records/image.png" alt="image">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 159 110" width="159" height="110"><path d="m154 17.5c-1.82-6.73-7.07-12-13.8-13.8-9.04-3.49-96.6-5.2-122 0.1-6.73 1.82-12 7.07-13.8 13.8-4.08 17.9-4.39 56.6 0.1 74.9 1.82 6.73 7.07 12 13.8 13.8 17.9 4.12 103 4.7 122 0 6.73-1.82 12-7.07 13.8-13.8 4.35-19.5 4.66-55.8-0.1-75z" fill="#f00"/><path d="m105 55-40.8-23.4v46.8z" fill="#fff"/></svg>
+              </a>
+              <div class="item-records__body">
+                <a href="#" class="item-records__actions">
+                  <div class="item-records__title">Преимущества работы <br> на пассивном самолигировании</div>
+                  <div class="item-records__descr">Анализ и лечение открытого прикуса.</div>
+                  <div class="item-records__date">
+                    <svg width="15" height="20" viewBox="0 0 15 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="1.66669" y="4.81445" width="11.8519" height="11.8519" rx="1.48148" stroke="#111111" stroke-width="1.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M10.5559 3.33337V6.29634" stroke="#111111" stroke-width="1.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M4.62983 3.33337V6.29634" stroke="#111111" stroke-width="1.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M1.66669 9.25953H13.5185" stroke="#111111" stroke-width="1.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>2 октября 2022 г.</span>
+                  </div>
+                </a>
+                <a href="#" class="item-records__speaker">
+                  <div class="item-records__avatar">
+                    <img src="@img/events/speaker.png" alt="image">
+                  </div>
+                  <div class="item-records__speakername">Дьячкова Яна Юрьевна</div>
+                </a>
+              </div>
+            </div>
+            <div class="item-records" disabled data-popup="#pleaseRegPopup">
+              <a href="#" class="item-records__image">
+                <img src="@img/records/image.png" alt="image">
+                <svg width="57" height="56" viewBox="0 0 57 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="0.5" width="56" height="56" rx="28" fill="white"/>
+                  <rect x="16.6212" y="26.303" width="23.7575" height="16.9698" rx="3.39394" stroke="#111111" stroke-width="2.9697" stroke-linecap="round" stroke-linejoin="round"/>
+                  <ellipse cx="28.5" cy="34.7879" rx="1.69696" ry="1.69697" stroke="#111111" stroke-width="2.9697" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M21.7121 26.3031V19.5152C21.7121 15.7663 24.7512 12.7273 28.5 12.7273C32.2488 12.7273 35.2879 15.7663 35.2879 19.5152V26.3031" stroke="#111111" stroke-width="2.9697" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+              <div class="item-records__body">
+                <a href="#" class="item-records__actions">
+                  <div class="item-records__title">Преимущества работы <br> на пассивном самолигировании</div>
+                  <div class="item-records__descr">Анализ и лечение открытого прикуса.</div>
+                  <div class="item-records__date">
+                    <svg width="15" height="20" viewBox="0 0 15 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="1.66669" y="4.81445" width="11.8519" height="11.8519" rx="1.48148" stroke="#111111" stroke-width="1.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M10.5559 3.33337V6.29634" stroke="#111111" stroke-width="1.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M4.62983 3.33337V6.29634" stroke="#111111" stroke-width="1.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M1.66669 9.25953H13.5185" stroke="#111111" stroke-width="1.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>2 октября 2022 г.</span>
+                  </div>
+                </a>
+                <a href="#" class="item-records__speaker">
+                  <div class="item-records__avatar">
+                    <img src="@img/events/speaker.png" alt="image">
+                  </div>
+                  <div class="item-records__speakername">Дьячкова Яна Юрьевна</div>
+                </a>
+              </div>
+            </div>
+            <div class="item-records" disabled data-popup="#pleaseRegPopup">
+              <a href="#" class="item-records__image">
+                <img src="@img/records/image.png" alt="image">
+                <svg width="57" height="56" viewBox="0 0 57 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="0.5" width="56" height="56" rx="28" fill="white"/>
+                  <rect x="16.6212" y="26.303" width="23.7575" height="16.9698" rx="3.39394" stroke="#111111" stroke-width="2.9697" stroke-linecap="round" stroke-linejoin="round"/>
+                  <ellipse cx="28.5" cy="34.7879" rx="1.69696" ry="1.69697" stroke="#111111" stroke-width="2.9697" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M21.7121 26.3031V19.5152C21.7121 15.7663 24.7512 12.7273 28.5 12.7273C32.2488 12.7273 35.2879 15.7663 35.2879 19.5152V26.3031" stroke="#111111" stroke-width="2.9697" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+              <div class="item-records__body">
+                <a href="#" class="item-records__actions">
+                  <div class="item-records__title">Преимущества работы <br> на пассивном самолигировании</div>
+                  <div class="item-records__descr">Анализ и лечение открытого прикуса.</div>
+                  <div class="item-records__date">
+                    <svg width="15" height="20" viewBox="0 0 15 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="1.66669" y="4.81445" width="11.8519" height="11.8519" rx="1.48148" stroke="#111111" stroke-width="1.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M10.5559 3.33337V6.29634" stroke="#111111" stroke-width="1.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M4.62983 3.33337V6.29634" stroke="#111111" stroke-width="1.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M1.66669 9.25953H13.5185" stroke="#111111" stroke-width="1.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>2 октября 2022 г.</span>
+                  </div>
+                </a>
+                <a href="#" class="item-records__speaker">
+                  <div class="item-records__avatar">
+                    <img src="@img/events/speaker.png" alt="image">
+                  </div>
+                  <div class="item-records__speakername">Дьячкова Яна Юрьевна</div>
+                </a>
+              </div>
+            </div>
+            <div class="item-records" disabled data-popup="#pleaseRegPopup">
+              <a href="#" class="item-records__image">
+                <img src="@img/records/image.png" alt="image">
+                <svg width="57" height="56" viewBox="0 0 57 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="0.5" width="56" height="56" rx="28" fill="white"/>
+                  <rect x="16.6212" y="26.303" width="23.7575" height="16.9698" rx="3.39394" stroke="#111111" stroke-width="2.9697" stroke-linecap="round" stroke-linejoin="round"/>
+                  <ellipse cx="28.5" cy="34.7879" rx="1.69696" ry="1.69697" stroke="#111111" stroke-width="2.9697" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M21.7121 26.3031V19.5152C21.7121 15.7663 24.7512 12.7273 28.5 12.7273C32.2488 12.7273 35.2879 15.7663 35.2879 19.5152V26.3031" stroke="#111111" stroke-width="2.9697" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+              <div class="item-records__body">
+                <a href="#" class="item-records__actions">
+                  <div class="item-records__title">Преимущества работы <br> на пассивном самолигировании</div>
+                  <div class="item-records__descr">Анализ и лечение открытого прикуса.</div>
+                  <div class="item-records__date">
+                    <svg width="15" height="20" viewBox="0 0 15 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="1.66669" y="4.81445" width="11.8519" height="11.8519" rx="1.48148" stroke="#111111" stroke-width="1.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M10.5559 3.33337V6.29634" stroke="#111111" stroke-width="1.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M4.62983 3.33337V6.29634" stroke="#111111" stroke-width="1.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M1.66669 9.25953H13.5185" stroke="#111111" stroke-width="1.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>2 октября 2022 г.</span>
+                  </div>
+                </a>
+                <a href="#" class="item-records__speaker">
+                  <div class="item-records__avatar">
+                    <img src="@img/events/speaker.png" alt="image">
+                  </div>
+                  <div class="item-records__speakername">Дьячкова Яна Юрьевна</div>
+                </a>
+              </div>
+            </div>
+            <div class="item-records">
+              <a href="#" class="item-records__image">
+                <img src="@img/records/image.png" alt="image">
+                <svg width="45" height="44" viewBox="0 0 45 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="0.5" width="44" height="44" rx="22" fill="#FF6C2C"/>
+                  <path d="M27.8502 21.7621L19.1982 16.098C19.0983 16.0315 19.0125 16.0239 18.9408 16.075C18.8692 16.1262 18.8333 16.2183 18.8333 16.3513V27.6487C18.8333 27.7817 18.8692 27.8738 18.9408 27.9249C19.0125 27.9761 19.0983 27.9684 19.1982 27.9019L27.8502 22.2379C27.9501 22.1714 28 22.0921 28 22C28 21.9079 27.9501 21.8286 27.8502 21.7621Z" fill="white"/>
+                </svg>
+              </a>
+              <div class="item-records__body">
+                <a href="#" class="item-records__actions">
+                  <div class="item-records__title">Преимущества работы <br> на пассивном самолигировании</div>
+                  <div class="item-records__descr">Анализ и лечение открытого прикуса.</div>
+                  <div class="item-records__date">
+                    <svg width="15" height="20" viewBox="0 0 15 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="1.66669" y="4.81445" width="11.8519" height="11.8519" rx="1.48148" stroke="#111111" stroke-width="1.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M10.5559 3.33337V6.29634" stroke="#111111" stroke-width="1.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M4.62983 3.33337V6.29634" stroke="#111111" stroke-width="1.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M1.66669 9.25953H13.5185" stroke="#111111" stroke-width="1.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>2 октября 2022 г.</span>
+                  </div>
+                </a>
+                <a href="#" class="item-records__speaker">
+                  <div class="item-records__avatar">
+                    <img src="@img/events/speaker.png" alt="image">
+                  </div>
+                  <div class="item-records__speakername">Дьячкова Яна Юрьевна</div>
+                </a>
+              </div>
+            </div>
+            <div class="item-records">
+              <a href="#" class="item-records__image">
+                <img src="@img/records/image.png" alt="image">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 159 110" width="159" height="110"><path d="m154 17.5c-1.82-6.73-7.07-12-13.8-13.8-9.04-3.49-96.6-5.2-122 0.1-6.73 1.82-12 7.07-13.8 13.8-4.08 17.9-4.39 56.6 0.1 74.9 1.82 6.73 7.07 12 13.8 13.8 17.9 4.12 103 4.7 122 0 6.73-1.82 12-7.07 13.8-13.8 4.35-19.5 4.66-55.8-0.1-75z" fill="#f00"/><path d="m105 55-40.8-23.4v46.8z" fill="#fff"/></svg>
+              </a>
+              <div class="item-records__body">
+                <a href="#" class="item-records__actions">
+                  <div class="item-records__title">Преимущества работы <br> на пассивном самолигировании</div>
+                  <div class="item-records__descr">Анализ и лечение открытого прикуса.</div>
+                  <div class="item-records__date">
+                    <svg width="15" height="20" viewBox="0 0 15 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="1.66669" y="4.81445" width="11.8519" height="11.8519" rx="1.48148" stroke="#111111" stroke-width="1.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M10.5559 3.33337V6.29634" stroke="#111111" stroke-width="1.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M4.62983 3.33337V6.29634" stroke="#111111" stroke-width="1.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M1.66669 9.25953H13.5185" stroke="#111111" stroke-width="1.08333" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>2 октября 2022 г.</span>
+                  </div>
+                </a>
+                <a href="#" class="item-records__speaker">
+                  <div class="item-records__avatar">
+                    <img src="@img/events/speaker.png" alt="image">
+                  </div>
+                  <div class="item-records__speakername">Дьячкова Яна Юрьевна</div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="eventsfull__container eventsfull__pagination pagination">
+            <div class="loader">
+              <div class="loader__circle">
+                <img src="@img/common/loader_circle.png" alt="image">
+              </div>
+            </div>
+            <button type="button" class="pagination__more btn btn-border">Показать еще</button>
+            <div class="pagination__numbers">
+              <span class="pagination__number pagination__number_active btn">1</span>
+              <a href="#" class="pagination__number btn">2</a>
+              <a href="#" class="pagination__number btn">3</a>
+              <a href="#" class="pagination__number btn">4</a>
+              <a href="#" class="pagination__number btn">5</a>
+              <a href="#" class="pagination__number pagination__number_prevnext btn">Вперед</a>
+            </div>
+          </div>
+        </section>
+        @@include('html/_interesting.htm',{
+          "title": "Вам может быть интересно"
+        })
+        @@include('html/_subscribe.htm',{})
+        @@include('html/_reviews.htm',{})
+        @@include('html/_ormcoban.htm',{})
+        @@include('html/_contacts.htm',{})
+        @@include('html/_partners.htm',{})
+        @@include('html/_application.htm',{})
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_popup.htm',{})
+		@@include('html/_popup_auth.htm',{})
+		@@include('html/_popup_question.htm',{})
+		@@include('html/_js.htm',{})
+	</body>
+</html>

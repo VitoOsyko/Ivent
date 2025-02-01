@@ -1,0 +1,286 @@
+.learnings {
+  @include adaptiveValue("padding-bottom", 40, 24, 1230, 480, 1);
+
+  &__container {
+  }
+
+  &__body {
+    &:not(:last-child) {margin-bottom: rem(32);}
+    @media (min-width:$tablet){
+      display: grid;
+      gap: rem(20);
+      grid-template-columns: rem(387) auto;
+    }
+  }
+
+  &__list {
+  }
+
+  &__map {
+    @media (min-width:$mobile){
+      aspect-ratio: 793/604;
+    }
+    @media (max-width:$mobile){
+      min-width: 100%;
+      margin: 0 rem(-15);
+      height: rem(440);
+      
+    }
+  }
+
+  &__footer {
+    @include adaptiveValue("font-size", 16, 14, 1230, 480, 1);
+  }
+}
+.list-learnings {
+  background-color: #fff;
+  transition: all 0.3s ease 0s;
+  .simplebar-track.simplebar-vertical {
+    width: rem(3);
+    right: rem(-6);
+    @media (max-width:$tablet){
+      right: rem(6);
+      background-color: #E8E8E9;
+    }
+    .simplebar-scrollbar:before {
+      right: 0;
+      left: 0;
+      @media (max-width:$tablet){
+        opacity: 1;
+      }
+    }
+    .simplebar-scrollbar.simplebar-visible:before {
+      opacity: 1;
+    }
+  }
+  @media (max-width:$tablet){
+    position: fixed;
+    left: 0;
+    bottom: calc(var(--btmhght, rem(67)) - rem(1));
+    width: 100%;
+    transform: translateY(rem(228));
+    z-index: 20;
+    border-radius: rem(16) rem(16) 0 0;
+    .list-learnings-open & {
+      transform: none;
+    }
+  }
+
+  &__trigger {
+    padding: rem(20) rem(16);
+    box-shadow: 0px rem(8) rem(20) 0px rgba(26, 26, 26, 0.10);
+    border-radius: rem(16) rem(16) 0 0;
+    background-color: #fff;
+    font-weight: 600;
+    font-size: rem(20);
+  }
+
+  &__close {
+    position: absolute;
+    top: rem(20);
+    right: rem(16);
+    display: block;
+    width: rem(32);
+    height: rem(32);
+    border-radius: 50%;
+    background-color: #F5F5F5;
+    transition: all 0.3s ease 0s;
+    opacity: 0;
+    pointer-events: none;
+    .list-learnings-open & {
+      opacity: 1;
+      pointer-events: all;
+    }
+    @media (min-width:$mobile){
+      transform: translateX(50%);
+    }
+    &::before,&::after{
+      content:'';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: rem(12);
+      height: rem(2);
+      background-color: #8E8E93;
+      transition: all 0.3s ease 0s;
+    }
+    &::before{
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+    &::after{
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+    @media (any-hover: hover){
+      &:hover{
+        &::before,&::after{
+          background-color: #000;
+        }
+      }
+    }
+  }
+
+  &__body {
+    background-color: #fff;
+    @media (max-width:$tablet){
+      padding: 0 rem(16);
+    }
+  }
+}
+.item-learnings {
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  &._active {
+    background-color: #E8E8E9;
+  }
+  @media (any-hover: hover){
+    &:hover{
+      background-color: #E8E8E9;
+    }
+  }
+  &:not(:first-child) {
+    padding-top: rem(12);
+  }
+  &:not(:last-child) {
+    border-bottom: 1px solid rgba(138, 138, 138, 0.5);
+  }
+  padding-bottom: rem(12);
+
+  &__name {
+    font-weight: 600;
+    @include adaptiveValue("font-size", 18, 15, 1230, 480, 1);
+    &:not(:last-child) {margin-bottom: rem(10);}
+  }
+
+  &__info {
+    @include adaptiveValue("font-size", 15, 13, 1230, 480, 1);
+    color: #8A8A8A;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    li {
+      display: inline-flex;
+      gap: rem(4);
+      &:not(:first-child) {
+        flex-wrap: wrap;
+      }
+      &:not(:last-child) {margin-bottom: rem(7);}
+    }
+    svg {
+      flex: 0 0 rem(15);
+    }
+    a {
+      transition: all 0.3s ease 0s;
+      @media (any-hover: hover){
+        &:hover{
+          color: #2CA5F5;
+        }
+      }
+    }
+    &:not(:last-child) {margin-bottom: rem(10);}
+  }
+
+  &__link {
+    color: #2CA5F5;
+    display: inline-flex;
+    align-items: center;
+    gap: rem(2);
+    @include adaptiveValue("font-size", 15, 13, 1230, 480, 1);
+    svg {
+      margin-top: rem(2);
+    }
+    @media (any-hover: hover){
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.baloon-learnings {
+
+  &__name {
+    font-size: rem(13);
+    font-weight: 600;
+    &:not(:last-child) {margin-bottom: rem(4);}
+  }
+
+  &__body {
+    font-size: rem(13);
+    color: #8A8A8A;
+    li {
+      display: flex;
+      gap: rem(4);
+      &:not(:first-child) {
+        flex-wrap: wrap;
+      }
+      &:not(:last-child) {margin-bottom: rem(7);}
+    }
+    svg {
+      flex: 0 0 rem(15);
+    }
+    a {
+      transition: all 0.3s ease 0s;
+      @media (any-hover: hover){
+        &:hover{
+          color: #2CA5F5;
+        }
+      }
+    }
+  }
+}
+
+[class*="-balloon__content"] {
+  margin-right: 0 !important;
+  padding: rem(10) rem(12) rem(8) !important;
+  border-radius: rem(12) !important;
+  box-shadow: 0px 8px 20px 0px rgba(26, 26, 26, 0.10) !important;
+  >ymaps {
+    width: max-content !important;
+    height: auto !important;
+  }
+}
+[class*="-balloon__layout"] {
+  background: transparent !important;
+}
+[class*="-balloon"] {
+  box-shadow: none !important;
+}
+
+[class*="-balloon__tail"] {
+  display: none !important;
+}
+[class*="-balloon__close"] {
+  display: none;
+}
+//=================================================================================================
+.learning {
+  @include adaptiveValue("padding-bottom", 40, 24, 1230, 480, 1);
+
+  &__container {
+  }
+
+  &__image {
+    img {
+      @include adaptiveValue("max-width", 200, 110, 1230, 480, 1);
+    }
+    &:not(:last-child) {margin-bottom: rem(20);}
+  }
+
+  &__info {
+  }
+
+  &__body {
+  }
+
+  &__link {
+    padding: rem(17);
+    font-weight: 700;
+    font-size: rem(15);
+    @media (min-width:$mobile){
+      min-width: rem(340);
+    }
+    @media (max-width:$mobile){
+      width: 100%;
+    }
+  }
+}

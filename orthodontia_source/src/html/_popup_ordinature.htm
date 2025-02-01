@@ -1,0 +1,40 @@
+<div id="ordinaturePopup" aria-hidden="true" class="popup authPopup">
+	<div class="popup__wrapper authPopup__wrapper">
+		<div class="popup__content authPopup__content authPopup__content_question">
+      <div class="authPopup__top">
+        <button data-close type="button" class="popup__close authPopup__close"></button>
+      </div>
+			<div class="popup__text authPopup__text">
+        <div class="authPopup__head">
+          <h2 class="authPopup__title">Подача заявки</h2>
+          <span>Клиническая ординатура в "Конфиденции", СПб</span>
+        </div>
+        <form action="#" method="post" class="authPopup__form form-authPopup" data-validate>
+          <div class="form-authPopup__item form-authPopup__item_input">
+            <input type="text" class="form-authPopup__input" data-required>
+            <label class="form-authPopup__label">Фамилия*</label>
+          </div>
+          <div class="form-authPopup__item form-authPopup__item_input">
+            <input type="text" class="form-authPopup__input" data-required>
+            <label class="form-authPopup__label">Имя*</label>
+          </div>
+          <div class="form-authPopup__item form-authPopup__item_input">
+            <input type="text" class="form-authPopup__input">
+            <label class="form-authPopup__label">Отчество</label>
+          </div>
+          <div class="form-authPopup__item form-authPopup__item_input">
+            <input type="text" class="form-authPopup__input" data-required="email" data-inputmask="'alias':'email'">
+            <label class="form-authPopup__label">Email*</label>
+          </div>
+          <div class="form-authPopup__item form-authPopup__item_input">
+            <input type="text" class="form-authPopup__input" data-required data-inputmask="'mask':'+7 (###) ###-##-##'" data-inputmask-clearincomplete="true">
+            <label class="form-authPopup__label">Номер телефона*</label>
+          </div>
+          <div class="form-authPopup__item">
+            <button type="submit" class="form-authPopup__button btn btn-lightblue" disabled>Отправить</button>
+          </div>
+        </form>
+			</div>
+		</div>
+	</div>
+</div>

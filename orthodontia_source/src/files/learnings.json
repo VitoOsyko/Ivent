@@ -1,0 +1,65 @@
+{
+  "type":"FeatureCollection",
+  "features":[
+    {
+      "type":"Feature",
+      "id": 1,
+      "geometry":{
+        "type":"Point",
+        "coordinates":[59.931679, 30.402996]
+      },
+      "properties":{
+        "name": "Учебный центр \"Ормко\", Санкт-Петербург",
+        "address":"Малоохтинский пр., д. 64, корп. 3, этаж 5, БЦ \"Санкт-Петербург Плаза\"",
+        "phones": ["+7 (812) 324-74-14", "+7 (812) 324-42-60", "+7 (812) 324-42-62"],
+        "mails": ["Natalia.Postnikova@ormco.com", "Magdalina.Borzhkovskaya@ormco.com"],
+        "href": "https://orthodontia.ru/search-center/uchebniy-centr-ormco-spb/"
+      }
+    },
+    {
+      "type":"Feature",
+      "id": 2,
+      "geometry":{
+        "type":"Point",
+        "coordinates":[55.745341, 37.662344]
+      },
+      "properties":{
+        "name": "Учебный центр \"Ормко\", Москва",
+        "address":"ул. Станиславского, д. 21, стр. 3, этаж 1, БЦ \"Фабрика Станиславского\"",
+        "phones": ["+7 (999) 768-09-68"],
+        "mails": ["Ekaterina.Panova@ormco.com"],
+        "href": "https://orthodontia.ru/search-center/uchebniy-centr-ormco-moskva/"
+      }
+    },
+    {
+      "type":"Feature",
+      "id": 3,
+      "geometry":{
+        "type":"Point",
+        "coordinates":[47.211557, 39.653487]
+      },
+      "properties":{
+        "name": "Учебный центр \"Стомка\", Ростов-на-Дону",
+        "address":"пр. Стачки, д. 143",
+        "phones": ["+7 (863) 222-17-43"],
+        "mails": ["office@stomka.shop"],
+        "href": "https://orthodontia.ru/search-center/uchebnyj-centr-stomka-rostov-na-donu/"
+      }
+    },
+    {
+      "type":"Feature",
+      "id": 4,
+      "geometry":{
+        "type":"Point",
+        "coordinates":[56.026659, 93.108484]
+      },
+      "properties":{
+        "name": "Учебный центр \"Контакт\", Красноярск",
+        "address":"пос. Берёзовка, ул. Солнечная, д. 1а/3",
+        "phones": ["+7 (391) 270-99-77, доб. 422", "+7 (391) 270-99-77, доб. 475"],
+        "mails": ["ananeva@contact-kr.ru", "alejnikova@contact-kr.ru"],
+        "href": "https://orthodontia.ru/search-center/uchebnyi-centr-kontakt/"
+      }
+    }
+  ]
+}

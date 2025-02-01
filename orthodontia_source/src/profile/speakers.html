@@ -1,0 +1,1797 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('html/_head.htm',{
+	"title":"Спикеры"
+	})
+	<body>
+		<div class="wrapper">
+			@@include('html/_loader.htm',{})
+			@@include('html/_header.htm',{
+        "active_events": "_inpage"
+      })
+			<main class="page" data-sticky="800" data-sticky-header>
+        <section class="breadcumps" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <div class="breadcumps__container container">
+              <ul class="breadcumps__body">
+                <li class="breadcumps__item" itemscope itemprop="itemListElement" itemtype="http://schema.org/ListItem">
+                  <a href="home.html" itemprop="item">
+                    <span itemprop="name">Главная страница</span>
+                    <div itemprop="item.name" class="breadcumps_onhover">Главная страница</div>
+                    <meta itemprop="position" content="1">
+                  </a>
+                </li>
+                <li class="breadcumps__item" itemscope itemprop="itemListElement" itemtype="http://schema.org/ListItem">
+                  <a href="home.html" itemprop="item">
+                    <span itemprop="name">Личный кабинет</span>
+                    <div itemprop="item.name" class="breadcumps_onhover">Личный кабинет</div>
+                    <meta itemprop="position" content="2">
+                  </a>
+                </li>
+                <li class="breadcumps__item" itemscope itemprop="itemListElement" itemtype="http://schema.org/ListItem">
+                  <span itemprop="item">
+                    <span itemprop="name">Спикеры</span>
+                    <div itemprop="item.name" class="breadcumps_onhover">Спикеры</div>
+                    <meta itemprop="position" content="3">
+                  </span>
+                </li>
+              </ul>
+          </div>
+        </section>
+        <section class="common-head">
+          <div class="common-head__container">
+            <h1 class="common-head__title">Спикеры</h1>
+          </div>
+        </section>
+        <section class="filters">
+          <div class="filters__container spollers-filters" data-spollers data-one-spoller data-spollers-speed="300">
+            <div class="spollers-filters__item" data-filter-item="Тематика">
+              <button type="button" data-spoller data-spoller-close class="spollers-filters__title">Тематика</button>
+              <div class="spollers-filters__body" hidden>
+                <div class="spollers-filters__mobile _mmd3dn">
+                  <div class="spollers-filters__close"></div>
+                </div>
+                <div class="spollers-filters__name _mmd3dn">
+                  Тематика
+                </div>
+                <form action="#" data-dev data-noclean class="spollers-filters__form">
+                  <div class="spollers-filters__rows">
+                    <label class="spollers-filters__row">
+                      <input type="checkbox" name="Тематика" value="Damon system" class="spollers-filters__checkbox">
+                      <div class="spollers-filters__label">Damon system</div>
+                    </label>
+                    <label class="spollers-filters__row">
+                      <input type="checkbox" name="Тематика" value="Insignia" class="spollers-filters__checkbox">
+                      <div class="spollers-filters__label">Insignia</div>
+                    </label>
+                    <label class="spollers-filters__row">
+                      <input type="checkbox" name="Тематика" value="Абсолютный анкораж (Vector TAS)" class="spollers-filters__checkbox">
+                      <div class="spollers-filters__label">Абсолютный анкораж (Vector TAS)</div>
+                    </label>
+                    <label class="spollers-filters__row">
+                      <input type="checkbox" name="Тематика" value="Биомеханика" class="spollers-filters__checkbox">
+                      <div class="spollers-filters__label">Биомеханика</div>
+                    </label>
+                    <label class="spollers-filters__row">
+                      <input type="checkbox" name="Тематика" value="ВНЧС" class="spollers-filters__checkbox">
+                      <div class="spollers-filters__label">ВНЧС</div>
+                    </label>
+                    <label class="spollers-filters__row">
+                      <input type="checkbox" name="Тематика" value="Детство" class="spollers-filters__checkbox">
+                      <div class="spollers-filters__label">Детство</div>
+                    </label>
+                    <label class="spollers-filters__row">
+                      <input type="checkbox" name="Тематика" value="Диагностика" class="spollers-filters__checkbox">
+                      <div class="spollers-filters__label">Диагностика</div>
+                    </label>
+                    <label class="spollers-filters__row">
+                      <input type="checkbox" name="Тематика" value="Комплексное лечение" class="spollers-filters__checkbox">
+                      <div class="spollers-filters__label">Комплексное лечение</div>
+                    </label>
+                    <label class="spollers-filters__row">
+                      <input type="checkbox" name="Тематика" value="Маркетинг" class="spollers-filters__checkbox">
+                      <div class="spollers-filters__label">Маркетинг</div>
+                    </label>
+                    <label class="spollers-filters__row">
+                      <input type="checkbox" name="Тематика" value="Пропедевтика" class="spollers-filters__checkbox">
+                      <div class="spollers-filters__label">Пропедевтика</div>
+                    </label>
+                    <label class="spollers-filters__row">
+                      <input type="checkbox" name="Тематика" value="Другое" class="spollers-filters__checkbox">
+                      <div class="spollers-filters__label">Другое</div>
+                    </label>
+                  </div>
+                  <button type="submit" class="spollers-filters__submit btn btn-lightblue" hidden>Применить</button>
+                </form>
+              </div>
+            </div>
+            <div class="spollers-filters__item" data-filter-item="Город">
+              <button type="button" data-spoller data-spoller-close class="spollers-filters__title">Город</button>
+              <div class="spollers-filters__body" hidden>
+                <div class="spollers-filters__mobile _mmd3dn">
+                  <div class="spollers-filters__close"></div>
+                </div>
+                <div class="spollers-filters__name _mmd3dn">
+                  Город
+                </div>
+                <form action="#" data-dev data-noclean class="spollers-filters__form">
+                  <div class="spollers-filters__rows">
+                    <label class="spollers-filters__row">
+                      <input type="checkbox" name="Город" value="Архангельск" class="spollers-filters__checkbox">
+                      <div class="spollers-filters__label">Архангельск</div>
+                    </label>
+                    <label class="spollers-filters__row">
+                      <input type="checkbox" name="Город" value="Владивосток" class="spollers-filters__checkbox">
+                      <div class="spollers-filters__label">Владивосток</div>
+                    </label>
+                    <label class="spollers-filters__row">
+                      <input type="checkbox" name="Город" value="Владикавказ" class="spollers-filters__checkbox">
+                      <div class="spollers-filters__label">Владикавказ</div>
+                    </label>
+                    <label class="spollers-filters__row">
+                      <input type="checkbox" name="Город" value="Воронеж" class="spollers-filters__checkbox">
+                      <div class="spollers-filters__label">Воронеж</div>
+                    </label>
+                    <label class="spollers-filters__row">
+                      <input type="checkbox" name="Город" value="Грозный" class="spollers-filters__checkbox">
+                      <div class="spollers-filters__label">Грозный</div>
+                    </label>
+                    <label class="spollers-filters__row">
+                      <input type="checkbox" name="Город" value="Екатеринбург" class="spollers-filters__checkbox">
+                      <div class="spollers-filters__label">Екатеринбург</div>
+                    </label>
+                    <label class="spollers-filters__row">
+                      <input type="checkbox" name="Город" value="Иркутск" class="spollers-filters__checkbox">
+                      <div class="spollers-filters__label">Иркутск</div>
+                    </label>
+                    <label class="spollers-filters__row">
+                      <input type="checkbox" name="Город" value="Чита" class="spollers-filters__checkbox">
+                      <div class="spollers-filters__label">Чита</div>
+                    </label>
+                    <label class="spollers-filters__row">
+                      <input type="checkbox" name="Город" value="Тюмень" class="spollers-filters__checkbox">
+                      <div class="spollers-filters__label">Тюмень</div>
+                    </label>
+                  </div>
+                  <button type="submit" class="spollers-filters__submit btn btn-lightblue" hidden>Применить</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="checked-filters">
+          <div class="checked-filters__container">
+            <div class="checked-filters__wrapper"></div>
+            <button type="button" class="checked-filters__button" hidden>Очистить фильтры</button>
+          </div>
+        </section>
+        <section class="lk-downloads">
+          <div class="lk-downloads__sticky" data-sticky-item>
+            <div class="lk-downloads__container">
+              <div class="lk-downloads__shadow">
+                <div class="lk-downloads__head">
+                  <div class="lk-downloads__title">Скачайте список спикеров и их семинаров в  PDF</div>
+                </div>
+                <div class="lk-downloads__body" data-lk-downloads="../files/download_endpoint.php" data-da=".downloadsPopup__text, 800, last">
+                  <a href="#" class="lk-downloads__button btn btn-lightblue" data-lk-download="all,briefly">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="_noanimate">
+                      <path d="M3.66602 16.3333H16.3327" stroke="white" stroke-width="1.38542" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M9.99935 11.5833V3.66663" stroke="white" stroke-width="1.38542" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M10 11.5833L13.1667 8.41663" stroke="white" stroke-width="1.38542" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M10.0007 11.5833L6.83398 8.41663" stroke="white" stroke-width="1.38542" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="_animate">
+                      <path d="M15.6485 9.30358C15.7012 9.68251 16.0511 9.94701 16.43 9.89435C16.8089 9.84169 17.0734 9.49181 17.0207 9.11288L15.6485 9.30358ZM3.42436 7.35851C3.27724 7.71166 3.44426 8.11722 3.79741 8.26434C4.15056 8.41146 4.55612 8.24444 4.70324 7.89129L3.42436 7.35851ZM4.36068 4.45827C4.36068 4.07569 4.05054 3.76556 3.66797 3.76556C3.2854 3.76556 2.97526 4.07569 2.97526 4.45827H4.36068ZM3.66797 7.62493H2.97526C2.97526 8.00751 3.2854 8.31764 3.66797 8.31764V7.62493ZM6.83464 8.31764C7.21721 8.31764 7.52734 8.00751 7.52734 7.62493C7.52734 7.24236 7.21721 6.93223 6.83464 6.93223V8.31764ZM17.0207 9.11288C16.5798 5.93969 14.0698 3.4541 10.8924 3.04412L10.7151 4.41814C13.2729 4.74818 15.2935 6.74912 15.6485 9.30358L17.0207 9.11288ZM10.8924 3.04412C7.7151 2.63414 4.65638 4.40119 3.42436 7.35851L4.70324 7.89129C5.69503 5.51061 8.15734 4.0881 10.7151 4.41814L10.8924 3.04412ZM2.97526 4.45827V7.62493H4.36068V4.45827H2.97526ZM3.66797 8.31764H6.83464V6.93223H3.66797V8.31764Z" fill="white"/>
+                      <path d="M4.35408 10.6962C4.30142 10.3173 3.95155 10.0528 3.57262 10.1055C3.19369 10.1581 2.92919 10.508 2.98185 10.8869L4.35408 10.6962ZM16.5782 12.6413C16.7254 12.2882 16.5583 11.8826 16.2052 11.7355C15.852 11.5884 15.4465 11.7554 15.2994 12.1085L16.5782 12.6413ZM15.6419 15.5416C15.6419 15.9242 15.9521 16.2343 16.3346 16.2343C16.7172 16.2343 17.0273 15.9242 17.0273 15.5416H15.6419ZM16.3346 12.3749H17.0273C17.0273 11.9924 16.7172 11.6822 16.3346 11.6822V12.3749ZM13.168 11.6822C12.7854 11.6822 12.4753 11.9924 12.4753 12.3749C12.4753 12.7575 12.7854 13.0676 13.168 13.0676V11.6822ZM2.98185 10.8869C3.42284 14.0601 5.93282 16.5457 9.11017 16.9557L9.28746 15.5817C6.72965 15.2516 4.70908 13.2507 4.35408 10.6962L2.98185 10.8869ZM9.11017 16.9557C12.2875 17.3657 15.3462 15.5986 16.5782 12.6413L15.2994 12.1085C14.3076 14.4892 11.8453 15.9117 9.28746 15.5817L9.11017 16.9557ZM17.0273 15.5416V12.3749H15.6419V15.5416H17.0273ZM16.3346 11.6822H13.168V13.0676H16.3346V11.6822Z" fill="white"/>
+                    </svg>
+                    <span>Все кратко .pdf</span>
+                  </a>
+                  <a href="#" class="lk-downloads__button btn btn-lightblue" data-lk-download="all,detail">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="_noanimate">
+                      <path d="M3.66602 16.3333H16.3327" stroke="white" stroke-width="1.38542" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M9.99935 11.5833V3.66663" stroke="white" stroke-width="1.38542" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M10 11.5833L13.1667 8.41663" stroke="white" stroke-width="1.38542" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M10.0007 11.5833L6.83398 8.41663" stroke="white" stroke-width="1.38542" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="_animate">
+                      <path d="M15.6485 9.30358C15.7012 9.68251 16.0511 9.94701 16.43 9.89435C16.8089 9.84169 17.0734 9.49181 17.0207 9.11288L15.6485 9.30358ZM3.42436 7.35851C3.27724 7.71166 3.44426 8.11722 3.79741 8.26434C4.15056 8.41146 4.55612 8.24444 4.70324 7.89129L3.42436 7.35851ZM4.36068 4.45827C4.36068 4.07569 4.05054 3.76556 3.66797 3.76556C3.2854 3.76556 2.97526 4.07569 2.97526 4.45827H4.36068ZM3.66797 7.62493H2.97526C2.97526 8.00751 3.2854 8.31764 3.66797 8.31764V7.62493ZM6.83464 8.31764C7.21721 8.31764 7.52734 8.00751 7.52734 7.62493C7.52734 7.24236 7.21721 6.93223 6.83464 6.93223V8.31764ZM17.0207 9.11288C16.5798 5.93969 14.0698 3.4541 10.8924 3.04412L10.7151 4.41814C13.2729 4.74818 15.2935 6.74912 15.6485 9.30358L17.0207 9.11288ZM10.8924 3.04412C7.7151 2.63414 4.65638 4.40119 3.42436 7.35851L4.70324 7.89129C5.69503 5.51061 8.15734 4.0881 10.7151 4.41814L10.8924 3.04412ZM2.97526 4.45827V7.62493H4.36068V4.45827H2.97526ZM3.66797 8.31764H6.83464V6.93223H3.66797V8.31764Z" fill="white"/>
+                      <path d="M4.35408 10.6962C4.30142 10.3173 3.95155 10.0528 3.57262 10.1055C3.19369 10.1581 2.92919 10.508 2.98185 10.8869L4.35408 10.6962ZM16.5782 12.6413C16.7254 12.2882 16.5583 11.8826 16.2052 11.7355C15.852 11.5884 15.4465 11.7554 15.2994 12.1085L16.5782 12.6413ZM15.6419 15.5416C15.6419 15.9242 15.9521 16.2343 16.3346 16.2343C16.7172 16.2343 17.0273 15.9242 17.0273 15.5416H15.6419ZM16.3346 12.3749H17.0273C17.0273 11.9924 16.7172 11.6822 16.3346 11.6822V12.3749ZM13.168 11.6822C12.7854 11.6822 12.4753 11.9924 12.4753 12.3749C12.4753 12.7575 12.7854 13.0676 13.168 13.0676V11.6822ZM2.98185 10.8869C3.42284 14.0601 5.93282 16.5457 9.11017 16.9557L9.28746 15.5817C6.72965 15.2516 4.70908 13.2507 4.35408 10.6962L2.98185 10.8869ZM9.11017 16.9557C12.2875 17.3657 15.3462 15.5986 16.5782 12.6413L15.2994 12.1085C14.3076 14.4892 11.8453 15.9117 9.28746 15.5817L9.11017 16.9557ZM17.0273 15.5416V12.3749H15.6419V15.5416H17.0273ZM16.3346 11.6822H13.168V13.0676H16.3346V11.6822Z" fill="white"/>
+                    </svg>
+                    <span>Все подробно .pdf</span>
+                  </a>
+                  <a href="#" class="lk-downloads__button btn btn-lightblue" data-lk-download="checked,detail" disabled>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="_noanimate">
+                      <path d="M3.66602 16.3333H16.3327" stroke="white" stroke-width="1.38542" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M9.99935 11.5833V3.66663" stroke="white" stroke-width="1.38542" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M10 11.5833L13.1667 8.41663" stroke="white" stroke-width="1.38542" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M10.0007 11.5833L6.83398 8.41663" stroke="white" stroke-width="1.38542" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="_animate">
+                      <path d="M15.6485 9.30358C15.7012 9.68251 16.0511 9.94701 16.43 9.89435C16.8089 9.84169 17.0734 9.49181 17.0207 9.11288L15.6485 9.30358ZM3.42436 7.35851C3.27724 7.71166 3.44426 8.11722 3.79741 8.26434C4.15056 8.41146 4.55612 8.24444 4.70324 7.89129L3.42436 7.35851ZM4.36068 4.45827C4.36068 4.07569 4.05054 3.76556 3.66797 3.76556C3.2854 3.76556 2.97526 4.07569 2.97526 4.45827H4.36068ZM3.66797 7.62493H2.97526C2.97526 8.00751 3.2854 8.31764 3.66797 8.31764V7.62493ZM6.83464 8.31764C7.21721 8.31764 7.52734 8.00751 7.52734 7.62493C7.52734 7.24236 7.21721 6.93223 6.83464 6.93223V8.31764ZM17.0207 9.11288C16.5798 5.93969 14.0698 3.4541 10.8924 3.04412L10.7151 4.41814C13.2729 4.74818 15.2935 6.74912 15.6485 9.30358L17.0207 9.11288ZM10.8924 3.04412C7.7151 2.63414 4.65638 4.40119 3.42436 7.35851L4.70324 7.89129C5.69503 5.51061 8.15734 4.0881 10.7151 4.41814L10.8924 3.04412ZM2.97526 4.45827V7.62493H4.36068V4.45827H2.97526ZM3.66797 8.31764H6.83464V6.93223H3.66797V8.31764Z" fill="white"/>
+                      <path d="M4.35408 10.6962C4.30142 10.3173 3.95155 10.0528 3.57262 10.1055C3.19369 10.1581 2.92919 10.508 2.98185 10.8869L4.35408 10.6962ZM16.5782 12.6413C16.7254 12.2882 16.5583 11.8826 16.2052 11.7355C15.852 11.5884 15.4465 11.7554 15.2994 12.1085L16.5782 12.6413ZM15.6419 15.5416C15.6419 15.9242 15.9521 16.2343 16.3346 16.2343C16.7172 16.2343 17.0273 15.9242 17.0273 15.5416H15.6419ZM16.3346 12.3749H17.0273C17.0273 11.9924 16.7172 11.6822 16.3346 11.6822V12.3749ZM13.168 11.6822C12.7854 11.6822 12.4753 11.9924 12.4753 12.3749C12.4753 12.7575 12.7854 13.0676 13.168 13.0676V11.6822ZM2.98185 10.8869C3.42284 14.0601 5.93282 16.5457 9.11017 16.9557L9.28746 15.5817C6.72965 15.2516 4.70908 13.2507 4.35408 10.6962L2.98185 10.8869ZM9.11017 16.9557C12.2875 17.3657 15.3462 15.5986 16.5782 12.6413L15.2994 12.1085C14.3076 14.4892 11.8453 15.9117 9.28746 15.5817L9.11017 16.9557ZM17.0273 15.5416V12.3749H15.6419V15.5416H17.0273ZM16.3346 11.6822H13.168V13.0676H16.3346V11.6822Z" fill="white"/>
+                    </svg>
+                    <span>Выбранное подробно .pdf</span>
+                  </a>
+                  <a href="#" class="lk-downloads__button btn btn-lightblue" data-lk-download="checked,briefly" disabled>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="_noanimate">
+                      <path d="M3.66602 16.3333H16.3327" stroke="white" stroke-width="1.38542" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M9.99935 11.5833V3.66663" stroke="white" stroke-width="1.38542" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M10 11.5833L13.1667 8.41663" stroke="white" stroke-width="1.38542" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M10.0007 11.5833L6.83398 8.41663" stroke="white" stroke-width="1.38542" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="_animate">
+                      <path d="M15.6485 9.30358C15.7012 9.68251 16.0511 9.94701 16.43 9.89435C16.8089 9.84169 17.0734 9.49181 17.0207 9.11288L15.6485 9.30358ZM3.42436 7.35851C3.27724 7.71166 3.44426 8.11722 3.79741 8.26434C4.15056 8.41146 4.55612 8.24444 4.70324 7.89129L3.42436 7.35851ZM4.36068 4.45827C4.36068 4.07569 4.05054 3.76556 3.66797 3.76556C3.2854 3.76556 2.97526 4.07569 2.97526 4.45827H4.36068ZM3.66797 7.62493H2.97526C2.97526 8.00751 3.2854 8.31764 3.66797 8.31764V7.62493ZM6.83464 8.31764C7.21721 8.31764 7.52734 8.00751 7.52734 7.62493C7.52734 7.24236 7.21721 6.93223 6.83464 6.93223V8.31764ZM17.0207 9.11288C16.5798 5.93969 14.0698 3.4541 10.8924 3.04412L10.7151 4.41814C13.2729 4.74818 15.2935 6.74912 15.6485 9.30358L17.0207 9.11288ZM10.8924 3.04412C7.7151 2.63414 4.65638 4.40119 3.42436 7.35851L4.70324 7.89129C5.69503 5.51061 8.15734 4.0881 10.7151 4.41814L10.8924 3.04412ZM2.97526 4.45827V7.62493H4.36068V4.45827H2.97526ZM3.66797 8.31764H6.83464V6.93223H3.66797V8.31764Z" fill="white"/>
+                      <path d="M4.35408 10.6962C4.30142 10.3173 3.95155 10.0528 3.57262 10.1055C3.19369 10.1581 2.92919 10.508 2.98185 10.8869L4.35408 10.6962ZM16.5782 12.6413C16.7254 12.2882 16.5583 11.8826 16.2052 11.7355C15.852 11.5884 15.4465 11.7554 15.2994 12.1085L16.5782 12.6413ZM15.6419 15.5416C15.6419 15.9242 15.9521 16.2343 16.3346 16.2343C16.7172 16.2343 17.0273 15.9242 17.0273 15.5416H15.6419ZM16.3346 12.3749H17.0273C17.0273 11.9924 16.7172 11.6822 16.3346 11.6822V12.3749ZM13.168 11.6822C12.7854 11.6822 12.4753 11.9924 12.4753 12.3749C12.4753 12.7575 12.7854 13.0676 13.168 13.0676V11.6822ZM2.98185 10.8869C3.42284 14.0601 5.93282 16.5457 9.11017 16.9557L9.28746 15.5817C6.72965 15.2516 4.70908 13.2507 4.35408 10.6962L2.98185 10.8869ZM9.11017 16.9557C12.2875 17.3657 15.3462 15.5986 16.5782 12.6413L15.2994 12.1085C14.3076 14.4892 11.8453 15.9117 9.28746 15.5817L9.11017 16.9557ZM17.0273 15.5416V12.3749H15.6419V15.5416H17.0273ZM16.3346 11.6822H13.168V13.0676H16.3346V11.6822Z" fill="white"/>
+                    </svg>
+                    <span>Выбранное кратко .pdf</span>
+                  </a>
+                </div>
+                <button type="button" class="lk-downloads__button btn btn-lightblue _mmd800dn" data-popup="#downloadsPopup">
+                  <svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3.16797 16.3333H15.8346" stroke="white" stroke-width="1.38542" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M9.5013 11.5833V3.66663" stroke="white" stroke-width="1.38542" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M9.5 11.5833L12.6667 8.41663" stroke="white" stroke-width="1.38542" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M9.4987 11.5833L6.33203 8.41663" stroke="white" stroke-width="1.38542" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>Скачать .pdf</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="eventsfull" data-lk-boxes>
+          <div class="eventsfull__container">
+            <label class="lk-speaker">
+              <div class="lk-speaker__boxwrap">
+                <input type="checkbox" class="lk-speaker__box" data-lk-box value="ид спикера">
+                <i></i>
+              </div>
+              <a href="#" class="lk-speaker__speaker">
+                <div class="lk-speaker__avatar">
+                  <img src="@img/events/speaker.png" alt="image">
+                </div>
+                <div class="lk-speaker__name">Дьячкова Яна Юрьевна</div>
+                <div class="lk-speaker__city">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="10" cy="9.16663" r="2.5" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7148 13.8808L11.179 17.4167C10.5282 18.0667 9.47389 18.0667 8.82315 17.4167L5.28648 13.8808C2.68309 11.2773 2.68316 7.05627 5.28665 4.45283C7.89013 1.84938 12.1112 1.84938 14.7147 4.45283C17.3181 7.05627 17.3182 11.2773 14.7148 13.8808V13.8808Z" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>г. Москва</span>
+                </div>
+                <div class="lk-speaker__profile">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.5021 10.75C14.3041 11.1167 16.1333 10.2588 17.0036 8.6388C17.8738 7.01883 17.5791 5.01995 16.2785 3.71998C14.9779 2.42002 12.9788 2.1264 11.3593 2.99744C9.73979 3.86849 8.88279 5.69822 9.25042 7.5" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5013 10.75L9.24967 7.50085L2.98883 14.6542C2.56756 15.075 2.40279 15.6886 2.5566 16.2639C2.71041 16.8391 3.15943 17.2886 3.73452 17.443C4.3096 17.5975 4.92339 17.4334 5.34466 17.0125L12.5013 10.75V10.75Z" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>Лекция, мастер класс</span>
+                </div>
+              </a>
+              <div class="lk-speaker__tags">
+                <a href="#" class="lk-speaker__tag">Комплексное лечение</a>
+                <a href="#" class="lk-speaker__tag">Детство</a>
+                <a href="#" class="lk-speaker__tag">ВНЧС</a>
+                <a href="#" class="lk-speaker__tag">Абсолютный анкораж</a>
+                <a href="#" class="lk-speaker__tag">Диагностика</a>
+                <a href="#" class="lk-speaker__tag">Damon system</a>
+              </div>
+            </label>
+            <label class="lk-speaker">
+              <div class="lk-speaker__boxwrap">
+                <input type="checkbox" class="lk-speaker__box" data-lk-box value="ид спикера2">
+                <i></i>
+              </div>
+              <a href="#" class="lk-speaker__speaker">
+                <div class="lk-speaker__avatar">
+                  <img src="@img/events/speaker.png" alt="image">
+                </div>
+                <div class="lk-speaker__name">Дьячкова Яна Юрьевна</div>
+                <div class="lk-speaker__city">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="10" cy="9.16663" r="2.5" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7148 13.8808L11.179 17.4167C10.5282 18.0667 9.47389 18.0667 8.82315 17.4167L5.28648 13.8808C2.68309 11.2773 2.68316 7.05627 5.28665 4.45283C7.89013 1.84938 12.1112 1.84938 14.7147 4.45283C17.3181 7.05627 17.3182 11.2773 14.7148 13.8808V13.8808Z" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>г. Москва</span>
+                </div>
+                <div class="lk-speaker__profile">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.5021 10.75C14.3041 11.1167 16.1333 10.2588 17.0036 8.6388C17.8738 7.01883 17.5791 5.01995 16.2785 3.71998C14.9779 2.42002 12.9788 2.1264 11.3593 2.99744C9.73979 3.86849 8.88279 5.69822 9.25042 7.5" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5013 10.75L9.24967 7.50085L2.98883 14.6542C2.56756 15.075 2.40279 15.6886 2.5566 16.2639C2.71041 16.8391 3.15943 17.2886 3.73452 17.443C4.3096 17.5975 4.92339 17.4334 5.34466 17.0125L12.5013 10.75V10.75Z" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>Лекция, мастер класс</span>
+                </div>
+              </a>
+              <div class="lk-speaker__tags">
+                <a href="#" class="lk-speaker__tag">Комплексное лечение</a>
+                <a href="#" class="lk-speaker__tag">Детство</a>
+                <a href="#" class="lk-speaker__tag">ВНЧС</a>
+                <a href="#" class="lk-speaker__tag">Абсолютный анкораж</a>
+                <a href="#" class="lk-speaker__tag">Диагностика</a>
+              </div>
+            </label>
+            <label class="lk-speaker">
+              <div class="lk-speaker__boxwrap">
+                <input type="checkbox" class="lk-speaker__box" data-lk-box value="ид спикера">
+                <i></i>
+              </div>
+              <a href="#" class="lk-speaker__speaker">
+                <div class="lk-speaker__avatar">
+                  <img src="@img/events/speaker.png" alt="image">
+                </div>
+                <div class="lk-speaker__name">Дьячкова Яна Юрьевна</div>
+                <div class="lk-speaker__city">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="10" cy="9.16663" r="2.5" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7148 13.8808L11.179 17.4167C10.5282 18.0667 9.47389 18.0667 8.82315 17.4167L5.28648 13.8808C2.68309 11.2773 2.68316 7.05627 5.28665 4.45283C7.89013 1.84938 12.1112 1.84938 14.7147 4.45283C17.3181 7.05627 17.3182 11.2773 14.7148 13.8808V13.8808Z" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>г. Москва</span>
+                </div>
+                <div class="lk-speaker__profile">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.5021 10.75C14.3041 11.1167 16.1333 10.2588 17.0036 8.6388C17.8738 7.01883 17.5791 5.01995 16.2785 3.71998C14.9779 2.42002 12.9788 2.1264 11.3593 2.99744C9.73979 3.86849 8.88279 5.69822 9.25042 7.5" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5013 10.75L9.24967 7.50085L2.98883 14.6542C2.56756 15.075 2.40279 15.6886 2.5566 16.2639C2.71041 16.8391 3.15943 17.2886 3.73452 17.443C4.3096 17.5975 4.92339 17.4334 5.34466 17.0125L12.5013 10.75V10.75Z" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>Лекция, мастер класс</span>
+                </div>
+              </a>
+              <div class="lk-speaker__tags">
+                <a href="#" class="lk-speaker__tag">Комплексное лечение</a>
+                <a href="#" class="lk-speaker__tag">Детство</a>
+                <a href="#" class="lk-speaker__tag">ВНЧС</a>
+              </div>
+            </label>
+            <label class="lk-speaker">
+              <div class="lk-speaker__boxwrap">
+                <input type="checkbox" class="lk-speaker__box" data-lk-box value="ид спикера">
+                <i></i>
+              </div>
+              <a href="#" class="lk-speaker__speaker">
+                <div class="lk-speaker__avatar">
+                  <img src="@img/events/speaker.png" alt="image">
+                </div>
+                <div class="lk-speaker__name">Дьячкова Яна Юрьевна</div>
+                <div class="lk-speaker__city">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="10" cy="9.16663" r="2.5" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7148 13.8808L11.179 17.4167C10.5282 18.0667 9.47389 18.0667 8.82315 17.4167L5.28648 13.8808C2.68309 11.2773 2.68316 7.05627 5.28665 4.45283C7.89013 1.84938 12.1112 1.84938 14.7147 4.45283C17.3181 7.05627 17.3182 11.2773 14.7148 13.8808V13.8808Z" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>г. Москва</span>
+                </div>
+                <div class="lk-speaker__profile">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.5021 10.75C14.3041 11.1167 16.1333 10.2588 17.0036 8.6388C17.8738 7.01883 17.5791 5.01995 16.2785 3.71998C14.9779 2.42002 12.9788 2.1264 11.3593 2.99744C9.73979 3.86849 8.88279 5.69822 9.25042 7.5" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5013 10.75L9.24967 7.50085L2.98883 14.6542C2.56756 15.075 2.40279 15.6886 2.5566 16.2639C2.71041 16.8391 3.15943 17.2886 3.73452 17.443C4.3096 17.5975 4.92339 17.4334 5.34466 17.0125L12.5013 10.75V10.75Z" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>Лекция, мастер класс</span>
+                </div>
+              </a>
+              <div class="lk-speaker__tags">
+                <a href="#" class="lk-speaker__tag">Комплексное лечение</a>
+                <a href="#" class="lk-speaker__tag">Детство</a>
+                <a href="#" class="lk-speaker__tag">ВНЧС</a>
+              </div>
+            </label>
+            <label class="lk-speaker">
+              <div class="lk-speaker__boxwrap">
+                <input type="checkbox" class="lk-speaker__box" data-lk-box value="ид спикера">
+                <i></i>
+              </div>
+              <a href="#" class="lk-speaker__speaker">
+                <div class="lk-speaker__avatar">
+                  <img src="@img/events/speaker.png" alt="image">
+                </div>
+                <div class="lk-speaker__name">Дьячкова Яна Юрьевна</div>
+                <div class="lk-speaker__city">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="10" cy="9.16663" r="2.5" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7148 13.8808L11.179 17.4167C10.5282 18.0667 9.47389 18.0667 8.82315 17.4167L5.28648 13.8808C2.68309 11.2773 2.68316 7.05627 5.28665 4.45283C7.89013 1.84938 12.1112 1.84938 14.7147 4.45283C17.3181 7.05627 17.3182 11.2773 14.7148 13.8808V13.8808Z" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>г. Москва</span>
+                </div>
+                <div class="lk-speaker__profile">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.5021 10.75C14.3041 11.1167 16.1333 10.2588 17.0036 8.6388C17.8738 7.01883 17.5791 5.01995 16.2785 3.71998C14.9779 2.42002 12.9788 2.1264 11.3593 2.99744C9.73979 3.86849 8.88279 5.69822 9.25042 7.5" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5013 10.75L9.24967 7.50085L2.98883 14.6542C2.56756 15.075 2.40279 15.6886 2.5566 16.2639C2.71041 16.8391 3.15943 17.2886 3.73452 17.443C4.3096 17.5975 4.92339 17.4334 5.34466 17.0125L12.5013 10.75V10.75Z" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>Лекция, мастер класс</span>
+                </div>
+              </a>
+              <div class="lk-speaker__tags">
+                <a href="#" class="lk-speaker__tag">Комплексное лечение</a>
+                <a href="#" class="lk-speaker__tag">Детство</a>
+                <a href="#" class="lk-speaker__tag">ВНЧС</a>
+                <a href="#" class="lk-speaker__tag">Абсолютный анкораж</a>
+                <a href="#" class="lk-speaker__tag">Диагностика</a>
+              </div>
+            </label>
+            <label class="lk-speaker">
+              <div class="lk-speaker__boxwrap">
+                <input type="checkbox" class="lk-speaker__box" data-lk-box value="ид спикера">
+                <i></i>
+              </div>
+              <a href="#" class="lk-speaker__speaker">
+                <div class="lk-speaker__avatar">
+                  <img src="@img/events/speaker.png" alt="image">
+                </div>
+                <div class="lk-speaker__name">Дьячкова Яна Юрьевна</div>
+                <div class="lk-speaker__city">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="10" cy="9.16663" r="2.5" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7148 13.8808L11.179 17.4167C10.5282 18.0667 9.47389 18.0667 8.82315 17.4167L5.28648 13.8808C2.68309 11.2773 2.68316 7.05627 5.28665 4.45283C7.89013 1.84938 12.1112 1.84938 14.7147 4.45283C17.3181 7.05627 17.3182 11.2773 14.7148 13.8808V13.8808Z" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>г. Москва</span>
+                </div>
+                <div class="lk-speaker__profile">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.5021 10.75C14.3041 11.1167 16.1333 10.2588 17.0036 8.6388C17.8738 7.01883 17.5791 5.01995 16.2785 3.71998C14.9779 2.42002 12.9788 2.1264 11.3593 2.99744C9.73979 3.86849 8.88279 5.69822 9.25042 7.5" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5013 10.75L9.24967 7.50085L2.98883 14.6542C2.56756 15.075 2.40279 15.6886 2.5566 16.2639C2.71041 16.8391 3.15943 17.2886 3.73452 17.443C4.3096 17.5975 4.92339 17.4334 5.34466 17.0125L12.5013 10.75V10.75Z" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>Лекция, мастер класс</span>
+                </div>
+              </a>
+              <div class="lk-speaker__tags">
+                <a href="#" class="lk-speaker__tag">Комплексное лечение</a>
+                <a href="#" class="lk-speaker__tag">Детство</a>
+                <a href="#" class="lk-speaker__tag">ВНЧС</a>
+                <a href="#" class="lk-speaker__tag">Абсолютный анкораж</a>
+                <a href="#" class="lk-speaker__tag">Диагностика</a>
+                <a href="#" class="lk-speaker__tag">Damon system</a>
+              </div>
+            </label>
+          </div>
+          <div class="eventsfull__banner banner-eventsfull">
+            <div class="event-banner__container">
+              <div class="event-banner__content">
+                <div class="event-banner__title">Современные инструменты врача-ортодонта </div>
+                <div class="event-banner__text">Современный взгляд на решение старых проблем, 02.12.22, А.В. Спесивцев, Хабаровск</div>
+                <div class="event-banner__footer">
+                  <div class="event-banner__prices">
+                    <div class="event-banner__price">35 000 <font class='rub'>i</font></div>
+                    <div class="event-banner__stars"
+                      data-tippy-stars="Количество звезд, которое вы получите за участие в мероприятии" 
+                      data-position="right"
+                    >
+                      <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.77039 1.03318C3.85716 0.831694 4.14284 0.831695 4.22961 1.03319L5.02281 2.87507C5.059 2.95911 5.13822 3.01667 5.22934 3.02512L7.22618 3.21032C7.44462 3.23058 7.53291 3.50228 7.36809 3.64707L5.86147 4.97062C5.79272 5.03101 5.76246 5.12414 5.78258 5.2134L6.2235 7.16975C6.27174 7.38376 6.04061 7.55168 5.85198 7.43968L4.12764 6.41579C4.04896 6.36907 3.95104 6.36907 3.87236 6.41579L2.14802 7.43967C1.95939 7.55168 1.72826 7.38376 1.7765 7.16975L2.21742 5.2134C2.23754 5.12414 2.20728 5.03101 2.13853 4.97062L0.631909 3.64707C0.467093 3.50228 0.555375 3.23058 0.773818 3.21032L2.77066 3.02512C2.86178 3.01667 2.941 2.95911 2.97719 2.87507L3.77039 1.03318Z" fill="white"/>
+                      </svg>
+                      <span>50</span>
+                    </div>
+                    <div class="event-banner__oldprice">38 600 <font class='rub'>i</font></div>
+                  </div>
+                  <a href="#" class="event-banner__button btn">Подробнее</a>
+                </div>
+              </div>
+              <div class="event-banner__image">
+                <img src="@img/home/hero_1.png" alt="image">
+              </div>
+            </div>
+          </div>
+          <div class="eventsfull__container">
+            <label class="lk-speaker">
+              <div class="lk-speaker__boxwrap">
+                <input type="checkbox" class="lk-speaker__box" data-lk-box value="ид спикера">
+                <i></i>
+              </div>
+              <a href="#" class="lk-speaker__speaker">
+                <div class="lk-speaker__avatar">
+                  <img src="@img/events/speaker.png" alt="image">
+                </div>
+                <div class="lk-speaker__name">Дьячкова Яна Юрьевна</div>
+                <div class="lk-speaker__city">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="10" cy="9.16663" r="2.5" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7148 13.8808L11.179 17.4167C10.5282 18.0667 9.47389 18.0667 8.82315 17.4167L5.28648 13.8808C2.68309 11.2773 2.68316 7.05627 5.28665 4.45283C7.89013 1.84938 12.1112 1.84938 14.7147 4.45283C17.3181 7.05627 17.3182 11.2773 14.7148 13.8808V13.8808Z" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>г. Москва</span>
+                </div>
+                <div class="lk-speaker__profile">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.5021 10.75C14.3041 11.1167 16.1333 10.2588 17.0036 8.6388C17.8738 7.01883 17.5791 5.01995 16.2785 3.71998C14.9779 2.42002 12.9788 2.1264 11.3593 2.99744C9.73979 3.86849 8.88279 5.69822 9.25042 7.5" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5013 10.75L9.24967 7.50085L2.98883 14.6542C2.56756 15.075 2.40279 15.6886 2.5566 16.2639C2.71041 16.8391 3.15943 17.2886 3.73452 17.443C4.3096 17.5975 4.92339 17.4334 5.34466 17.0125L12.5013 10.75V10.75Z" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>Лекция, мастер класс</span>
+                </div>
+              </a>
+              <div class="lk-speaker__tags">
+                <a href="#" class="lk-speaker__tag">Комплексное лечение</a>
+                <a href="#" class="lk-speaker__tag">Детство</a>
+                <a href="#" class="lk-speaker__tag">ВНЧС</a>
+                <a href="#" class="lk-speaker__tag">Абсолютный анкораж</a>
+                <a href="#" class="lk-speaker__tag">Диагностика</a>
+                <a href="#" class="lk-speaker__tag">Damon system</a>
+              </div>
+            </label>
+            <label class="lk-speaker">
+              <div class="lk-speaker__boxwrap">
+                <input type="checkbox" class="lk-speaker__box" data-lk-box value="ид спикера">
+                <i></i>
+              </div>
+              <a href="#" class="lk-speaker__speaker">
+                <div class="lk-speaker__avatar">
+                  <img src="@img/events/speaker.png" alt="image">
+                </div>
+                <div class="lk-speaker__name">Дьячкова Яна Юрьевна</div>
+                <div class="lk-speaker__city">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="10" cy="9.16663" r="2.5" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7148 13.8808L11.179 17.4167C10.5282 18.0667 9.47389 18.0667 8.82315 17.4167L5.28648 13.8808C2.68309 11.2773 2.68316 7.05627 5.28665 4.45283C7.89013 1.84938 12.1112 1.84938 14.7147 4.45283C17.3181 7.05627 17.3182 11.2773 14.7148 13.8808V13.8808Z" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>г. Москва</span>
+                </div>
+                <div class="lk-speaker__profile">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.5021 10.75C14.3041 11.1167 16.1333 10.2588 17.0036 8.6388C17.8738 7.01883 17.5791 5.01995 16.2785 3.71998C14.9779 2.42002 12.9788 2.1264 11.3593 2.99744C9.73979 3.86849 8.88279 5.69822 9.25042 7.5" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5013 10.75L9.24967 7.50085L2.98883 14.6542C2.56756 15.075 2.40279 15.6886 2.5566 16.2639C2.71041 16.8391 3.15943 17.2886 3.73452 17.443C4.3096 17.5975 4.92339 17.4334 5.34466 17.0125L12.5013 10.75V10.75Z" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>Лекция, мастер класс</span>
+                </div>
+              </a>
+              <div class="lk-speaker__tags">
+                <a href="#" class="lk-speaker__tag">Комплексное лечение</a>
+                <a href="#" class="lk-speaker__tag">Детство</a>
+                <a href="#" class="lk-speaker__tag">ВНЧС</a>
+                <a href="#" class="lk-speaker__tag">Абсолютный анкораж</a>
+                <a href="#" class="lk-speaker__tag">Диагностика</a>
+              </div>
+            </label>
+            <label class="lk-speaker">
+              <div class="lk-speaker__boxwrap">
+                <input type="checkbox" class="lk-speaker__box" data-lk-box value="ид спикера">
+                <i></i>
+              </div>
+              <a href="#" class="lk-speaker__speaker">
+                <div class="lk-speaker__avatar">
+                  <img src="@img/events/speaker.png" alt="image">
+                </div>
+                <div class="lk-speaker__name">Дьячкова Яна Юрьевна</div>
+                <div class="lk-speaker__city">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="10" cy="9.16663" r="2.5" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7148 13.8808L11.179 17.4167C10.5282 18.0667 9.47389 18.0667 8.82315 17.4167L5.28648 13.8808C2.68309 11.2773 2.68316 7.05627 5.28665 4.45283C7.89013 1.84938 12.1112 1.84938 14.7147 4.45283C17.3181 7.05627 17.3182 11.2773 14.7148 13.8808V13.8808Z" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>г. Москва</span>
+                </div>
+                <div class="lk-speaker__profile">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.5021 10.75C14.3041 11.1167 16.1333 10.2588 17.0036 8.6388C17.8738 7.01883 17.5791 5.01995 16.2785 3.71998C14.9779 2.42002 12.9788 2.1264 11.3593 2.99744C9.73979 3.86849 8.88279 5.69822 9.25042 7.5" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5013 10.75L9.24967 7.50085L2.98883 14.6542C2.56756 15.075 2.40279 15.6886 2.5566 16.2639C2.71041 16.8391 3.15943 17.2886 3.73452 17.443C4.3096 17.5975 4.92339 17.4334 5.34466 17.0125L12.5013 10.75V10.75Z" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>Лекция, мастер класс</span>
+                </div>
+              </a>
+              <div class="lk-speaker__tags">
+                <a href="#" class="lk-speaker__tag">Комплексное лечение</a>
+                <a href="#" class="lk-speaker__tag">Детство</a>
+                <a href="#" class="lk-speaker__tag">ВНЧС</a>
+              </div>
+            </label>
+            <label class="lk-speaker">
+              <div class="lk-speaker__boxwrap">
+                <input type="checkbox" class="lk-speaker__box" data-lk-box value="ид спикера">
+                <i></i>
+              </div>
+              <a href="#" class="lk-speaker__speaker">
+                <div class="lk-speaker__avatar">
+                  <img src="@img/events/speaker.png" alt="image">
+                </div>
+                <div class="lk-speaker__name">Дьячкова Яна Юрьевна</div>
+                <div class="lk-speaker__city">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="10" cy="9.16663" r="2.5" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7148 13.8808L11.179 17.4167C10.5282 18.0667 9.47389 18.0667 8.82315 17.4167L5.28648 13.8808C2.68309 11.2773 2.68316 7.05627 5.28665 4.45283C7.89013 1.84938 12.1112 1.84938 14.7147 4.45283C17.3181 7.05627 17.3182 11.2773 14.7148 13.8808V13.8808Z" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>г. Москва</span>
+                </div>
+                <div class="lk-speaker__profile">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.5021 10.75C14.3041 11.1167 16.1333 10.2588 17.0036 8.6388C17.8738 7.01883 17.5791 5.01995 16.2785 3.71998C14.9779 2.42002 12.9788 2.1264 11.3593 2.99744C9.73979 3.86849 8.88279 5.69822 9.25042 7.5" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5013 10.75L9.24967 7.50085L2.98883 14.6542C2.56756 15.075 2.40279 15.6886 2.5566 16.2639C2.71041 16.8391 3.15943 17.2886 3.73452 17.443C4.3096 17.5975 4.92339 17.4334 5.34466 17.0125L12.5013 10.75V10.75Z" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>Лекция, мастер класс</span>
+                </div>
+              </a>
+              <div class="lk-speaker__tags">
+                <a href="#" class="lk-speaker__tag">Комплексное лечение</a>
+                <a href="#" class="lk-speaker__tag">Детство</a>
+                <a href="#" class="lk-speaker__tag">ВНЧС</a>
+              </div>
+            </label>
+            <label class="lk-speaker">
+              <div class="lk-speaker__boxwrap">
+                <input type="checkbox" class="lk-speaker__box" data-lk-box value="ид спикера">
+                <i></i>
+              </div>
+              <a href="#" class="lk-speaker__speaker">
+                <div class="lk-speaker__avatar">
+                  <img src="@img/events/speaker.png" alt="image">
+                </div>
+                <div class="lk-speaker__name">Дьячкова Яна Юрьевна</div>
+                <div class="lk-speaker__city">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="10" cy="9.16663" r="2.5" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7148 13.8808L11.179 17.4167C10.5282 18.0667 9.47389 18.0667 8.82315 17.4167L5.28648 13.8808C2.68309 11.2773 2.68316 7.05627 5.28665 4.45283C7.89013 1.84938 12.1112 1.84938 14.7147 4.45283C17.3181 7.05627 17.3182 11.2773 14.7148 13.8808V13.8808Z" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>г. Москва</span>
+                </div>
+                <div class="lk-speaker__profile">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.5021 10.75C14.3041 11.1167 16.1333 10.2588 17.0036 8.6388C17.8738 7.01883 17.5791 5.01995 16.2785 3.71998C14.9779 2.42002 12.9788 2.1264 11.3593 2.99744C9.73979 3.86849 8.88279 5.69822 9.25042 7.5" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5013 10.75L9.24967 7.50085L2.98883 14.6542C2.56756 15.075 2.40279 15.6886 2.5566 16.2639C2.71041 16.8391 3.15943 17.2886 3.73452 17.443C4.3096 17.5975 4.92339 17.4334 5.34466 17.0125L12.5013 10.75V10.75Z" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>Лекция, мастер класс</span>
+                </div>
+              </a>
+              <div class="lk-speaker__tags">
+                <a href="#" class="lk-speaker__tag">Комплексное лечение</a>
+                <a href="#" class="lk-speaker__tag">Детство</a>
+                <a href="#" class="lk-speaker__tag">ВНЧС</a>
+                <a href="#" class="lk-speaker__tag">Абсолютный анкораж</a>
+                <a href="#" class="lk-speaker__tag">Диагностика</a>
+              </div>
+            </label>
+            <label class="lk-speaker">
+              <div class="lk-speaker__boxwrap">
+                <input type="checkbox" class="lk-speaker__box" data-lk-box value="ид спикера">
+                <i></i>
+              </div>
+              <a href="#" class="lk-speaker__speaker">
+                <div class="lk-speaker__avatar">
+                  <img src="@img/events/speaker.png" alt="image">
+                </div>
+                <div class="lk-speaker__name">Дьячкова Яна Юрьевна</div>
+                <div class="lk-speaker__city">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="10" cy="9.16663" r="2.5" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7148 13.8808L11.179 17.4167C10.5282 18.0667 9.47389 18.0667 8.82315 17.4167L5.28648 13.8808C2.68309 11.2773 2.68316 7.05627 5.28665 4.45283C7.89013 1.84938 12.1112 1.84938 14.7147 4.45283C17.3181 7.05627 17.3182 11.2773 14.7148 13.8808V13.8808Z" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>г. Москва</span>
+                </div>
+                <div class="lk-speaker__profile">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.5021 10.75C14.3041 11.1167 16.1333 10.2588 17.0036 8.6388C17.8738 7.01883 17.5791 5.01995 16.2785 3.71998C14.9779 2.42002 12.9788 2.1264 11.3593 2.99744C9.73979 3.86849 8.88279 5.69822 9.25042 7.5" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5013 10.75L9.24967 7.50085L2.98883 14.6542C2.56756 15.075 2.40279 15.6886 2.5566 16.2639C2.71041 16.8391 3.15943 17.2886 3.73452 17.443C4.3096 17.5975 4.92339 17.4334 5.34466 17.0125L12.5013 10.75V10.75Z" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>Лекция, мастер класс</span>
+                </div>
+              </a>
+              <div class="lk-speaker__tags">
+                <a href="#" class="lk-speaker__tag">Комплексное лечение</a>
+                <a href="#" class="lk-speaker__tag">Детство</a>
+                <a href="#" class="lk-speaker__tag">ВНЧС</a>
+                <a href="#" class="lk-speaker__tag">Абсолютный анкораж</a>
+                <a href="#" class="lk-speaker__tag">Диагностика</a>
+                <a href="#" class="lk-speaker__tag">Damon system</a>
+              </div>
+            </label>
+            <label class="lk-speaker">
+              <div class="lk-speaker__boxwrap">
+                <input type="checkbox" class="lk-speaker__box" data-lk-box value="ид спикера">
+                <i></i>
+              </div>
+              <a href="#" class="lk-speaker__speaker">
+                <div class="lk-speaker__avatar">
+                  <img src="@img/events/speaker.png" alt="image">
+                </div>
+                <div class="lk-speaker__name">Дьячкова Яна Юрьевна</div>
+                <div class="lk-speaker__city">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="10" cy="9.16663" r="2.5" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7148 13.8808L11.179 17.4167C10.5282 18.0667 9.47389 18.0667 8.82315 17.4167L5.28648 13.8808C2.68309 11.2773 2.68316 7.05627 5.28665 4.45283C7.89013 1.84938 12.1112 1.84938 14.7147 4.45283C17.3181 7.05627 17.3182 11.2773 14.7148 13.8808V13.8808Z" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>г. Москва</span>
+                </div>
+                <div class="lk-speaker__profile">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.5021 10.75C14.3041 11.1167 16.1333 10.2588 17.0036 8.6388C17.8738 7.01883 17.5791 5.01995 16.2785 3.71998C14.9779 2.42002 12.9788 2.1264 11.3593 2.99744C9.73979 3.86849 8.88279 5.69822 9.25042 7.5" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5013 10.75L9.24967 7.50085L2.98883 14.6542C2.56756 15.075 2.40279 15.6886 2.5566 16.2639C2.71041 16.8391 3.15943 17.2886 3.73452 17.443C4.3096 17.5975 4.92339 17.4334 5.34466 17.0125L12.5013 10.75V10.75Z" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>Лекция, мастер класс</span>
+                </div>
+              </a>
+              <div class="lk-speaker__tags">
+                <a href="#" class="lk-speaker__tag">Комплексное лечение</a>
+                <a href="#" class="lk-speaker__tag">Детство</a>
+                <a href="#" class="lk-speaker__tag">ВНЧС</a>
+                <a href="#" class="lk-speaker__tag">Абсолютный анкораж</a>
+                <a href="#" class="lk-speaker__tag">Диагностика</a>
+                <a href="#" class="lk-speaker__tag">Damon system</a>
+              </div>
+            </label>
+            <label class="lk-speaker">
+              <div class="lk-speaker__boxwrap">
+                <input type="checkbox" class="lk-speaker__box" data-lk-box value="ид спикера">
+                <i></i>
+              </div>
+              <a href="#" class="lk-speaker__speaker">
+                <div class="lk-speaker__avatar">
+                  <img src="@img/events/speaker.png" alt="image">
+                </div>
+                <div class="lk-speaker__name">Дьячкова Яна Юрьевна</div>
+                <div class="lk-speaker__city">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="10" cy="9.16663" r="2.5" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7148 13.8808L11.179 17.4167C10.5282 18.0667 9.47389 18.0667 8.82315 17.4167L5.28648 13.8808C2.68309 11.2773 2.68316 7.05627 5.28665 4.45283C7.89013 1.84938 12.1112 1.84938 14.7147 4.45283C17.3181 7.05627 17.3182 11.2773 14.7148 13.8808V13.8808Z" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>г. Москва</span>
+                </div>
+                <div class="lk-speaker__profile">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.5021 10.75C14.3041 11.1167 16.1333 10.2588 17.0036 8.6388C17.8738 7.01883 17.5791 5.01995 16.2785 3.71998C14.9779 2.42002 12.9788 2.1264 11.3593 2.99744C9.73979 3.86849 8.88279 5.69822 9.25042 7.5" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5013 10.75L9.24967 7.50085L2.98883 14.6542C2.56756 15.075 2.40279 15.6886 2.5566 16.2639C2.71041 16.8391 3.15943 17.2886 3.73452 17.443C4.3096 17.5975 4.92339 17.4334 5.34466 17.0125L12.5013 10.75V10.75Z" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>Лекция, мастер класс</span>
+                </div>
+              </a>
+              <div class="lk-speaker__tags">
+                <a href="#" class="lk-speaker__tag">Комплексное лечение</a>
+                <a href="#" class="lk-speaker__tag">Детство</a>
+                <a href="#" class="lk-speaker__tag">ВНЧС</a>
+                <a href="#" class="lk-speaker__tag">Абсолютный анкораж</a>
+                <a href="#" class="lk-speaker__tag">Диагностика</a>
+              </div>
+            </label>
+            <label class="lk-speaker">
+              <div class="lk-speaker__boxwrap">
+                <input type="checkbox" class="lk-speaker__box" data-lk-box value="ид спикера">
+                <i></i>
+              </div>
+              <a href="#" class="lk-speaker__speaker">
+                <div class="lk-speaker__avatar">
+                  <img src="@img/events/speaker.png" alt="image">
+                </div>
+                <div class="lk-speaker__name">Дьячкова Яна Юрьевна</div>
+                <div class="lk-speaker__city">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="10" cy="9.16663" r="2.5" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7148 13.8808L11.179 17.4167C10.5282 18.0667 9.47389 18.0667 8.82315 17.4167L5.28648 13.8808C2.68309 11.2773 2.68316 7.05627 5.28665 4.45283C7.89013 1.84938 12.1112 1.84938 14.7147 4.45283C17.3181 7.05627 17.3182 11.2773 14.7148 13.8808V13.8808Z" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>г. Москва</span>
+                </div>
+                <div class="lk-speaker__profile">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.5021 10.75C14.3041 11.1167 16.1333 10.2588 17.0036 8.6388C17.8738 7.01883 17.5791 5.01995 16.2785 3.71998C14.9779 2.42002 12.9788 2.1264 11.3593 2.99744C9.73979 3.86849 8.88279 5.69822 9.25042 7.5" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5013 10.75L9.24967 7.50085L2.98883 14.6542C2.56756 15.075 2.40279 15.6886 2.5566 16.2639C2.71041 16.8391 3.15943 17.2886 3.73452 17.443C4.3096 17.5975 4.92339 17.4334 5.34466 17.0125L12.5013 10.75V10.75Z" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>Лекция, мастер класс</span>
+                </div>
+              </a>
+              <div class="lk-speaker__tags">
+                <a href="#" class="lk-speaker__tag">Комплексное лечение</a>
+                <a href="#" class="lk-speaker__tag">Детство</a>
+                <a href="#" class="lk-speaker__tag">ВНЧС</a>
+              </div>
+            </label>
+            <label class="lk-speaker">
+              <div class="lk-speaker__boxwrap">
+                <input type="checkbox" class="lk-speaker__box" data-lk-box value="ид спикера">
+                <i></i>
+              </div>
+              <a href="#" class="lk-speaker__speaker">
+                <div class="lk-speaker__avatar">
+                  <img src="@img/events/speaker.png" alt="image">
+                </div>
+                <div class="lk-speaker__name">Дьячкова Яна Юрьевна</div>
+                <div class="lk-speaker__city">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="10" cy="9.16663" r="2.5" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7148 13.8808L11.179 17.4167C10.5282 18.0667 9.47389 18.0667 8.82315 17.4167L5.28648 13.8808C2.68309 11.2773 2.68316 7.05627 5.28665 4.45283C7.89013 1.84938 12.1112 1.84938 14.7147 4.45283C17.3181 7.05627 17.3182 11.2773 14.7148 13.8808V13.8808Z" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>г. Москва</span>
+                </div>
+                <div class="lk-speaker__profile">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.5021 10.75C14.3041 11.1167 16.1333 10.2588 17.0036 8.6388C17.8738 7.01883 17.5791 5.01995 16.2785 3.71998C14.9779 2.42002 12.9788 2.1264 11.3593 2.99744C9.73979 3.86849 8.88279 5.69822 9.25042 7.5" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5013 10.75L9.24967 7.50085L2.98883 14.6542C2.56756 15.075 2.40279 15.6886 2.5566 16.2639C2.71041 16.8391 3.15943 17.2886 3.73452 17.443C4.3096 17.5975 4.92339 17.4334 5.34466 17.0125L12.5013 10.75V10.75Z" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>Лекция, мастер класс</span>
+                </div>
+              </a>
+              <div class="lk-speaker__tags">
+                <a href="#" class="lk-speaker__tag">Комплексное лечение</a>
+                <a href="#" class="lk-speaker__tag">Детство</a>
+                <a href="#" class="lk-speaker__tag">ВНЧС</a>
+              </div>
+            </label>
+            <label class="lk-speaker">
+              <div class="lk-speaker__boxwrap">
+                <input type="checkbox" class="lk-speaker__box" data-lk-box value="ид спикера">
+                <i></i>
+              </div>
+              <a href="#" class="lk-speaker__speaker">
+                <div class="lk-speaker__avatar">
+                  <img src="@img/events/speaker.png" alt="image">
+                </div>
+                <div class="lk-speaker__name">Дьячкова Яна Юрьевна</div>
+                <div class="lk-speaker__city">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="10" cy="9.16663" r="2.5" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7148 13.8808L11.179 17.4167C10.5282 18.0667 9.47389 18.0667 8.82315 17.4167L5.28648 13.8808C2.68309 11.2773 2.68316 7.05627 5.28665 4.45283C7.89013 1.84938 12.1112 1.84938 14.7147 4.45283C17.3181 7.05627 17.3182 11.2773 14.7148 13.8808V13.8808Z" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>г. Москва</span>
+                </div>
+                <div class="lk-speaker__profile">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.5021 10.75C14.3041 11.1167 16.1333 10.2588 17.0036 8.6388C17.8738 7.01883 17.5791 5.01995 16.2785 3.71998C14.9779 2.42002 12.9788 2.1264 11.3593 2.99744C9.73979 3.86849 8.88279 5.69822 9.25042 7.5" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5013 10.75L9.24967 7.50085L2.98883 14.6542C2.56756 15.075 2.40279 15.6886 2.5566 16.2639C2.71041 16.8391 3.15943 17.2886 3.73452 17.443C4.3096 17.5975 4.92339 17.4334 5.34466 17.0125L12.5013 10.75V10.75Z" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>Лекция, мастер класс</span>
+                </div>
+              </a>
+              <div class="lk-speaker__tags">
+                <a href="#" class="lk-speaker__tag">Комплексное лечение</a>
+                <a href="#" class="lk-speaker__tag">Детство</a>
+                <a href="#" class="lk-speaker__tag">ВНЧС</a>
+                <a href="#" class="lk-speaker__tag">Абсолютный анкораж</a>
+                <a href="#" class="lk-speaker__tag">Диагностика</a>
+              </div>
+            </label>
+            <label class="lk-speaker">
+              <div class="lk-speaker__boxwrap">
+                <input type="checkbox" class="lk-speaker__box" data-lk-box value="ид спикера">
+                <i></i>
+              </div>
+              <a href="#" class="lk-speaker__speaker">
+                <div class="lk-speaker__avatar">
+                  <img src="@img/events/speaker.png" alt="image">
+                </div>
+                <div class="lk-speaker__name">Дьячкова Яна Юрьевна</div>
+                <div class="lk-speaker__city">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="10" cy="9.16663" r="2.5" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7148 13.8808L11.179 17.4167C10.5282 18.0667 9.47389 18.0667 8.82315 17.4167L5.28648 13.8808C2.68309 11.2773 2.68316 7.05627 5.28665 4.45283C7.89013 1.84938 12.1112 1.84938 14.7147 4.45283C17.3181 7.05627 17.3182 11.2773 14.7148 13.8808V13.8808Z" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>г. Москва</span>
+                </div>
+                <div class="lk-speaker__profile">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.5021 10.75C14.3041 11.1167 16.1333 10.2588 17.0036 8.6388C17.8738 7.01883 17.5791 5.01995 16.2785 3.71998C14.9779 2.42002 12.9788 2.1264 11.3593 2.99744C9.73979 3.86849 8.88279 5.69822 9.25042 7.5" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5013 10.75L9.24967 7.50085L2.98883 14.6542C2.56756 15.075 2.40279 15.6886 2.5566 16.2639C2.71041 16.8391 3.15943 17.2886 3.73452 17.443C4.3096 17.5975 4.92339 17.4334 5.34466 17.0125L12.5013 10.75V10.75Z" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>Лекция, мастер класс</span>
+                </div>
+              </a>
+              <div class="lk-speaker__tags">
+                <a href="#" class="lk-speaker__tag">Комплексное лечение</a>
+                <a href="#" class="lk-speaker__tag">Детство</a>
+                <a href="#" class="lk-speaker__tag">ВНЧС</a>
+                <a href="#" class="lk-speaker__tag">Абсолютный анкораж</a>
+                <a href="#" class="lk-speaker__tag">Диагностика</a>
+                <a href="#" class="lk-speaker__tag">Damon system</a>
+              </div>
+            </label>
+            <label class="lk-speaker">
+              <div class="lk-speaker__boxwrap">
+                <input type="checkbox" class="lk-speaker__box" data-lk-box value="ид спикера">
+                <i></i>
+              </div>
+              <a href="#" class="lk-speaker__speaker">
+                <div class="lk-speaker__avatar">
+                  <img src="@img/events/speaker.png" alt="image">
+                </div>
+                <div class="lk-speaker__name">Дьячкова Яна Юрьевна</div>
+                <div class="lk-speaker__city">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="10" cy="9.16663" r="2.5" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7148 13.8808L11.179 17.4167C10.5282 18.0667 9.47389 18.0667 8.82315 17.4167L5.28648 13.8808C2.68309 11.2773 2.68316 7.05627 5.28665 4.45283C7.89013 1.84938 12.1112 1.84938 14.7147 4.45283C17.3181 7.05627 17.3182 11.2773 14.7148 13.8808V13.8808Z" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>г. Москва</span>
+                </div>
+                <div class="lk-speaker__profile">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.5021 10.75C14.3041 11.1167 16.1333 10.2588 17.0036 8.6388C17.8738 7.01883 17.5791 5.01995 16.2785 3.71998C14.9779 2.42002 12.9788 2.1264 11.3593 2.99744C9.73979 3.86849 8.88279 5.69822 9.25042 7.5" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5013 10.75L9.24967 7.50085L2.98883 14.6542C2.56756 15.075 2.40279 15.6886 2.5566 16.2639C2.71041 16.8391 3.15943 17.2886 3.73452 17.443C4.3096 17.5975 4.92339 17.4334 5.34466 17.0125L12.5013 10.75V10.75Z" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>Лекция, мастер класс</span>
+                </div>
+              </a>
+              <div class="lk-speaker__tags">
+                <a href="#" class="lk-speaker__tag">Комплексное лечение</a>
+                <a href="#" class="lk-speaker__tag">Детство</a>
+                <a href="#" class="lk-speaker__tag">ВНЧС</a>
+                <a href="#" class="lk-speaker__tag">Абсолютный анкораж</a>
+                <a href="#" class="lk-speaker__tag">Диагностика</a>
+                <a href="#" class="lk-speaker__tag">Damon system</a>
+              </div>
+            </label>
+            <label class="lk-speaker">
+              <div class="lk-speaker__boxwrap">
+                <input type="checkbox" class="lk-speaker__box" data-lk-box value="ид спикера">
+                <i></i>
+              </div>
+              <a href="#" class="lk-speaker__speaker">
+                <div class="lk-speaker__avatar">
+                  <img src="@img/events/speaker.png" alt="image">
+                </div>
+                <div class="lk-speaker__name">Дьячкова Яна Юрьевна</div>
+                <div class="lk-speaker__city">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="10" cy="9.16663" r="2.5" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7148 13.8808L11.179 17.4167C10.5282 18.0667 9.47389 18.0667 8.82315 17.4167L5.28648 13.8808C2.68309 11.2773 2.68316 7.05627 5.28665 4.45283C7.89013 1.84938 12.1112 1.84938 14.7147 4.45283C17.3181 7.05627 17.3182 11.2773 14.7148 13.8808V13.8808Z" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>г. Москва</span>
+                </div>
+                <div class="lk-speaker__profile">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.5021 10.75C14.3041 11.1167 16.1333 10.2588 17.0036 8.6388C17.8738 7.01883 17.5791 5.01995 16.2785 3.71998C14.9779 2.42002 12.9788 2.1264 11.3593 2.99744C9.73979 3.86849 8.88279 5.69822 9.25042 7.5" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5013 10.75L9.24967 7.50085L2.98883 14.6542C2.56756 15.075 2.40279 15.6886 2.5566 16.2639C2.71041 16.8391 3.15943 17.2886 3.73452 17.443C4.3096 17.5975 4.92339 17.4334 5.34466 17.0125L12.5013 10.75V10.75Z" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>Лекция, мастер класс</span>
+                </div>
+              </a>
+              <div class="lk-speaker__tags">
+                <a href="#" class="lk-speaker__tag">Комплексное лечение</a>
+                <a href="#" class="lk-speaker__tag">Детство</a>
+                <a href="#" class="lk-speaker__tag">ВНЧС</a>
+                <a href="#" class="lk-speaker__tag">Абсолютный анкораж</a>
+                <a href="#" class="lk-speaker__tag">Диагностика</a>
+              </div>
+            </label>
+            <label class="lk-speaker">
+              <div class="lk-speaker__boxwrap">
+                <input type="checkbox" class="lk-speaker__box" data-lk-box value="ид спикера">
+                <i></i>
+              </div>
+              <a href="#" class="lk-speaker__speaker">
+                <div class="lk-speaker__avatar">
+                  <img src="@img/events/speaker.png" alt="image">
+                </div>
+                <div class="lk-speaker__name">Дьячкова Яна Юрьевна</div>
+                <div class="lk-speaker__city">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="10" cy="9.16663" r="2.5" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7148 13.8808L11.179 17.4167C10.5282 18.0667 9.47389 18.0667 8.82315 17.4167L5.28648 13.8808C2.68309 11.2773 2.68316 7.05627 5.28665 4.45283C7.89013 1.84938 12.1112 1.84938 14.7147 4.45283C17.3181 7.05627 17.3182 11.2773 14.7148 13.8808V13.8808Z" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>г. Москва</span>
+                </div>
+                <div class="lk-speaker__profile">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.5021 10.75C14.3041 11.1167 16.1333 10.2588 17.0036 8.6388C17.8738 7.01883 17.5791 5.01995 16.2785 3.71998C14.9779 2.42002 12.9788 2.1264 11.3593 2.99744C9.73979 3.86849 8.88279 5.69822 9.25042 7.5" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5013 10.75L9.24967 7.50085L2.98883 14.6542C2.56756 15.075 2.40279 15.6886 2.5566 16.2639C2.71041 16.8391 3.15943 17.2886 3.73452 17.443C4.3096 17.5975 4.92339 17.4334 5.34466 17.0125L12.5013 10.75V10.75Z" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>Лекция, мастер класс</span>
+                </div>
+              </a>
+              <div class="lk-speaker__tags">
+                <a href="#" class="lk-speaker__tag">Комплексное лечение</a>
+                <a href="#" class="lk-speaker__tag">Детство</a>
+                <a href="#" class="lk-speaker__tag">ВНЧС</a>
+              </div>
+            </label>
+            <label class="lk-speaker">
+              <div class="lk-speaker__boxwrap">
+                <input type="checkbox" class="lk-speaker__box" data-lk-box value="ид спикера">
+                <i></i>
+              </div>
+              <a href="#" class="lk-speaker__speaker">
+                <div class="lk-speaker__avatar">
+                  <img src="@img/events/speaker.png" alt="image">
+                </div>
+                <div class="lk-speaker__name">Дьячкова Яна Юрьевна</div>
+                <div class="lk-speaker__city">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="10" cy="9.16663" r="2.5" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7148 13.8808L11.179 17.4167C10.5282 18.0667 9.47389 18.0667 8.82315 17.4167L5.28648 13.8808C2.68309 11.2773 2.68316 7.05627 5.28665 4.45283C7.89013 1.84938 12.1112 1.84938 14.7147 4.45283C17.3181 7.05627 17.3182 11.2773 14.7148 13.8808V13.8808Z" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>г. Москва</span>
+                </div>
+                <div class="lk-speaker__profile">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.5021 10.75C14.3041 11.1167 16.1333 10.2588 17.0036 8.6388C17.8738 7.01883 17.5791 5.01995 16.2785 3.71998C14.9779 2.42002 12.9788 2.1264 11.3593 2.99744C9.73979 3.86849 8.88279 5.69822 9.25042 7.5" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5013 10.75L9.24967 7.50085L2.98883 14.6542C2.56756 15.075 2.40279 15.6886 2.5566 16.2639C2.71041 16.8391 3.15943 17.2886 3.73452 17.443C4.3096 17.5975 4.92339 17.4334 5.34466 17.0125L12.5013 10.75V10.75Z" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>Лекция, мастер класс</span>
+                </div>
+              </a>
+              <div class="lk-speaker__tags">
+                <a href="#" class="lk-speaker__tag">Комплексное лечение</a>
+                <a href="#" class="lk-speaker__tag">Детство</a>
+                <a href="#" class="lk-speaker__tag">ВНЧС</a>
+              </div>
+            </label>
+            <label class="lk-speaker">
+              <div class="lk-speaker__boxwrap">
+                <input type="checkbox" class="lk-speaker__box" data-lk-box value="ид спикера">
+                <i></i>
+              </div>
+              <a href="#" class="lk-speaker__speaker">
+                <div class="lk-speaker__avatar">
+                  <img src="@img/events/speaker.png" alt="image">
+                </div>
+                <div class="lk-speaker__name">Дьячкова Яна Юрьевна</div>
+                <div class="lk-speaker__city">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="10" cy="9.16663" r="2.5" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7148 13.8808L11.179 17.4167C10.5282 18.0667 9.47389 18.0667 8.82315 17.4167L5.28648 13.8808C2.68309 11.2773 2.68316 7.05627 5.28665 4.45283C7.89013 1.84938 12.1112 1.84938 14.7147 4.45283C17.3181 7.05627 17.3182 11.2773 14.7148 13.8808V13.8808Z" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>г. Москва</span>
+                </div>
+                <div class="lk-speaker__profile">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.5021 10.75C14.3041 11.1167 16.1333 10.2588 17.0036 8.6388C17.8738 7.01883 17.5791 5.01995 16.2785 3.71998C14.9779 2.42002 12.9788 2.1264 11.3593 2.99744C9.73979 3.86849 8.88279 5.69822 9.25042 7.5" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5013 10.75L9.24967 7.50085L2.98883 14.6542C2.56756 15.075 2.40279 15.6886 2.5566 16.2639C2.71041 16.8391 3.15943 17.2886 3.73452 17.443C4.3096 17.5975 4.92339 17.4334 5.34466 17.0125L12.5013 10.75V10.75Z" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>Лекция, мастер класс</span>
+                </div>
+              </a>
+              <div class="lk-speaker__tags">
+                <a href="#" class="lk-speaker__tag">Комплексное лечение</a>
+                <a href="#" class="lk-speaker__tag">Детство</a>
+                <a href="#" class="lk-speaker__tag">ВНЧС</a>
+                <a href="#" class="lk-speaker__tag">Абсолютный анкораж</a>
+                <a href="#" class="lk-speaker__tag">Диагностика</a>
+              </div>
+            </label>
+            <label class="lk-speaker">
+              <div class="lk-speaker__boxwrap">
+                <input type="checkbox" class="lk-speaker__box" data-lk-box value="ид спикера">
+                <i></i>
+              </div>
+              <a href="#" class="lk-speaker__speaker">
+                <div class="lk-speaker__avatar">
+                  <img src="@img/events/speaker.png" alt="image">
+                </div>
+                <div class="lk-speaker__name">Дьячкова Яна Юрьевна</div>
+                <div class="lk-speaker__city">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="10" cy="9.16663" r="2.5" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7148 13.8808L11.179 17.4167C10.5282 18.0667 9.47389 18.0667 8.82315 17.4167L5.28648 13.8808C2.68309 11.2773 2.68316 7.05627 5.28665 4.45283C7.89013 1.84938 12.1112 1.84938 14.7147 4.45283C17.3181 7.05627 17.3182 11.2773 14.7148 13.8808V13.8808Z" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>г. Москва</span>
+                </div>
+                <div class="lk-speaker__profile">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.5021 10.75C14.3041 11.1167 16.1333 10.2588 17.0036 8.6388C17.8738 7.01883 17.5791 5.01995 16.2785 3.71998C14.9779 2.42002 12.9788 2.1264 11.3593 2.99744C9.73979 3.86849 8.88279 5.69822 9.25042 7.5" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5013 10.75L9.24967 7.50085L2.98883 14.6542C2.56756 15.075 2.40279 15.6886 2.5566 16.2639C2.71041 16.8391 3.15943 17.2886 3.73452 17.443C4.3096 17.5975 4.92339 17.4334 5.34466 17.0125L12.5013 10.75V10.75Z" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>Лекция, мастер класс</span>
+                </div>
+              </a>
+              <div class="lk-speaker__tags">
+                <a href="#" class="lk-speaker__tag">Комплексное лечение</a>
+                <a href="#" class="lk-speaker__tag">Детство</a>
+                <a href="#" class="lk-speaker__tag">ВНЧС</a>
+                <a href="#" class="lk-speaker__tag">Абсолютный анкораж</a>
+                <a href="#" class="lk-speaker__tag">Диагностика</a>
+                <a href="#" class="lk-speaker__tag">Damon system</a>
+              </div>
+            </label>
+            <label class="lk-speaker">
+              <div class="lk-speaker__boxwrap">
+                <input type="checkbox" class="lk-speaker__box" data-lk-box value="ид спикера">
+                <i></i>
+              </div>
+              <a href="#" class="lk-speaker__speaker">
+                <div class="lk-speaker__avatar">
+                  <img src="@img/events/speaker.png" alt="image">
+                </div>
+                <div class="lk-speaker__name">Дьячкова Яна Юрьевна</div>
+                <div class="lk-speaker__city">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="10" cy="9.16663" r="2.5" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7148 13.8808L11.179 17.4167C10.5282 18.0667 9.47389 18.0667 8.82315 17.4167L5.28648 13.8808C2.68309 11.2773 2.68316 7.05627 5.28665 4.45283C7.89013 1.84938 12.1112 1.84938 14.7147 4.45283C17.3181 7.05627 17.3182 11.2773 14.7148 13.8808V13.8808Z" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>г. Москва</span>
+                </div>
+                <div class="lk-speaker__profile">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.5021 10.75C14.3041 11.1167 16.1333 10.2588 17.0036 8.6388C17.8738 7.01883 17.5791 5.01995 16.2785 3.71998C14.9779 2.42002 12.9788 2.1264 11.3593 2.99744C9.73979 3.86849 8.88279 5.69822 9.25042 7.5" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5013 10.75L9.24967 7.50085L2.98883 14.6542C2.56756 15.075 2.40279 15.6886 2.5566 16.2639C2.71041 16.8391 3.15943 17.2886 3.73452 17.443C4.3096 17.5975 4.92339 17.4334 5.34466 17.0125L12.5013 10.75V10.75Z" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>Лекция, мастер класс</span>
+                </div>
+              </a>
+              <div class="lk-speaker__tags">
+                <a href="#" class="lk-speaker__tag">Комплексное лечение</a>
+                <a href="#" class="lk-speaker__tag">Детство</a>
+                <a href="#" class="lk-speaker__tag">ВНЧС</a>
+                <a href="#" class="lk-speaker__tag">Абсолютный анкораж</a>
+                <a href="#" class="lk-speaker__tag">Диагностика</a>
+                <a href="#" class="lk-speaker__tag">Damon system</a>
+              </div>
+            </label>
+            <label class="lk-speaker">
+              <div class="lk-speaker__boxwrap">
+                <input type="checkbox" class="lk-speaker__box" data-lk-box value="ид спикера">
+                <i></i>
+              </div>
+              <a href="#" class="lk-speaker__speaker">
+                <div class="lk-speaker__avatar">
+                  <img src="@img/events/speaker.png" alt="image">
+                </div>
+                <div class="lk-speaker__name">Дьячкова Яна Юрьевна</div>
+                <div class="lk-speaker__city">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="10" cy="9.16663" r="2.5" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7148 13.8808L11.179 17.4167C10.5282 18.0667 9.47389 18.0667 8.82315 17.4167L5.28648 13.8808C2.68309 11.2773 2.68316 7.05627 5.28665 4.45283C7.89013 1.84938 12.1112 1.84938 14.7147 4.45283C17.3181 7.05627 17.3182 11.2773 14.7148 13.8808V13.8808Z" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>г. Москва</span>
+                </div>
+                <div class="lk-speaker__profile">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.5021 10.75C14.3041 11.1167 16.1333 10.2588 17.0036 8.6388C17.8738 7.01883 17.5791 5.01995 16.2785 3.71998C14.9779 2.42002 12.9788 2.1264 11.3593 2.99744C9.73979 3.86849 8.88279 5.69822 9.25042 7.5" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5013 10.75L9.24967 7.50085L2.98883 14.6542C2.56756 15.075 2.40279 15.6886 2.5566 16.2639C2.71041 16.8391 3.15943 17.2886 3.73452 17.443C4.3096 17.5975 4.92339 17.4334 5.34466 17.0125L12.5013 10.75V10.75Z" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>Лекция, мастер класс</span>
+                </div>
+              </a>
+              <div class="lk-speaker__tags">
+                <a href="#" class="lk-speaker__tag">Комплексное лечение</a>
+                <a href="#" class="lk-speaker__tag">Детство</a>
+                <a href="#" class="lk-speaker__tag">ВНЧС</a>
+                <a href="#" class="lk-speaker__tag">Абсолютный анкораж</a>
+                <a href="#" class="lk-speaker__tag">Диагностика</a>
+              </div>
+            </label>
+            <label class="lk-speaker">
+              <div class="lk-speaker__boxwrap">
+                <input type="checkbox" class="lk-speaker__box" data-lk-box value="ид спикера">
+                <i></i>
+              </div>
+              <a href="#" class="lk-speaker__speaker">
+                <div class="lk-speaker__avatar">
+                  <img src="@img/events/speaker.png" alt="image">
+                </div>
+                <div class="lk-speaker__name">Дьячкова Яна Юрьевна</div>
+                <div class="lk-speaker__city">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="10" cy="9.16663" r="2.5" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7148 13.8808L11.179 17.4167C10.5282 18.0667 9.47389 18.0667 8.82315 17.4167L5.28648 13.8808C2.68309 11.2773 2.68316 7.05627 5.28665 4.45283C7.89013 1.84938 12.1112 1.84938 14.7147 4.45283C17.3181 7.05627 17.3182 11.2773 14.7148 13.8808V13.8808Z" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>г. Москва</span>
+                </div>
+                <div class="lk-speaker__profile">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.5021 10.75C14.3041 11.1167 16.1333 10.2588 17.0036 8.6388C17.8738 7.01883 17.5791 5.01995 16.2785 3.71998C14.9779 2.42002 12.9788 2.1264 11.3593 2.99744C9.73979 3.86849 8.88279 5.69822 9.25042 7.5" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5013 10.75L9.24967 7.50085L2.98883 14.6542C2.56756 15.075 2.40279 15.6886 2.5566 16.2639C2.71041 16.8391 3.15943 17.2886 3.73452 17.443C4.3096 17.5975 4.92339 17.4334 5.34466 17.0125L12.5013 10.75V10.75Z" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>Лекция, мастер класс</span>
+                </div>
+              </a>
+              <div class="lk-speaker__tags">
+                <a href="#" class="lk-speaker__tag">Комплексное лечение</a>
+                <a href="#" class="lk-speaker__tag">Детство</a>
+                <a href="#" class="lk-speaker__tag">ВНЧС</a>
+              </div>
+            </label>
+            <label class="lk-speaker">
+              <div class="lk-speaker__boxwrap">
+                <input type="checkbox" class="lk-speaker__box" data-lk-box value="ид спикера">
+                <i></i>
+              </div>
+              <a href="#" class="lk-speaker__speaker">
+                <div class="lk-speaker__avatar">
+                  <img src="@img/events/speaker.png" alt="image">
+                </div>
+                <div class="lk-speaker__name">Дьячкова Яна Юрьевна</div>
+                <div class="lk-speaker__city">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="10" cy="9.16663" r="2.5" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7148 13.8808L11.179 17.4167C10.5282 18.0667 9.47389 18.0667 8.82315 17.4167L5.28648 13.8808C2.68309 11.2773 2.68316 7.05627 5.28665 4.45283C7.89013 1.84938 12.1112 1.84938 14.7147 4.45283C17.3181 7.05627 17.3182 11.2773 14.7148 13.8808V13.8808Z" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>г. Москва</span>
+                </div>
+                <div class="lk-speaker__profile">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.5021 10.75C14.3041 11.1167 16.1333 10.2588 17.0036 8.6388C17.8738 7.01883 17.5791 5.01995 16.2785 3.71998C14.9779 2.42002 12.9788 2.1264 11.3593 2.99744C9.73979 3.86849 8.88279 5.69822 9.25042 7.5" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5013 10.75L9.24967 7.50085L2.98883 14.6542C2.56756 15.075 2.40279 15.6886 2.5566 16.2639C2.71041 16.8391 3.15943 17.2886 3.73452 17.443C4.3096 17.5975 4.92339 17.4334 5.34466 17.0125L12.5013 10.75V10.75Z" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>Лекция, мастер класс</span>
+                </div>
+              </a>
+              <div class="lk-speaker__tags">
+                <a href="#" class="lk-speaker__tag">Комплексное лечение</a>
+                <a href="#" class="lk-speaker__tag">Детство</a>
+                <a href="#" class="lk-speaker__tag">ВНЧС</a>
+              </div>
+            </label>
+            <label class="lk-speaker">
+              <div class="lk-speaker__boxwrap">
+                <input type="checkbox" class="lk-speaker__box" data-lk-box value="ид спикера">
+                <i></i>
+              </div>
+              <a href="#" class="lk-speaker__speaker">
+                <div class="lk-speaker__avatar">
+                  <img src="@img/events/speaker.png" alt="image">
+                </div>
+                <div class="lk-speaker__name">Дьячкова Яна Юрьевна</div>
+                <div class="lk-speaker__city">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="10" cy="9.16663" r="2.5" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7148 13.8808L11.179 17.4167C10.5282 18.0667 9.47389 18.0667 8.82315 17.4167L5.28648 13.8808C2.68309 11.2773 2.68316 7.05627 5.28665 4.45283C7.89013 1.84938 12.1112 1.84938 14.7147 4.45283C17.3181 7.05627 17.3182 11.2773 14.7148 13.8808V13.8808Z" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>г. Москва</span>
+                </div>
+                <div class="lk-speaker__profile">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.5021 10.75C14.3041 11.1167 16.1333 10.2588 17.0036 8.6388C17.8738 7.01883 17.5791 5.01995 16.2785 3.71998C14.9779 2.42002 12.9788 2.1264 11.3593 2.99744C9.73979 3.86849 8.88279 5.69822 9.25042 7.5" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5013 10.75L9.24967 7.50085L2.98883 14.6542C2.56756 15.075 2.40279 15.6886 2.5566 16.2639C2.71041 16.8391 3.15943 17.2886 3.73452 17.443C4.3096 17.5975 4.92339 17.4334 5.34466 17.0125L12.5013 10.75V10.75Z" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>Лекция, мастер класс</span>
+                </div>
+              </a>
+              <div class="lk-speaker__tags">
+                <a href="#" class="lk-speaker__tag">Комплексное лечение</a>
+                <a href="#" class="lk-speaker__tag">Детство</a>
+                <a href="#" class="lk-speaker__tag">ВНЧС</a>
+                <a href="#" class="lk-speaker__tag">Абсолютный анкораж</a>
+                <a href="#" class="lk-speaker__tag">Диагностика</a>
+              </div>
+            </label>
+            <label class="lk-speaker">
+              <div class="lk-speaker__boxwrap">
+                <input type="checkbox" class="lk-speaker__box" data-lk-box value="ид спикера">
+                <i></i>
+              </div>
+              <a href="#" class="lk-speaker__speaker">
+                <div class="lk-speaker__avatar">
+                  <img src="@img/events/speaker.png" alt="image">
+                </div>
+                <div class="lk-speaker__name">Дьячкова Яна Юрьевна</div>
+                <div class="lk-speaker__city">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="10" cy="9.16663" r="2.5" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7148 13.8808L11.179 17.4167C10.5282 18.0667 9.47389 18.0667 8.82315 17.4167L5.28648 13.8808C2.68309 11.2773 2.68316 7.05627 5.28665 4.45283C7.89013 1.84938 12.1112 1.84938 14.7147 4.45283C17.3181 7.05627 17.3182 11.2773 14.7148 13.8808V13.8808Z" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>г. Москва</span>
+                </div>
+                <div class="lk-speaker__profile">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.5021 10.75C14.3041 11.1167 16.1333 10.2588 17.0036 8.6388C17.8738 7.01883 17.5791 5.01995 16.2785 3.71998C14.9779 2.42002 12.9788 2.1264 11.3593 2.99744C9.73979 3.86849 8.88279 5.69822 9.25042 7.5" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5013 10.75L9.24967 7.50085L2.98883 14.6542C2.56756 15.075 2.40279 15.6886 2.5566 16.2639C2.71041 16.8391 3.15943 17.2886 3.73452 17.443C4.3096 17.5975 4.92339 17.4334 5.34466 17.0125L12.5013 10.75V10.75Z" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>Лекция, мастер класс</span>
+                </div>
+              </a>
+              <div class="lk-speaker__tags">
+                <a href="#" class="lk-speaker__tag">Комплексное лечение</a>
+                <a href="#" class="lk-speaker__tag">Детство</a>
+                <a href="#" class="lk-speaker__tag">ВНЧС</a>
+                <a href="#" class="lk-speaker__tag">Абсолютный анкораж</a>
+                <a href="#" class="lk-speaker__tag">Диагностика</a>
+                <a href="#" class="lk-speaker__tag">Damon system</a>
+              </div>
+            </label>
+            <label class="lk-speaker">
+              <div class="lk-speaker__boxwrap">
+                <input type="checkbox" class="lk-speaker__box" data-lk-box value="ид спикера">
+                <i></i>
+              </div>
+              <a href="#" class="lk-speaker__speaker">
+                <div class="lk-speaker__avatar">
+                  <img src="@img/events/speaker.png" alt="image">
+                </div>
+                <div class="lk-speaker__name">Дьячкова Яна Юрьевна</div>
+                <div class="lk-speaker__city">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="10" cy="9.16663" r="2.5" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7148 13.8808L11.179 17.4167C10.5282 18.0667 9.47389 18.0667 8.82315 17.4167L5.28648 13.8808C2.68309 11.2773 2.68316 7.05627 5.28665 4.45283C7.89013 1.84938 12.1112 1.84938 14.7147 4.45283C17.3181 7.05627 17.3182 11.2773 14.7148 13.8808V13.8808Z" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>г. Москва</span>
+                </div>
+                <div class="lk-speaker__profile">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.5021 10.75C14.3041 11.1167 16.1333 10.2588 17.0036 8.6388C17.8738 7.01883 17.5791 5.01995 16.2785 3.71998C14.9779 2.42002 12.9788 2.1264 11.3593 2.99744C9.73979 3.86849 8.88279 5.69822 9.25042 7.5" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5013 10.75L9.24967 7.50085L2.98883 14.6542C2.56756 15.075 2.40279 15.6886 2.5566 16.2639C2.71041 16.8391 3.15943 17.2886 3.73452 17.443C4.3096 17.5975 4.92339 17.4334 5.34466 17.0125L12.5013 10.75V10.75Z" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>Лекция, мастер класс</span>
+                </div>
+              </a>
+              <div class="lk-speaker__tags">
+                <a href="#" class="lk-speaker__tag">Комплексное лечение</a>
+                <a href="#" class="lk-speaker__tag">Детство</a>
+                <a href="#" class="lk-speaker__tag">ВНЧС</a>
+                <a href="#" class="lk-speaker__tag">Абсолютный анкораж</a>
+                <a href="#" class="lk-speaker__tag">Диагностика</a>
+                <a href="#" class="lk-speaker__tag">Damon system</a>
+              </div>
+            </label>
+            <label class="lk-speaker">
+              <div class="lk-speaker__boxwrap">
+                <input type="checkbox" class="lk-speaker__box" data-lk-box value="ид спикера">
+                <i></i>
+              </div>
+              <a href="#" class="lk-speaker__speaker">
+                <div class="lk-speaker__avatar">
+                  <img src="@img/events/speaker.png" alt="image">
+                </div>
+                <div class="lk-speaker__name">Дьячкова Яна Юрьевна</div>
+                <div class="lk-speaker__city">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="10" cy="9.16663" r="2.5" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7148 13.8808L11.179 17.4167C10.5282 18.0667 9.47389 18.0667 8.82315 17.4167L5.28648 13.8808C2.68309 11.2773 2.68316 7.05627 5.28665 4.45283C7.89013 1.84938 12.1112 1.84938 14.7147 4.45283C17.3181 7.05627 17.3182 11.2773 14.7148 13.8808V13.8808Z" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>г. Москва</span>
+                </div>
+                <div class="lk-speaker__profile">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.5021 10.75C14.3041 11.1167 16.1333 10.2588 17.0036 8.6388C17.8738 7.01883 17.5791 5.01995 16.2785 3.71998C14.9779 2.42002 12.9788 2.1264 11.3593 2.99744C9.73979 3.86849 8.88279 5.69822 9.25042 7.5" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5013 10.75L9.24967 7.50085L2.98883 14.6542C2.56756 15.075 2.40279 15.6886 2.5566 16.2639C2.71041 16.8391 3.15943 17.2886 3.73452 17.443C4.3096 17.5975 4.92339 17.4334 5.34466 17.0125L12.5013 10.75V10.75Z" stroke="#111111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>Лекция, мастер класс</span>
+                </div>
+              </a>
+              <div class="lk-speaker__tags">
+                <a href="#" class="lk-speaker__tag">Комплексное лечение</a>
+                <a href="#" class="lk-speaker__tag">Детство</a>
+                <a href="#" class="lk-speaker__tag">ВНЧС</a>
+                <a href="#" class="lk-speaker__tag">Абсолютный анкораж</a>
+                <a href="#" class="lk-speaker__tag">Диагностика</a>
+              </div>
+            </label>
+          </div>
+        </section>
+        <section class="interesting">
+          <div class="interesting__container">
+            <div class="interesting__head section-head">
+              <h2 class="interesting__title section-title">Вам может быть интересно</h2>
+              <a href="#" class="interesting__all section-all">Смотреть все</a>
+            </div>
+            <div class="interesting__slider splide">
+              <div class="interesting__track splide__track">
+                <div class="interesting__list splide__list">
+                  <div class="interesting__slide events__item item-events splide__slide" data-event>
+                    <input type="hidden" data-type="hidden" data-name="name" value="Полная диагностика дисфункций ВНЧС в ортодонтической практике. Модуль 1, 03-04.02.23, Я.Ю.Дьячкова, Ставрополь">
+                    <input type="hidden" checked data-type="radio" data-name="discount_1" value="some value" data-black-text="Без скидок - 21 000" data-stars="10">
+                    <input type="hidden" data-type="radio" data-name="discount_1" value="some value" data-black-text="Ординаторам (30%) - 14 700 <font class='rub'>i</font>" data-grey-text="Предложение действует до 01.02.23" data-stars="10">
+                    <input type="hidden" data-type="radio" data-name="discount_1" value="some value" data-black-text='Врачам 1-2 года (30%) - 14 700 <font class="rub">i</font>' data-grey-text="Предложение действует до 01.02.23" data-stars="10">
+                    <input type="hidden" data-type="radio" data-name="discount_1" value="some value" data-black-text='Преподаватель (30%) - 14 700 <font class="rub">i</font>' data-stars="10">
+                    <input type="hidden" data-type="radio" data-name="discount_1" value="some value" data-black-text='Звездами (50%) - 14 700 <font class="rub">i</font>' data-grey-text="Звездами вы можете оплатить не более 50% от стоимости курса. <br>Подробнее про звезды читайте <a href='#'>на странице</a>" data-stars="10">
+                    <div class="item-events__head">
+                      <span>Клуб Ormco</span>
+                      <div class="item-events__stars" data-tippy-stars="Количество звезд, которое вы получите за участие в мероприятии" data-position="bottom-end">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M6.54077 1.06637C6.71432 0.663388 7.28569 0.663389 7.45923 1.06637L9.04562 4.75014C9.11801 4.91822 9.27644 5.03333 9.45867 5.05024L13.4524 5.42064C13.8892 5.46116 14.0658 6.00457 13.7362 6.29414L10.7229 8.94124C10.5854 9.06202 10.5249 9.24828 10.5652 9.42681L11.447 13.3395C11.5435 13.7675 11.0812 14.1034 10.704 13.8794L7.25528 11.8316C7.09792 11.7381 6.90208 11.7381 6.74472 11.8316L3.29604 13.8793C2.91877 14.1034 2.45652 13.7675 2.55299 13.3395L3.43484 9.42681C3.47507 9.24827 3.41456 9.06202 3.27706 8.94124L0.263817 6.29414C-0.0658138 6.00456 0.11075 5.46116 0.547636 5.42064L4.54133 5.05024C4.72356 5.03333 4.88199 4.91822 4.95438 4.75014L6.54077 1.06637Z" fill="white"/>
+                        </svg>
+                        <span>50</span>
+                      </div>
+                    </div>
+                    <a href="#" class="item-events__image">
+                      <img src="@img/events/interesting.png" alt="image">
+                    </a>
+                    <div class="item-events__body">
+                      <a href="#" class="item-events__name">
+                        Полная диагностика дисфункций ВНЧС в ортодонтической практике. Модуль 1, 03-04.02.23, Я.Ю.Дьячкова, Ставрополь
+                      </a>
+                      <div class="item-events__level">
+                        <svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M17.7727 7.81862L9.59091 4.5459L1.40909 7.81862L9.59091 11.0913L17.7727 7.81862V12.7277" stroke="#8A8A8A" stroke-width="1.18182" stroke-linecap="round" stroke-linejoin="round"></path>
+													<path d="M4.68146 9.45508V13.8733C4.68146 15.2289 6.87933 16.3278 9.59055 16.3278C12.3018 16.3278 14.4996 15.2289 14.4996 13.8733V9.45508" stroke="#8A8A8A" stroke-width="1.18182" stroke-linecap="round" stroke-linejoin="round"></path>
+												</svg>
+                        <span>Базовый уровень</span>
+                        <span class="item-events__theme">
+                          <img src="@img/events/partner_1.png" alt="image">
+                        </span>
+                      </div>
+                      <ul class="item-events__info">
+                        <li>Дьячкова Яна Юрьевна</li>
+                        <li>3-5 октября 2022 г. (3 дня)</li>
+                        <li>г. Санкт-Петербург</li>
+                      </ul>
+                      <div class="item-events__footer">
+                        <div class="item-events__prices">
+                          <div class="item-events__price">18 000 <font class="rub">i</font></div>
+                          <div class="item-events__oldprice">18 000 <font class="rub">i</font></div>
+                        </div>
+                        <button class="item-events__button btn btn-lightblue" 
+                          data-popup="#popupEventRegFull" 
+                          data-price='18 000'
+                          data-stars="50"
+                        >
+                          <span>Зарегистрироваться</span>
+                          <svg data-tippy-stars="Вы можете получить скидку 50% за звезды Ormco" data-offset="0, 8" data-position="top-end" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-expanded="false">
+                            <path d="M8.54077 1.06637C8.71432 0.663389 9.28569 0.66339 9.45923 1.06637L11.5864 6.00584C11.6588 6.17393 11.8172 6.28904 11.9994 6.30594L17.3545 6.80261C17.7914 6.84313 17.9679 7.38653 17.6383 7.67611L13.5979 11.2255C13.4604 11.3463 13.3999 11.5326 13.4401 11.7111L14.6226 16.9575C14.719 17.3856 14.2568 17.7214 13.8795 17.4974L9.25528 14.7516C9.09792 14.6581 8.90208 14.6581 8.74472 14.7516L4.12047 17.4974C3.7432 17.7214 3.28095 17.3856 3.37742 16.9575L4.55986 11.7111C4.6001 11.5326 4.53958 11.3463 4.40209 11.2255L0.361705 7.67611C0.0320742 7.38653 0.208637 6.84313 0.645523 6.80261L6.00057 6.30594C6.1828 6.28904 6.34123 6.17393 6.41362 6.00584L8.54077 1.06637Z" fill="white"></path>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="interesting__slide events__item item-events splide__slide" data-event>
+                    <input type="hidden" data-type="hidden" data-name="name" value="Полная диагностика дисфункций ВНЧС в ортодонтической практике. Модуль 1, 03-04.02.23, Я.Ю.Дьячкова, Ставрополь">
+                    <input type="hidden" checked data-type="radio" data-name="discount_1" value="some value" data-black-text="Без скидок - 21 000" data-stars="10">
+                    <input type="hidden" data-type="radio" data-name="discount_1" value="some value" data-black-text="Ординаторам (30%) - 14 700 <font class='rub'>i</font>" data-grey-text="Предложение действует до 01.02.23" data-stars="10">
+                    <input type="hidden" data-type="radio" data-name="discount_1" value="some value" data-black-text='Врачам 1-2 года (30%) - 14 700 <font class="rub">i</font>' data-grey-text="Предложение действует до 01.02.23" data-stars="10">
+                    <input type="hidden" data-type="radio" data-name="discount_1" value="some value" data-black-text='Преподаватель (30%) - 14 700 <font class="rub">i</font>' data-stars="10">
+                    <input type="hidden" disabled data-type="radio" data-name="discount_1" value="some value" data-black-text='Звездами (50%) - 14 700 <font class="rub">i</font>' data-grey-text="У вас недостаточно звезд чтобы воспользоваться скидкой <br>Подробнее про звезды читайте <a href='#'>на странице</a>" data-stars="10">
+                    <div class="item-events__head">
+                      <span>Клуб Ormco</span>
+                      <div class="item-events__stars" data-tippy-stars="Количество звезд, которое вы получите за участие в мероприятии" data-position="bottom-end">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M6.54077 1.06637C6.71432 0.663388 7.28569 0.663389 7.45923 1.06637L9.04562 4.75014C9.11801 4.91822 9.27644 5.03333 9.45867 5.05024L13.4524 5.42064C13.8892 5.46116 14.0658 6.00457 13.7362 6.29414L10.7229 8.94124C10.5854 9.06202 10.5249 9.24828 10.5652 9.42681L11.447 13.3395C11.5435 13.7675 11.0812 14.1034 10.704 13.8794L7.25528 11.8316C7.09792 11.7381 6.90208 11.7381 6.74472 11.8316L3.29604 13.8793C2.91877 14.1034 2.45652 13.7675 2.55299 13.3395L3.43484 9.42681C3.47507 9.24827 3.41456 9.06202 3.27706 8.94124L0.263817 6.29414C-0.0658138 6.00456 0.11075 5.46116 0.547636 5.42064L4.54133 5.05024C4.72356 5.03333 4.88199 4.91822 4.95438 4.75014L6.54077 1.06637Z" fill="white"/>
+                        </svg>
+                        <span>50</span>
+                      </div>
+                    </div>
+                    <a href="#" class="item-events__image">
+                      <img src="@img/events/interesting.png" alt="image">
+                    </a>
+                    <div class="item-events__body">
+                      <a href="#" class="item-events__name">
+                        Полная диагностика дисфункций ВНЧС в ортодонтической практике. Модуль 1, 03-04.02.23, Я.Ю.Дьячкова, Ставрополь
+                      </a>
+                      <div class="item-events__level">
+                        <svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M17.7727 7.81862L9.59091 4.5459L1.40909 7.81862L9.59091 11.0913L17.7727 7.81862V12.7277" stroke="#8A8A8A" stroke-width="1.18182" stroke-linecap="round" stroke-linejoin="round"></path>
+													<path d="M4.68146 9.45508V13.8733C4.68146 15.2289 6.87933 16.3278 9.59055 16.3278C12.3018 16.3278 14.4996 15.2289 14.4996 13.8733V9.45508" stroke="#8A8A8A" stroke-width="1.18182" stroke-linecap="round" stroke-linejoin="round"></path>
+												</svg>
+                        <span>Базовый уровень</span>
+                        <span class="item-events__theme">
+                          <img src="@img/events/partner_1.png" alt="image">
+                        </span>
+                      </div>
+                      <ul class="item-events__info">
+                        <li>Дьячкова Яна Юрьевна</li>
+                        <li>3-5 октября 2022 г. (3 дня)</li>
+                        <li>г. Санкт-Петербург</li>
+                      </ul>
+                      <div class="item-events__footer">
+                        <div class="item-events__prices">
+                          <div class="item-events__price">18 000 <font class="rub">i</font></div>
+                          <div class="item-events__oldprice">18 000 <font class="rub">i</font></div>
+                        </div>
+                        <button class="item-events__button btn btn-lightblue" 
+                          data-popup="#popupEventRegFull" 
+                          data-price='18 000'
+                          data-stars="50"
+                        >
+                          <span>Зарегистрироваться</span>
+                          <svg data-tippy-stars="Вы можете получить скидку 50% за звезды Ormco" data-offset="0, 8" data-position="top-end" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-expanded="false">
+                            <path d="M8.54077 1.06637C8.71432 0.663389 9.28569 0.66339 9.45923 1.06637L11.5864 6.00584C11.6588 6.17393 11.8172 6.28904 11.9994 6.30594L17.3545 6.80261C17.7914 6.84313 17.9679 7.38653 17.6383 7.67611L13.5979 11.2255C13.4604 11.3463 13.3999 11.5326 13.4401 11.7111L14.6226 16.9575C14.719 17.3856 14.2568 17.7214 13.8795 17.4974L9.25528 14.7516C9.09792 14.6581 8.90208 14.6581 8.74472 14.7516L4.12047 17.4974C3.7432 17.7214 3.28095 17.3856 3.37742 16.9575L4.55986 11.7111C4.6001 11.5326 4.53958 11.3463 4.40209 11.2255L0.361705 7.67611C0.0320742 7.38653 0.208637 6.84313 0.645523 6.80261L6.00057 6.30594C6.1828 6.28904 6.34123 6.17393 6.41362 6.00584L8.54077 1.06637Z" fill="white"></path>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="interesting__slide events__item item-events splide__slide" data-event>
+                    <input type="hidden" data-type="hidden" data-name="name" value="Полная диагностика дисфункций ВНЧС в ортодонтической практике. Модуль 1, 03-04.02.23, Я.Ю.Дьячкова, Ставрополь">
+                    <input type="hidden" checked data-type="radio" data-name="discount_1" value="some value" data-black-text="Без скидок - 21 000" data-stars="10">
+                    <input type="hidden" data-type="radio" data-name="discount_1" value="some value" data-black-text="Ординаторам (30%) - 14 700 <font class='rub'>i</font>" data-grey-text="Предложение действует до 01.02.23" data-stars="10">
+                    <input type="hidden" data-type="radio" data-name="discount_1" value="some value" data-black-text='Врачам 1-2 года (30%) - 14 700 <font class="rub">i</font>' data-grey-text="Предложение действует до 01.02.23" data-stars="10">
+                    <input type="hidden" data-type="radio" data-name="discount_1" value="some value" data-black-text='Преподаватель (30%) - 14 700 <font class="rub">i</font>' data-stars="10">
+                    <div class="item-events__head">
+                      <span>Клуб Ormco</span>
+                      <div class="item-events__stars" data-tippy-stars="Количество звезд, которое вы получите за участие в мероприятии" data-position="bottom-end">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M6.54077 1.06637C6.71432 0.663388 7.28569 0.663389 7.45923 1.06637L9.04562 4.75014C9.11801 4.91822 9.27644 5.03333 9.45867 5.05024L13.4524 5.42064C13.8892 5.46116 14.0658 6.00457 13.7362 6.29414L10.7229 8.94124C10.5854 9.06202 10.5249 9.24828 10.5652 9.42681L11.447 13.3395C11.5435 13.7675 11.0812 14.1034 10.704 13.8794L7.25528 11.8316C7.09792 11.7381 6.90208 11.7381 6.74472 11.8316L3.29604 13.8793C2.91877 14.1034 2.45652 13.7675 2.55299 13.3395L3.43484 9.42681C3.47507 9.24827 3.41456 9.06202 3.27706 8.94124L0.263817 6.29414C-0.0658138 6.00456 0.11075 5.46116 0.547636 5.42064L4.54133 5.05024C4.72356 5.03333 4.88199 4.91822 4.95438 4.75014L6.54077 1.06637Z" fill="white"/>
+                        </svg>
+                        <span>50</span>
+                      </div>
+                    </div>
+                    <a href="#" class="item-events__image">
+                      <img src="@img/events/interesting.png" alt="image">
+                    </a>
+                    <div class="item-events__body">
+                      <a href="#" class="item-events__name">
+                        Полная диагностика дисфункций ВНЧС в ортодонтической практике. Модуль 1, 03-04.02.23, Я.Ю.Дьячкова, Ставрополь
+                      </a>
+                      <div class="item-events__level">
+                        <svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M17.7727 7.81862L9.59091 4.5459L1.40909 7.81862L9.59091 11.0913L17.7727 7.81862V12.7277" stroke="#8A8A8A" stroke-width="1.18182" stroke-linecap="round" stroke-linejoin="round"></path>
+													<path d="M4.68146 9.45508V13.8733C4.68146 15.2289 6.87933 16.3278 9.59055 16.3278C12.3018 16.3278 14.4996 15.2289 14.4996 13.8733V9.45508" stroke="#8A8A8A" stroke-width="1.18182" stroke-linecap="round" stroke-linejoin="round"></path>
+												</svg>
+                        <span>Базовый уровень</span>
+                        <span class="item-events__theme">
+                          <img src="@img/events/partner_1.png" alt="image">
+                        </span>
+                      </div>
+                      <ul class="item-events__info">
+                        <li>Дьячкова Яна Юрьевна</li>
+                        <li>3-5 октября 2022 г. (3 дня)</li>
+                        <li>г. Санкт-Петербург</li>
+                      </ul>
+                      <div class="item-events__footer">
+                        <div class="item-events__prices">
+                          <div class="item-events__price">18 000 <font class="rub">i</font></div>
+                          <div class="item-events__oldprice">18 000 <font class="rub">i</font></div>
+                        </div>
+                        <button class="item-events__button btn btn-lightblue" 
+                          data-popup="#popupEventRegFull" 
+                          data-price='18 000'
+                          data-stars="50"
+                        >
+                          <span>Зарегистрироваться</span>
+                          <svg data-tippy-stars="Вы можете получить скидку 50% за звезды Ormco" data-offset="0, 8" data-position="top-end" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-expanded="false">
+                            <path d="M8.54077 1.06637C8.71432 0.663389 9.28569 0.66339 9.45923 1.06637L11.5864 6.00584C11.6588 6.17393 11.8172 6.28904 11.9994 6.30594L17.3545 6.80261C17.7914 6.84313 17.9679 7.38653 17.6383 7.67611L13.5979 11.2255C13.4604 11.3463 13.3999 11.5326 13.4401 11.7111L14.6226 16.9575C14.719 17.3856 14.2568 17.7214 13.8795 17.4974L9.25528 14.7516C9.09792 14.6581 8.90208 14.6581 8.74472 14.7516L4.12047 17.4974C3.7432 17.7214 3.28095 17.3856 3.37742 16.9575L4.55986 11.7111C4.6001 11.5326 4.53958 11.3463 4.40209 11.2255L0.361705 7.67611C0.0320742 7.38653 0.208637 6.84313 0.645523 6.80261L6.00057 6.30594C6.1828 6.28904 6.34123 6.17393 6.41362 6.00584L8.54077 1.06637Z" fill="white"></path>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="interesting__slide events__item item-events splide__slide" data-event>
+                    <input type="hidden" data-type="hidden" data-name="name" value="Полная диагностика дисфункций ВНЧС в ортодонтической практике. Модуль 1, 03-04.02.23, Я.Ю.Дьячкова, Ставрополь">
+                    <div class="item-events__head">
+                      <span>Клуб Ormco</span>
+                      <div class="item-events__stars" data-tippy-stars="Количество звезд, которое вы получите за участие в мероприятии" data-position="bottom-end">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M6.54077 1.06637C6.71432 0.663388 7.28569 0.663389 7.45923 1.06637L9.04562 4.75014C9.11801 4.91822 9.27644 5.03333 9.45867 5.05024L13.4524 5.42064C13.8892 5.46116 14.0658 6.00457 13.7362 6.29414L10.7229 8.94124C10.5854 9.06202 10.5249 9.24828 10.5652 9.42681L11.447 13.3395C11.5435 13.7675 11.0812 14.1034 10.704 13.8794L7.25528 11.8316C7.09792 11.7381 6.90208 11.7381 6.74472 11.8316L3.29604 13.8793C2.91877 14.1034 2.45652 13.7675 2.55299 13.3395L3.43484 9.42681C3.47507 9.24827 3.41456 9.06202 3.27706 8.94124L0.263817 6.29414C-0.0658138 6.00456 0.11075 5.46116 0.547636 5.42064L4.54133 5.05024C4.72356 5.03333 4.88199 4.91822 4.95438 4.75014L6.54077 1.06637Z" fill="white"/>
+                        </svg>
+                        <span>50</span>
+                      </div>
+                    </div>
+                    <a href="#" class="item-events__image">
+                      <img src="@img/events/interesting.png" alt="image">
+                    </a>
+                    <div class="item-events__body">
+                      <a href="#" class="item-events__name">
+                        Полная диагностика дисфункций ВНЧС в ортодонтической практике. Модуль 1, 03-04.02.23, Я.Ю.Дьячкова, Ставрополь
+                      </a>
+                      <div class="item-events__level">
+                        <svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M17.7727 7.81862L9.59091 4.5459L1.40909 7.81862L9.59091 11.0913L17.7727 7.81862V12.7277" stroke="#8A8A8A" stroke-width="1.18182" stroke-linecap="round" stroke-linejoin="round"></path>
+													<path d="M4.68146 9.45508V13.8733C4.68146 15.2289 6.87933 16.3278 9.59055 16.3278C12.3018 16.3278 14.4996 15.2289 14.4996 13.8733V9.45508" stroke="#8A8A8A" stroke-width="1.18182" stroke-linecap="round" stroke-linejoin="round"></path>
+												</svg>
+                        <span>Базовый уровень</span>
+                        <span class="item-events__theme">
+                          <img src="@img/events/partner_1.png" alt="image">
+                        </span>
+                      </div>
+                      <ul class="item-events__info">
+                        <li>Дьячкова Яна Юрьевна</li>
+                        <li>3-5 октября 2022 г. (3 дня)</li>
+                        <li>г. Санкт-Петербург</li>
+                      </ul>
+                      <div class="item-events__footer">
+                        <div class="item-events__prices">
+                          <div class="item-events__price">18 000 <font class="rub">i</font></div>
+                          <div class="item-events__oldprice">18 000 <font class="rub">i</font></div>
+                        </div>
+                        <button class="item-events__button btn btn-lightblue" 
+                          data-popup="#popupEventRegFull" 
+                          data-price='18 000'
+                          data-stars="50"
+                        >
+                          <span>Зарегистрироваться</span>
+                          <svg data-tippy-stars="Вы можете получить скидку 50% за звезды Ormco" data-offset="0, 8" data-position="top-end" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-expanded="false">
+                            <path d="M8.54077 1.06637C8.71432 0.663389 9.28569 0.66339 9.45923 1.06637L11.5864 6.00584C11.6588 6.17393 11.8172 6.28904 11.9994 6.30594L17.3545 6.80261C17.7914 6.84313 17.9679 7.38653 17.6383 7.67611L13.5979 11.2255C13.4604 11.3463 13.3999 11.5326 13.4401 11.7111L14.6226 16.9575C14.719 17.3856 14.2568 17.7214 13.8795 17.4974L9.25528 14.7516C9.09792 14.6581 8.90208 14.6581 8.74472 14.7516L4.12047 17.4974C3.7432 17.7214 3.28095 17.3856 3.37742 16.9575L4.55986 11.7111C4.6001 11.5326 4.53958 11.3463 4.40209 11.2255L0.361705 7.67611C0.0320742 7.38653 0.208637 6.84313 0.645523 6.80261L6.00057 6.30594C6.1828 6.28904 6.34123 6.17393 6.41362 6.00584L8.54077 1.06637Z" fill="white"></path>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="interesting__slide events__item item-events splide__slide" data-event>
+                    <input type="hidden" data-type="hidden" data-name="name" value="Полная диагностика дисфункций ВНЧС в ортодонтической практике. Модуль 1, 03-04.02.23, Я.Ю.Дьячкова, Ставрополь">
+                    <input type="hidden" checked data-type="radio" data-name="discount_1" value="some value" data-black-text="Без скидок - 21 000" data-stars="10">
+                    <input type="hidden" data-type="radio" data-name="discount_1" value="some value" data-black-text="Ординаторам (30%) - 14 700 <font class='rub'>i</font>" data-grey-text="Предложение действует до 01.02.23" data-stars="10">
+                    <input type="hidden" data-type="radio" data-name="discount_1" value="some value" data-black-text='Врачам 1-2 года (30%) - 14 700 <font class="rub">i</font>' data-grey-text="Предложение действует до 01.02.23" data-stars="10">
+                    <input type="hidden" data-type="radio" data-name="discount_1" value="some value" data-black-text='Преподаватель (30%) - 14 700 <font class="rub">i</font>' data-stars="10">
+                    <input type="hidden" data-type="radio" data-name="discount_1" value="some value" data-black-text='Звездами (50%) - 14 700 <font class="rub">i</font>' data-grey-text="Звездами вы можете оплатить не более 50% от стоимости курса. <br>Подробнее про звезды читайте <a href='#'>на странице</a>" data-stars="10">
+                    <div class="item-events__head">
+                      <span>Клуб Ormco</span>
+                      <div class="item-events__stars" data-tippy-stars="Количество звезд, которое вы получите за участие в мероприятии" data-position="bottom-end">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M6.54077 1.06637C6.71432 0.663388 7.28569 0.663389 7.45923 1.06637L9.04562 4.75014C9.11801 4.91822 9.27644 5.03333 9.45867 5.05024L13.4524 5.42064C13.8892 5.46116 14.0658 6.00457 13.7362 6.29414L10.7229 8.94124C10.5854 9.06202 10.5249 9.24828 10.5652 9.42681L11.447 13.3395C11.5435 13.7675 11.0812 14.1034 10.704 13.8794L7.25528 11.8316C7.09792 11.7381 6.90208 11.7381 6.74472 11.8316L3.29604 13.8793C2.91877 14.1034 2.45652 13.7675 2.55299 13.3395L3.43484 9.42681C3.47507 9.24827 3.41456 9.06202 3.27706 8.94124L0.263817 6.29414C-0.0658138 6.00456 0.11075 5.46116 0.547636 5.42064L4.54133 5.05024C4.72356 5.03333 4.88199 4.91822 4.95438 4.75014L6.54077 1.06637Z" fill="white"/>
+                        </svg>
+                        <span>50</span>
+                      </div>
+                    </div>
+                    <a href="#" class="item-events__image">
+                      <img src="@img/events/interesting.png" alt="image">
+                    </a>
+                    <div class="item-events__body">
+                      <a href="#" class="item-events__name">
+                        Полная диагностика дисфункций ВНЧС в ортодонтической практике. Модуль 1, 03-04.02.23, Я.Ю.Дьячкова, Ставрополь
+                      </a>
+                      <div class="item-events__level">
+                        <svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M17.7727 7.81862L9.59091 4.5459L1.40909 7.81862L9.59091 11.0913L17.7727 7.81862V12.7277" stroke="#8A8A8A" stroke-width="1.18182" stroke-linecap="round" stroke-linejoin="round"></path>
+													<path d="M4.68146 9.45508V13.8733C4.68146 15.2289 6.87933 16.3278 9.59055 16.3278C12.3018 16.3278 14.4996 15.2289 14.4996 13.8733V9.45508" stroke="#8A8A8A" stroke-width="1.18182" stroke-linecap="round" stroke-linejoin="round"></path>
+												</svg>
+                        <span>Базовый уровень</span>
+                        <span class="item-events__theme">
+                          <img src="@img/events/partner_1.png" alt="image">
+                        </span>
+                      </div>
+                      <ul class="item-events__info">
+                        <li>Дьячкова Яна Юрьевна</li>
+                        <li>3-5 октября 2022 г. (3 дня)</li>
+                        <li>г. Санкт-Петербург</li>
+                      </ul>
+                      <div class="item-events__footer">
+                        <div class="item-events__prices">
+                          <div class="item-events__price">18 000 <font class="rub">i</font></div>
+                          <div class="item-events__oldprice">18 000 <font class="rub">i</font></div>
+                        </div>
+                        <button class="item-events__button btn btn-lightblue" 
+                          data-popup="#popupEventRegFull" 
+                          data-price='18 000'
+                          data-stars="50"
+                        >
+                          <span>Зарегистрироваться</span>
+                          <svg data-tippy-stars="Вы можете получить скидку 50% за звезды Ormco" data-offset="0, 8" data-position="top-end" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-expanded="false">
+                            <path d="M8.54077 1.06637C8.71432 0.663389 9.28569 0.66339 9.45923 1.06637L11.5864 6.00584C11.6588 6.17393 11.8172 6.28904 11.9994 6.30594L17.3545 6.80261C17.7914 6.84313 17.9679 7.38653 17.6383 7.67611L13.5979 11.2255C13.4604 11.3463 13.3999 11.5326 13.4401 11.7111L14.6226 16.9575C14.719 17.3856 14.2568 17.7214 13.8795 17.4974L9.25528 14.7516C9.09792 14.6581 8.90208 14.6581 8.74472 14.7516L4.12047 17.4974C3.7432 17.7214 3.28095 17.3856 3.37742 16.9575L4.55986 11.7111C4.6001 11.5326 4.53958 11.3463 4.40209 11.2255L0.361705 7.67611C0.0320742 7.38653 0.208637 6.84313 0.645523 6.80261L6.00057 6.30594C6.1828 6.28904 6.34123 6.17393 6.41362 6.00584L8.54077 1.06637Z" fill="white"></path>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="interesting__slide events__item item-events splide__slide" data-event>
+                    <input type="hidden" data-type="hidden" data-name="name" value="Полная диагностика дисфункций ВНЧС в ортодонтической практике. Модуль 1, 03-04.02.23, Я.Ю.Дьячкова, Ставрополь">
+                    <input type="hidden" checked data-type="radio" data-name="discount_1" value="some value" data-black-text="Без скидок - 21 000" data-stars="10">
+                    <input type="hidden" data-type="radio" data-name="discount_1" value="some value" data-black-text="Ординаторам (30%) - 14 700 <font class='rub'>i</font>" data-grey-text="Предложение действует до 01.02.23" data-stars="10">
+                    <input type="hidden" data-type="radio" data-name="discount_1" value="some value" data-black-text='Врачам 1-2 года (30%) - 14 700 <font class="rub">i</font>' data-grey-text="Предложение действует до 01.02.23" data-stars="10">
+                    <input type="hidden" data-type="radio" data-name="discount_1" value="some value" data-black-text='Преподаватель (30%) - 14 700 <font class="rub">i</font>' data-stars="10">
+                    <input type="hidden" disabled data-type="radio" data-name="discount_1" value="some value" data-black-text='Звездами (50%) - 14 700 <font class="rub">i</font>' data-grey-text="У вас недостаточно звезд чтобы воспользоваться скидкой <br>Подробнее про звезды читайте <a href='#'>на странице</a>" data-stars="10">
+                    <div class="item-events__head">
+                      <span>Клуб Ormco</span>
+                      <div class="item-events__stars" data-tippy-stars="Количество звезд, которое вы получите за участие в мероприятии" data-position="bottom-end">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M6.54077 1.06637C6.71432 0.663388 7.28569 0.663389 7.45923 1.06637L9.04562 4.75014C9.11801 4.91822 9.27644 5.03333 9.45867 5.05024L13.4524 5.42064C13.8892 5.46116 14.0658 6.00457 13.7362 6.29414L10.7229 8.94124C10.5854 9.06202 10.5249 9.24828 10.5652 9.42681L11.447 13.3395C11.5435 13.7675 11.0812 14.1034 10.704 13.8794L7.25528 11.8316C7.09792 11.7381 6.90208 11.7381 6.74472 11.8316L3.29604 13.8793C2.91877 14.1034 2.45652 13.7675 2.55299 13.3395L3.43484 9.42681C3.47507 9.24827 3.41456 9.06202 3.27706 8.94124L0.263817 6.29414C-0.0658138 6.00456 0.11075 5.46116 0.547636 5.42064L4.54133 5.05024C4.72356 5.03333 4.88199 4.91822 4.95438 4.75014L6.54077 1.06637Z" fill="white"/>
+                        </svg>
+                        <span>50</span>
+                      </div>
+                    </div>
+                    <a href="#" class="item-events__image">
+                      <img src="@img/events/interesting.png" alt="image">
+                    </a>
+                    <div class="item-events__body">
+                      <a href="#" class="item-events__name">
+                        Полная диагностика дисфункций ВНЧС в ортодонтической практике. Модуль 1, 03-04.02.23, Я.Ю.Дьячкова, Ставрополь
+                      </a>
+                      <div class="item-events__level">
+                        <svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M17.7727 7.81862L9.59091 4.5459L1.40909 7.81862L9.59091 11.0913L17.7727 7.81862V12.7277" stroke="#8A8A8A" stroke-width="1.18182" stroke-linecap="round" stroke-linejoin="round"></path>
+													<path d="M4.68146 9.45508V13.8733C4.68146 15.2289 6.87933 16.3278 9.59055 16.3278C12.3018 16.3278 14.4996 15.2289 14.4996 13.8733V9.45508" stroke="#8A8A8A" stroke-width="1.18182" stroke-linecap="round" stroke-linejoin="round"></path>
+												</svg>
+                        <span>Базовый уровень</span>
+                        <span class="item-events__theme">
+                          <img src="@img/events/partner_1.png" alt="image">
+                        </span>
+                      </div>
+                      <ul class="item-events__info">
+                        <li>Дьячкова Яна Юрьевна</li>
+                        <li>3-5 октября 2022 г. (3 дня)</li>
+                        <li>г. Санкт-Петербург</li>
+                      </ul>
+                      <div class="item-events__footer">
+                        <div class="item-events__prices">
+                          <div class="item-events__price">18 000 <font class="rub">i</font></div>
+                          <div class="item-events__oldprice">18 000 <font class="rub">i</font></div>
+                        </div>
+                        <button class="item-events__button btn btn-lightblue" 
+                          data-popup="#popupEventRegFull" 
+                          data-price='18 000'
+                          data-stars="50"
+                        >
+                          <span>Зарегистрироваться</span>
+                          <svg data-tippy-stars="Вы можете получить скидку 50% за звезды Ormco" data-offset="0, 8" data-position="top-end" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-expanded="false">
+                            <path d="M8.54077 1.06637C8.71432 0.663389 9.28569 0.66339 9.45923 1.06637L11.5864 6.00584C11.6588 6.17393 11.8172 6.28904 11.9994 6.30594L17.3545 6.80261C17.7914 6.84313 17.9679 7.38653 17.6383 7.67611L13.5979 11.2255C13.4604 11.3463 13.3999 11.5326 13.4401 11.7111L14.6226 16.9575C14.719 17.3856 14.2568 17.7214 13.8795 17.4974L9.25528 14.7516C9.09792 14.6581 8.90208 14.6581 8.74472 14.7516L4.12047 17.4974C3.7432 17.7214 3.28095 17.3856 3.37742 16.9575L4.55986 11.7111C4.6001 11.5326 4.53958 11.3463 4.40209 11.2255L0.361705 7.67611C0.0320742 7.38653 0.208637 6.84313 0.645523 6.80261L6.00057 6.30594C6.1828 6.28904 6.34123 6.17393 6.41362 6.00584L8.54077 1.06637Z" fill="white"></path>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="interesting__slide events__item item-events splide__slide" data-event>
+                    <input type="hidden" data-type="hidden" data-name="name" value="Полная диагностика дисфункций ВНЧС в ортодонтической практике. Модуль 1, 03-04.02.23, Я.Ю.Дьячкова, Ставрополь">
+                    <input type="hidden" checked data-type="radio" data-name="discount_1" value="some value" data-black-text="Без скидок - 21 000" data-stars="10">
+                    <input type="hidden" data-type="radio" data-name="discount_1" value="some value" data-black-text="Ординаторам (30%) - 14 700 <font class='rub'>i</font>" data-grey-text="Предложение действует до 01.02.23" data-stars="10">
+                    <input type="hidden" data-type="radio" data-name="discount_1" value="some value" data-black-text='Врачам 1-2 года (30%) - 14 700 <font class="rub">i</font>' data-grey-text="Предложение действует до 01.02.23" data-stars="10">
+                    <input type="hidden" data-type="radio" data-name="discount_1" value="some value" data-black-text='Преподаватель (30%) - 14 700 <font class="rub">i</font>' data-stars="10">
+                    <div class="item-events__head">
+                      <span>Клуб Ormco</span>
+                      <div class="item-events__stars" data-tippy-stars="Количество звезд, которое вы получите за участие в мероприятии" data-position="bottom-end">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M6.54077 1.06637C6.71432 0.663388 7.28569 0.663389 7.45923 1.06637L9.04562 4.75014C9.11801 4.91822 9.27644 5.03333 9.45867 5.05024L13.4524 5.42064C13.8892 5.46116 14.0658 6.00457 13.7362 6.29414L10.7229 8.94124C10.5854 9.06202 10.5249 9.24828 10.5652 9.42681L11.447 13.3395C11.5435 13.7675 11.0812 14.1034 10.704 13.8794L7.25528 11.8316C7.09792 11.7381 6.90208 11.7381 6.74472 11.8316L3.29604 13.8793C2.91877 14.1034 2.45652 13.7675 2.55299 13.3395L3.43484 9.42681C3.47507 9.24827 3.41456 9.06202 3.27706 8.94124L0.263817 6.29414C-0.0658138 6.00456 0.11075 5.46116 0.547636 5.42064L4.54133 5.05024C4.72356 5.03333 4.88199 4.91822 4.95438 4.75014L6.54077 1.06637Z" fill="white"/>
+                        </svg>
+                        <span>50</span>
+                      </div>
+                    </div>
+                    <a href="#" class="item-events__image">
+                      <img src="@img/events/interesting.png" alt="image">
+                    </a>
+                    <div class="item-events__body">
+                      <a href="#" class="item-events__name">
+                        Полная диагностика дисфункций ВНЧС в ортодонтической практике. Модуль 1, 03-04.02.23, Я.Ю.Дьячкова, Ставрополь
+                      </a>
+                      <div class="item-events__level">
+                        <svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M17.7727 7.81862L9.59091 4.5459L1.40909 7.81862L9.59091 11.0913L17.7727 7.81862V12.7277" stroke="#8A8A8A" stroke-width="1.18182" stroke-linecap="round" stroke-linejoin="round"></path>
+													<path d="M4.68146 9.45508V13.8733C4.68146 15.2289 6.87933 16.3278 9.59055 16.3278C12.3018 16.3278 14.4996 15.2289 14.4996 13.8733V9.45508" stroke="#8A8A8A" stroke-width="1.18182" stroke-linecap="round" stroke-linejoin="round"></path>
+												</svg>
+                        <span>Базовый уровень</span>
+                        <span class="item-events__theme">
+                          <img src="@img/events/partner_1.png" alt="image">
+                        </span>
+                      </div>
+                      <ul class="item-events__info">
+                        <li>Дьячкова Яна Юрьевна</li>
+                        <li>3-5 октября 2022 г. (3 дня)</li>
+                        <li>г. Санкт-Петербург</li>
+                      </ul>
+                      <div class="item-events__footer">
+                        <div class="item-events__prices">
+                          <div class="item-events__price">18 000 <font class="rub">i</font></div>
+                          <div class="item-events__oldprice">18 000 <font class="rub">i</font></div>
+                        </div>
+                        <button class="item-events__button btn btn-lightblue" 
+                          data-popup="#popupEventRegFull" 
+                          data-price='18 000'
+                          data-stars="50"
+                        >
+                          <span>Зарегистрироваться</span>
+                          <svg data-tippy-stars="Вы можете получить скидку 50% за звезды Ormco" data-offset="0, 8" data-position="top-end" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-expanded="false">
+                            <path d="M8.54077 1.06637C8.71432 0.663389 9.28569 0.66339 9.45923 1.06637L11.5864 6.00584C11.6588 6.17393 11.8172 6.28904 11.9994 6.30594L17.3545 6.80261C17.7914 6.84313 17.9679 7.38653 17.6383 7.67611L13.5979 11.2255C13.4604 11.3463 13.3999 11.5326 13.4401 11.7111L14.6226 16.9575C14.719 17.3856 14.2568 17.7214 13.8795 17.4974L9.25528 14.7516C9.09792 14.6581 8.90208 14.6581 8.74472 14.7516L4.12047 17.4974C3.7432 17.7214 3.28095 17.3856 3.37742 16.9575L4.55986 11.7111C4.6001 11.5326 4.53958 11.3463 4.40209 11.2255L0.361705 7.67611C0.0320742 7.38653 0.208637 6.84313 0.645523 6.80261L6.00057 6.30594C6.1828 6.28904 6.34123 6.17393 6.41362 6.00584L8.54077 1.06637Z" fill="white"></path>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="interesting__slide events__item item-events splide__slide" data-event>
+                    <input type="hidden" data-type="hidden" data-name="name" value="Полная диагностика дисфункций ВНЧС в ортодонтической практике. Модуль 1, 03-04.02.23, Я.Ю.Дьячкова, Ставрополь">
+                    <div class="item-events__head">
+                      <span>Клуб Ormco</span>
+                      <div class="item-events__stars" data-tippy-stars="Количество звезд, которое вы получите за участие в мероприятии" data-position="bottom-end">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M6.54077 1.06637C6.71432 0.663388 7.28569 0.663389 7.45923 1.06637L9.04562 4.75014C9.11801 4.91822 9.27644 5.03333 9.45867 5.05024L13.4524 5.42064C13.8892 5.46116 14.0658 6.00457 13.7362 6.29414L10.7229 8.94124C10.5854 9.06202 10.5249 9.24828 10.5652 9.42681L11.447 13.3395C11.5435 13.7675 11.0812 14.1034 10.704 13.8794L7.25528 11.8316C7.09792 11.7381 6.90208 11.7381 6.74472 11.8316L3.29604 13.8793C2.91877 14.1034 2.45652 13.7675 2.55299 13.3395L3.43484 9.42681C3.47507 9.24827 3.41456 9.06202 3.27706 8.94124L0.263817 6.29414C-0.0658138 6.00456 0.11075 5.46116 0.547636 5.42064L4.54133 5.05024C4.72356 5.03333 4.88199 4.91822 4.95438 4.75014L6.54077 1.06637Z" fill="white"/>
+                        </svg>
+                        <span>50</span>
+                      </div>
+                    </div>
+                    <a href="#" class="item-events__image">
+                      <img src="@img/events/interesting.png" alt="image">
+                    </a>
+                    <div class="item-events__body">
+                      <a href="#" class="item-events__name">
+                        Полная диагностика дисфункций ВНЧС в ортодонтической практике. Модуль 1, 03-04.02.23, Я.Ю.Дьячкова, Ставрополь
+                      </a>
+                      <div class="item-events__level">
+                        <svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M17.7727 7.81862L9.59091 4.5459L1.40909 7.81862L9.59091 11.0913L17.7727 7.81862V12.7277" stroke="#8A8A8A" stroke-width="1.18182" stroke-linecap="round" stroke-linejoin="round"></path>
+													<path d="M4.68146 9.45508V13.8733C4.68146 15.2289 6.87933 16.3278 9.59055 16.3278C12.3018 16.3278 14.4996 15.2289 14.4996 13.8733V9.45508" stroke="#8A8A8A" stroke-width="1.18182" stroke-linecap="round" stroke-linejoin="round"></path>
+												</svg>
+                        <span>Базовый уровень</span>
+                        <span class="item-events__theme">
+                          <img src="@img/events/partner_1.png" alt="image">
+                        </span>
+                      </div>
+                      <ul class="item-events__info">
+                        <li>Дьячкова Яна Юрьевна</li>
+                        <li>3-5 октября 2022 г. (3 дня)</li>
+                        <li>г. Санкт-Петербург</li>
+                      </ul>
+                      <div class="item-events__footer">
+                        <div class="item-events__prices">
+                          <div class="item-events__price">18 000 <font class="rub">i</font></div>
+                          <div class="item-events__oldprice">18 000 <font class="rub">i</font></div>
+                        </div>
+                        <button class="item-events__button btn btn-lightblue" 
+                          data-popup="#popupEventRegFull" 
+                          data-price='18 000'
+                          data-stars="50"
+                        >
+                          <span>Зарегистрироваться</span>
+                          <svg data-tippy-stars="Вы можете получить скидку 50% за звезды Ormco" data-offset="0, 8" data-position="top-end" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-expanded="false">
+                            <path d="M8.54077 1.06637C8.71432 0.663389 9.28569 0.66339 9.45923 1.06637L11.5864 6.00584C11.6588 6.17393 11.8172 6.28904 11.9994 6.30594L17.3545 6.80261C17.7914 6.84313 17.9679 7.38653 17.6383 7.67611L13.5979 11.2255C13.4604 11.3463 13.3999 11.5326 13.4401 11.7111L14.6226 16.9575C14.719 17.3856 14.2568 17.7214 13.8795 17.4974L9.25528 14.7516C9.09792 14.6581 8.90208 14.6581 8.74472 14.7516L4.12047 17.4974C3.7432 17.7214 3.28095 17.3856 3.37742 16.9575L4.55986 11.7111C4.6001 11.5326 4.53958 11.3463 4.40209 11.2255L0.361705 7.67611C0.0320742 7.38653 0.208637 6.84313 0.645523 6.80261L6.00057 6.30594C6.1828 6.28904 6.34123 6.17393 6.41362 6.00584L8.54077 1.06637Z" fill="white"></path>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="splide__arrows interesting__arrows">
+                <button class="splide__arrow splide__arrow--prev interesting__arrow interesting__arrow--prev">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15.375 5.25L8.625 12L15.375 18.75" stroke="#8E8E93" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+                <button class="splide__arrow splide__arrow--next interesting__arrow interesting__arrow--next">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.625 18.75L15.375 12L8.625 5.25" stroke="#8E8E93" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+        @@include('html/_subscribe.htm',{})
+        @@include('html/_ormcoban.htm',{})
+        @@include('html/_contacts.htm',{})
+        @@include('html/_partners.htm',{})
+        @@include('html/_application.htm',{})
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_popup.htm',{})
+		@@include('html/_popup_auth.htm',{})
+		@@include('html/_popup_question.htm',{})
+		@@include('html/_popup_downloads.htm',{})
+		@@include('html/_js.htm',{})
+	</body>
+</html>

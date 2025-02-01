@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('html/_head.htm',{
+	"title":"Клинический офис-курс в России"
+	})
+	<body class="_detail">
+		<div class="wrapper">
+			@@include('html/_loader.htm',{})
+			@@include('html/_header.htm',{
+        "active_events": "_inpage"
+      })
+			<main class="page">
+        <section class="breadcumps" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <div class="breadcumps__container container">
+              <ul class="breadcumps__body">
+                <li class="breadcumps__item" itemscope itemprop="itemListElement" itemtype="http://schema.org/ListItem">
+                  <a href="home.html" itemprop="item">
+                    <span itemprop="name">Главная страница</span>
+                    <div itemprop="item.name" class="breadcumps_onhover">Главная страница</div>
+                    <meta itemprop="position" content="1">
+                  </a>
+                </li>
+                <li class="breadcumps__item" itemscope itemprop="itemListElement" itemtype="http://schema.org/ListItem">
+                  <a href="events_all.html" itemprop="item">
+                    <span itemprop="name">Клинические офис-курсы в России</span>
+                    <div itemprop="item.name" class="breadcumps_onhover">Клинические офис-курсы в России</div>
+                    <meta itemprop="position" content="2">
+                  </a>
+                </li>
+                <li class="breadcumps__item" itemscope itemprop="itemListElement" itemtype="http://schema.org/ListItem">
+                  <span itemprop="item">
+                    <span itemprop="name">Клинические офис-курсы в клинике "Клиника Доктора Бобрика"</span>
+                    <div itemprop="item.name" class="breadcumps_onhover">Клинические офис-курсы в клинике "Клиника Доктора Бобрика"</div>
+                    <meta itemprop="position" content="3">
+                  </span>
+                </li>
+              </ul>
+          </div>
+        </section>
+        <section class="back _mmd3dn">
+          <div class="back__container">
+            <a href="#" class="spollers-filters__back">
+              <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7 1L1 7L7 13" stroke="#8A8A8A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+              <span>Назад</span>
+            </a>
+          </div>
+        </section>
+        <section class="common-head common-head_event">
+          <div class="common-head__container">
+            <h1 class="common-head__title">Клинические офис-курсы в клинике "Клиника Доктора Бобрика"</h1>
+          </div>
+        </section>
+        <section class="course">
+          <div class="course__container event__container">
+            <div class="event__main course__main main-course">
+              <div class="main-course__image">
+                <img src="@img/courses/rus_1.png" alt="image">
+              </div>
+              <ul class="main-course__list">
+                <li>
+                  <svg width="17" height="22" viewBox="0 0 17 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="7.55298" cy="10.2684" rx="2.30298" ry="2.30298" stroke="#111111" stroke-width="1.19167" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0669 14.611L8.80976 17.8682C8.21031 18.467 7.23904 18.467 6.63959 17.8682L3.38164 14.611C0.983407 12.2127 0.983474 8.32428 3.38178 5.92602C5.7801 3.52775 9.66848 3.52775 12.0668 5.92602C14.4651 8.32428 14.4652 12.2127 12.0669 14.611V14.611Z" stroke="#111111" stroke-width="1.19167" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>г. Уфа, ул.Ленина, 25/29, гостиница «Башкирия», Конференц-зал «Янган-Тау»</span>
+                </li>
+                <li>
+                  <svg width="17" height="22" viewBox="0 0 17 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_801_30517)">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M3.62122 2.75031C3.95029 2.75031 4.21706 3.01707 4.21706 3.34614L4.21706 3.66697H7.28789C7.61696 3.66697 7.88372 3.93374 7.88372 4.26281C7.88372 4.59187 7.61696 4.85864 7.28789 4.85864H4.21789C4.21891 5.43516 4.22115 5.95866 4.22613 6.4345C5.06481 6.48293 6.01883 6.63878 6.83501 6.98841C7.86509 7.42967 8.80039 8.24809 8.80039 9.63172C8.80039 10.4178 8.62771 11.1241 8.24876 11.7195C7.86853 12.3168 7.30814 12.7591 6.60618 13.0604C6.30378 13.1901 5.95344 13.0502 5.82367 12.7478C5.69391 12.4454 5.83386 12.095 6.13627 11.9653C6.65622 11.7421 7.0125 11.4424 7.24346 11.0796C7.47569 10.7147 7.60872 10.2427 7.60872 9.63172C7.60872 9.08857 7.35341 8.67418 6.87646 8.35544C6.69722 9.23882 6.26889 10.0558 5.74361 10.697C5.06572 11.5245 4.11151 12.192 3.16289 12.192C2.3205 12.192 1.60796 11.8721 1.10389 11.4206C0.614133 10.982 0.275391 10.3732 0.275391 9.76281C0.275391 8.75429 0.527922 7.88847 1.13741 7.27899C1.62508 6.79131 2.27687 6.53217 3.03455 6.44807C3.02947 5.96508 3.02721 5.43662 3.0262 4.85864H0.871224C0.542154 4.85864 0.275391 4.59187 0.275391 4.26281C0.275391 3.93374 0.542154 3.66697 0.871224 3.66697H3.0254L3.02539 3.3666V3.34614C3.02539 3.01707 3.29215 2.75031 3.62122 2.75031ZM3.05628 7.64613C2.55274 7.71873 2.20986 7.89181 1.98004 8.12162C1.67286 8.42881 1.46706 8.93798 1.46706 9.76281C1.46706 9.94535 1.58665 10.2532 1.89897 10.533C2.19699 10.7999 2.63028 11.0003 3.16289 11.0003C3.27441 11.0003 3.40122 10.9765 3.53811 10.9287C3.25266 10.346 3.13985 9.51048 3.0834 8.36417C3.07241 8.14089 3.0635 7.90188 3.05628 7.64613ZM4.54335 10.2501C4.63706 10.1563 4.73024 10.0536 4.82176 9.94187C5.29991 9.35817 5.65341 8.62005 5.74937 7.87138C5.26804 7.73932 4.74637 7.66353 4.24793 7.62985C4.25484 7.87075 4.26329 8.09557 4.27363 8.30556C4.32286 9.30544 4.41385 9.89263 4.54335 10.2501ZM11.8712 9.16697C12.1067 9.16697 12.3201 9.30564 12.4157 9.52081L16.0824 17.7708C16.216 18.0715 16.0806 18.4236 15.7799 18.5573C15.4792 18.6909 15.1271 18.5555 14.9934 18.2548L14.3359 16.7753H9.40659L8.74904 18.2548C8.61539 18.5555 8.26327 18.6909 7.96257 18.5573C7.66186 18.4236 7.52643 18.0715 7.66008 17.7708L11.3267 9.52081C11.4224 9.30564 11.6358 9.16697 11.8712 9.16697ZM9.93622 15.5836H13.8062L11.8712 11.2299L9.93622 15.5836Z" fill="#111111"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_801_30517">
+                    <rect width="16.5" height="22" fill="white"/>
+                    </clipPath>
+                    </defs>
+                  </svg>
+                  <span>Русский</span>
+                </li>
+                <li>
+                  <svg width="17" height="22" viewBox="0 0 17 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="1.83301" y="5.2959" width="13.037" height="13.037" rx="1.62963" stroke="#111111" stroke-width="1.19167" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M11.6115 3.66669V6.92595" stroke="#111111" stroke-width="1.19167" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M5.09295 3.66669V6.92595" stroke="#111111" stroke-width="1.19167" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M1.83301 10.1855H14.87" stroke="#111111" stroke-width="1.19167" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>Определяется индивидуально</span>
+                </li>
+              </ul>
+              <div class="main-course__content _content">
+                <h2>Программа курса</h2>
+                <p style="max-width: 653px">Клинические курсы – это практическое обучение в клинике, как дополнение к базовому обучению для врачей-ортодонтов, ординаторов и интернов, а также другим образовательным мероприятиям компании Ormco.</p>
+                <h2>Контакты</h2>
+                <p>Юлия Ерохина</p>
+                <p><a href="tel:+79270882285">+7 (927) 088-22-85</a></p>
+                <p><a href="mailto:julia.ortodent@yandex.ru">julia.ortodent@yandex.ru</a></p>
+              </div>
+            </div>
+            <aside class="course__sidebar event__sidebar sidebar-event sidebar-event_consult" data-da=".footer, 992, last" data-course>
+              <input type="hidden" name="some name" value="some value">
+              <span hidden="hidden" data-name>Клинические офис-курсы в клинике "Клиника Доктора Бобрика"</span>
+              <div class="sidebar-event__row">
+                <div class="sidebar-event__price" data-price>от 10 000 до 20 000 <font class='rub'>i</font></div>
+              </div>
+              <div class="sidebar-event__row">
+                <button type="button" class="sidebar-event__button btn btn-lightblue"
+                  data-popup="#coursePopup" 
+                >
+                Записаться
+                </button>
+              </div>
+            </aside>
+          </div>
+        </section>
+        <div class="eventsfull__banner banner-eventsfull banner-eventsfull_mb">
+          <div class="event-banner__container">
+            <div class="event-banner__content">
+              <div class="event-banner__title">Современные инструменты врача-ортодонта </div>
+              <div class="event-banner__text">Современный взгляд на решение старых проблем, 02.12.22, А.В. Спесивцев, Хабаровск</div>
+              <div class="event-banner__footer">
+                <div class="event-banner__prices">
+                  <div class="event-banner__price">35 000 <font class='rub'>i</font></div>
+                  <div class="event-banner__stars"
+                    data-tippy-stars="Количество звезд, которое вы получите за участие в мероприятии" 
+                    data-position="right"
+                  >
+                    <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M3.77039 1.03318C3.85716 0.831694 4.14284 0.831695 4.22961 1.03319L5.02281 2.87507C5.059 2.95911 5.13822 3.01667 5.22934 3.02512L7.22618 3.21032C7.44462 3.23058 7.53291 3.50228 7.36809 3.64707L5.86147 4.97062C5.79272 5.03101 5.76246 5.12414 5.78258 5.2134L6.2235 7.16975C6.27174 7.38376 6.04061 7.55168 5.85198 7.43968L4.12764 6.41579C4.04896 6.36907 3.95104 6.36907 3.87236 6.41579L2.14802 7.43967C1.95939 7.55168 1.72826 7.38376 1.7765 7.16975L2.21742 5.2134C2.23754 5.12414 2.20728 5.03101 2.13853 4.97062L0.631909 3.64707C0.467093 3.50228 0.555375 3.23058 0.773818 3.21032L2.77066 3.02512C2.86178 3.01667 2.941 2.95911 2.97719 2.87507L3.77039 1.03318Z" fill="white"/>
+                    </svg>
+                    <span>50</span>
+                  </div>
+                  <div class="event-banner__oldprice">38 600 <font class='rub'>i</font></div>
+                </div>
+                <a href="#" class="event-banner__button btn">Подробнее</a>
+              </div>
+            </div>
+            <div class="event-banner__image">
+              <img src="@img/home/hero_1.png" alt="image">
+            </div>
+          </div>
+        </div>
+        <section class="interesting">
+          <div class="interesting__container">
+            <div class="interesting__head section-head">
+              <h2 class="interesting__title section-title">Вам может быть интересно</h2>
+              <a href="#" class="interesting__all section-all">Смотреть все</a>
+            </div>
+            <div class="interesting__slider splide">
+              <div class="interesting__track splide__track">
+                <div class="interesting__list splide__list">
+                  <div class="interesting__slide events__item item-events splide__slide" data-event>
+                    <input type="hidden" data-type="hidden" data-name="name" value="Полная диагностика дисфункций ВНЧС в ортодонтической практике. Модуль 1, 03-04.02.23, Я.Ю.Дьячкова, Ставрополь">
+                    <input type="hidden" checked data-type="radio" data-name="discount_1" value="some value" data-black-text="Без скидок - 21 000" data-stars="10">
+                    <input type="hidden" data-type="radio" data-name="discount_1" value="some value" data-black-text="Ординаторам (30%) - 14 700 <font class='rub'>i</font>" data-grey-text="Предложение действует до 01.02.23" data-stars="10">
+                    <input type="hidden" data-type="radio" data-name="discount_1" value="some value" data-black-text='Врачам 1-2 года (30%) - 14 700 <font class="rub">i</font>' data-grey-text="Предложение действует до 01.02.23" data-stars="10">
+                    <input type="hidden" data-type="radio" data-name="discount_1" value="some value" data-black-text='Преподаватель (30%) - 14 700 <font class="rub">i</font>' data-stars="10">
+                    <input type="hidden" data-type="radio" data-name="discount_1" value="some value" data-black-text='Звездами (50%) - 14 700 <font class="rub">i</font>' data-grey-text="Звездами вы можете оплатить не более 50% от стоимости курса. <br>Подробнее про звезды читайте <a href='#'>на странице</a>" data-stars="10">
+                    <div class="item-events__head">
+                      <span>Клуб Ormco</span>
+                      <div class="item-events__stars" data-tippy-stars="Количество звезд, которое вы получите за участие в мероприятии" data-position="bottom-end">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M6.54077 1.06637C6.71432 0.663388 7.28569 0.663389 7.45923 1.06637L9.04562 4.75014C9.11801 4.91822 9.27644 5.03333 9.45867 5.05024L13.4524 5.42064C13.8892 5.46116 14.0658 6.00457 13.7362 6.29414L10.7229 8.94124C10.5854 9.06202 10.5249 9.24828 10.5652 9.42681L11.447 13.3395C11.5435 13.7675 11.0812 14.1034 10.704 13.8794L7.25528 11.8316C7.09792 11.7381 6.90208 11.7381 6.74472 11.8316L3.29604 13.8793C2.91877 14.1034 2.45652 13.7675 2.55299 13.3395L3.43484 9.42681C3.47507 9.24827 3.41456 9.06202 3.27706 8.94124L0.263817 6.29414C-0.0658138 6.00456 0.11075 5.46116 0.547636 5.42064L4.54133 5.05024C4.72356 5.03333 4.88199 4.91822 4.95438 4.75014L6.54077 1.06637Z" fill="white"/>
+                        </svg>
+                        <span>50</span>
+                      </div>
+                    </div>
+                    <a href="#" class="item-events__image">
+                      <img src="@img/events/interesting.png" alt="image">
+                    </a>
+                    <div class="item-events__body">
+                      <a href="#" class="item-events__name">
+                        Полная диагностика дисфункций ВНЧС в ортодонтической практике. Модуль 1, 03-04.02.23, Я.Ю.Дьячкова, Ставрополь
+                      </a>
+                      <div class="item-events__level">
+                        <svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M17.7727 7.81862L9.59091 4.5459L1.40909 7.81862L9.59091 11.0913L17.7727 7.81862V12.7277" stroke="#8A8A8A" stroke-width="1.18182" stroke-linecap="round" stroke-linejoin="round"></path>
+													<path d="M4.68146 9.45508V13.8733C4.68146 15.2289 6.87933 16.3278 9.59055 16.3278C12.3018 16.3278 14.4996 15.2289 14.4996 13.8733V9.45508" stroke="#8A8A8A" stroke-width="1.18182" stroke-linecap="round" stroke-linejoin="round"></path>
+												</svg>
+                        <span>Базовый уровень</span>
+                        <span class="item-events__theme">
+                          <img src="@img/events/partner_1.png" alt="image">
+                        </span>
+                      </div>
+                      <ul class="item-events__info">
+                        <li>Дьячкова Яна Юрьевна</li>
+                        <li>3-5 октября 2022 г. (3 дня)</li>
+                        <li>г. Санкт-Петербург</li>
+                      </ul>
+                      <div class="item-events__footer">
+                        <div class="item-events__prices">
+                          <div class="item-events__price">18 000 <font class="rub">i</font></div>
+                          <div class="item-events__oldprice">18 000 <font class="rub">i</font></div>
+                        </div>
+                        <button class="item-events__button btn btn-lightblue" 
+                          data-popup="#popupEventRegFull" 
+                          data-price='18 000'
+                          data-stars="50"
+                        >
+                          <span>Зарегистрироваться</span>
+                          <svg data-tippy-stars="Вы можете получить скидку 50% за звезды Ormco" data-offset="0, 8" data-position="top-end" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-expanded="false">
+                            <path d="M8.54077 1.06637C8.71432 0.663389 9.28569 0.66339 9.45923 1.06637L11.5864 6.00584C11.6588 6.17393 11.8172 6.28904 11.9994 6.30594L17.3545 6.80261C17.7914 6.84313 17.9679 7.38653 17.6383 7.67611L13.5979 11.2255C13.4604 11.3463 13.3999 11.5326 13.4401 11.7111L14.6226 16.9575C14.719 17.3856 14.2568 17.7214 13.8795 17.4974L9.25528 14.7516C9.09792 14.6581 8.90208 14.6581 8.74472 14.7516L4.12047 17.4974C3.7432 17.7214 3.28095 17.3856 3.37742 16.9575L4.55986 11.7111C4.6001 11.5326 4.53958 11.3463 4.40209 11.2255L0.361705 7.67611C0.0320742 7.38653 0.208637 6.84313 0.645523 6.80261L6.00057 6.30594C6.1828 6.28904 6.34123 6.17393 6.41362 6.00584L8.54077 1.06637Z" fill="white"></path>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="interesting__slide events__item item-events splide__slide" data-event>
+                    <input type="hidden" data-type="hidden" data-name="name" value="Полная диагностика дисфункций ВНЧС в ортодонтической практике. Модуль 1, 03-04.02.23, Я.Ю.Дьячкова, Ставрополь">
+                    <input type="hidden" checked data-type="radio" data-name="discount_1" value="some value" data-black-text="Без скидок - 21 000" data-stars="10">
+                    <input type="hidden" data-type="radio" data-name="discount_1" value="some value" data-black-text="Ординаторам (30%) - 14 700 <font class='rub'>i</font>" data-grey-text="Предложение действует до 01.02.23" data-stars="10">
+                    <input type="hidden" data-type="radio" data-name="discount_1" value="some value" data-black-text='Врачам 1-2 года (30%) - 14 700 <font class="rub">i</font>' data-grey-text="Предложение действует до 01.02.23" data-stars="10">
+                    <input type="hidden" data-type="radio" data-name="discount_1" value="some value" data-black-text='Преподаватель (30%) - 14 700 <font class="rub">i</font>' data-stars="10">
+                    <input type="hidden" disabled data-type="radio" data-name="discount_1" value="some value" data-black-text='Звездами (50%) - 14 700 <font class="rub">i</font>' data-grey-text="У вас недостаточно звезд чтобы воспользоваться скидкой <br>Подробнее про звезды читайте <a href='#'>на странице</a>" data-stars="10">
+                    <div class="item-events__head">
+                      <span>Клуб Ormco</span>
+                      <div class="item-events__stars" data-tippy-stars="Количество звезд, которое вы получите за участие в мероприятии" data-position="bottom-end">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M6.54077 1.06637C6.71432 0.663388 7.28569 0.663389 7.45923 1.06637L9.04562 4.75014C9.11801 4.91822 9.27644 5.03333 9.45867 5.05024L13.4524 5.42064C13.8892 5.46116 14.0658 6.00457 13.7362 6.29414L10.7229 8.94124C10.5854 9.06202 10.5249 9.24828 10.5652 9.42681L11.447 13.3395C11.5435 13.7675 11.0812 14.1034 10.704 13.8794L7.25528 11.8316C7.09792 11.7381 6.90208 11.7381 6.74472 11.8316L3.29604 13.8793C2.91877 14.1034 2.45652 13.7675 2.55299 13.3395L3.43484 9.42681C3.47507 9.24827 3.41456 9.06202 3.27706 8.94124L0.263817 6.29414C-0.0658138 6.00456 0.11075 5.46116 0.547636 5.42064L4.54133 5.05024C4.72356 5.03333 4.88199 4.91822 4.95438 4.75014L6.54077 1.06637Z" fill="white"/>
+                        </svg>
+                        <span>50</span>
+                      </div>
+                    </div>
+                    <a href="#" class="item-events__image">
+                      <img src="@img/events/interesting.png" alt="image">
+                    </a>
+                    <div class="item-events__body">
+                      <a href="#" class="item-events__name">
+                        Полная диагностика дисфункций ВНЧС в ортодонтической практике. Модуль 1, 03-04.02.23, Я.Ю.Дьячкова, Ставрополь
+                      </a>
+                      <div class="item-events__level">
+                        <svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M17.7727 7.81862L9.59091 4.5459L1.40909 7.81862L9.59091 11.0913L17.7727 7.81862V12.7277" stroke="#8A8A8A" stroke-width="1.18182" stroke-linecap="round" stroke-linejoin="round"></path>
+													<path d="M4.68146 9.45508V13.8733C4.68146 15.2289 6.87933 16.3278 9.59055 16.3278C12.3018 16.3278 14.4996 15.2289 14.4996 13.8733V9.45508" stroke="#8A8A8A" stroke-width="1.18182" stroke-linecap="round" stroke-linejoin="round"></path>
+												</svg>
+                        <span>Базовый уровень</span>
+                        <span class="item-events__theme">
+                          <img src="@img/events/partner_1.png" alt="image">
+                        </span>
+                      </div>
+                      <ul class="item-events__info">
+                        <li>Дьячкова Яна Юрьевна</li>
+                        <li>3-5 октября 2022 г. (3 дня)</li>
+                        <li>г. Санкт-Петербург</li>
+                      </ul>
+                      <div class="item-events__footer">
+                        <div class="item-events__prices">
+                          <div class="item-events__price">18 000 <font class="rub">i</font></div>
+                          <div class="item-events__oldprice">18 000 <font class="rub">i</font></div>
+                        </div>
+                        <button class="item-events__button btn btn-lightblue" 
+                          data-popup="#popupEventRegFull" 
+                          data-price='18 000'
+                          data-stars="50"
+                        >
+                          <span>Зарегистрироваться</span>
+                          <svg data-tippy-stars="Вы можете получить скидку 50% за звезды Ormco" data-offset="0, 8" data-position="top-end" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-expanded="false">
+                            <path d="M8.54077 1.06637C8.71432 0.663389 9.28569 0.66339 9.45923 1.06637L11.5864 6.00584C11.6588 6.17393 11.8172 6.28904 11.9994 6.30594L17.3545 6.80261C17.7914 6.84313 17.9679 7.38653 17.6383 7.67611L13.5979 11.2255C13.4604 11.3463 13.3999 11.5326 13.4401 11.7111L14.6226 16.9575C14.719 17.3856 14.2568 17.7214 13.8795 17.4974L9.25528 14.7516C9.09792 14.6581 8.90208 14.6581 8.74472 14.7516L4.12047 17.4974C3.7432 17.7214 3.28095 17.3856 3.37742 16.9575L4.55986 11.7111C4.6001 11.5326 4.53958 11.3463 4.40209 11.2255L0.361705 7.67611C0.0320742 7.38653 0.208637 6.84313 0.645523 6.80261L6.00057 6.30594C6.1828 6.28904 6.34123 6.17393 6.41362 6.00584L8.54077 1.06637Z" fill="white"></path>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="interesting__slide events__item item-events splide__slide" data-event>
+                    <input type="hidden" data-type="hidden" data-name="name" value="Полная диагностика дисфункций ВНЧС в ортодонтической практике. Модуль 1, 03-04.02.23, Я.Ю.Дьячкова, Ставрополь">
+                    <input type="hidden" checked data-type="radio" data-name="discount_1" value="some value" data-black-text="Без скидок - 21 000" data-stars="10">
+                    <input type="hidden" data-type="radio" data-name="discount_1" value="some value" data-black-text="Ординаторам (30%) - 14 700 <font class='rub'>i</font>" data-grey-text="Предложение действует до 01.02.23" data-stars="10">
+                    <input type="hidden" data-type="radio" data-name="discount_1" value="some value" data-black-text='Врачам 1-2 года (30%) - 14 700 <font class="rub">i</font>' data-grey-text="Предложение действует до 01.02.23" data-stars="10">
+                    <input type="hidden" data-type="radio" data-name="discount_1" value="some value" data-black-text='Преподаватель (30%) - 14 700 <font class="rub">i</font>' data-stars="10">
+                    <div class="item-events__head">
+                      <span>Клуб Ormco</span>
+                      <div class="item-events__stars" data-tippy-stars="Количество звезд, которое вы получите за участие в мероприятии" data-position="bottom-end">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M6.54077 1.06637C6.71432 0.663388 7.28569 0.663389 7.45923 1.06637L9.04562 4.75014C9.11801 4.91822 9.27644 5.03333 9.45867 5.05024L13.4524 5.42064C13.8892 5.46116 14.0658 6.00457 13.7362 6.29414L10.7229 8.94124C10.5854 9.06202 10.5249 9.24828 10.5652 9.42681L11.447 13.3395C11.5435 13.7675 11.0812 14.1034 10.704 13.8794L7.25528 11.8316C7.09792 11.7381 6.90208 11.7381 6.74472 11.8316L3.29604 13.8793C2.91877 14.1034 2.45652 13.7675 2.55299 13.3395L3.43484 9.42681C3.47507 9.24827 3.41456 9.06202 3.27706 8.94124L0.263817 6.29414C-0.0658138 6.00456 0.11075 5.46116 0.547636 5.42064L4.54133 5.05024C4.72356 5.03333 4.88199 4.91822 4.95438 4.75014L6.54077 1.06637Z" fill="white"/>
+                        </svg>
+                        <span>50</span>
+                      </div>
+                    </div>
+                    <a href="#" class="item-events__image">
+                      <img src="@img/events/interesting.png" alt="image">
+                    </a>
+                    <div class="item-events__body">
+                      <a href="#" class="item-events__name">
+                        Полная диагностика дисфункций ВНЧС в ортодонтической практике. Модуль 1, 03-04.02.23, Я.Ю.Дьячкова, Ставрополь
+                      </a>
+                      <div class="item-events__level">
+                        <svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M17.7727 7.81862L9.59091 4.5459L1.40909 7.81862L9.59091 11.0913L17.7727 7.81862V12.7277" stroke="#8A8A8A" stroke-width="1.18182" stroke-linecap="round" stroke-linejoin="round"></path>
+													<path d="M4.68146 9.45508V13.8733C4.68146 15.2289 6.87933 16.3278 9.59055 16.3278C12.3018 16.3278 14.4996 15.2289 14.4996 13.8733V9.45508" stroke="#8A8A8A" stroke-width="1.18182" stroke-linecap="round" stroke-linejoin="round"></path>
+												</svg>
+                        <span>Базовый уровень</span>
+                        <span class="item-events__theme">
+                          <img src="@img/events/partner_1.png" alt="image">
+                        </span>
+                      </div>
+                      <ul class="item-events__info">
+                        <li>Дьячкова Яна Юрьевна</li>
+                        <li>3-5 октября 2022 г. (3 дня)</li>
+                        <li>г. Санкт-Петербург</li>
+                      </ul>
+                      <div class="item-events__footer">
+                        <div class="item-events__prices">
+                          <div class="item-events__price">18 000 <font class="rub">i</font></div>
+                          <div class="item-events__oldprice">18 000 <font class="rub">i</font></div>
+                        </div>
+                        <button class="item-events__button btn btn-lightblue" 
+                          data-popup="#popupEventRegFull" 
+                          data-price='18 000'
+                          data-stars="50"
+                        >
+                          <span>Зарегистрироваться</span>
+                          <svg data-tippy-stars="Вы можете получить скидку 50% за звезды Ormco" data-offset="0, 8" data-position="top-end" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-expanded="false">
+                            <path d="M8.54077 1.06637C8.71432 0.663389 9.28569 0.66339 9.45923 1.06637L11.5864 6.00584C11.6588 6.17393 11.8172 6.28904 11.9994 6.30594L17.3545 6.80261C17.7914 6.84313 17.9679 7.38653 17.6383 7.67611L13.5979 11.2255C13.4604 11.3463 13.3999 11.5326 13.4401 11.7111L14.6226 16.9575C14.719 17.3856 14.2568 17.7214 13.8795 17.4974L9.25528 14.7516C9.09792 14.6581 8.90208 14.6581 8.74472 14.7516L4.12047 17.4974C3.7432 17.7214 3.28095 17.3856 3.37742 16.9575L4.55986 11.7111C4.6001 11.5326 4.53958 11.3463 4.40209 11.2255L0.361705 7.67611C0.0320742 7.38653 0.208637 6.84313 0.645523 6.80261L6.00057 6.30594C6.1828 6.28904 6.34123 6.17393 6.41362 6.00584L8.54077 1.06637Z" fill="white"></path>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="interesting__slide events__item item-events splide__slide" data-event>
+                    <input type="hidden" data-type="hidden" data-name="name" value="Полная диагностика дисфункций ВНЧС в ортодонтической практике. Модуль 1, 03-04.02.23, Я.Ю.Дьячкова, Ставрополь">
+                    <div class="item-events__head">
+                      <span>Клуб Ormco</span>
+                      <div class="item-events__stars" data-tippy-stars="Количество звезд, которое вы получите за участие в мероприятии" data-position="bottom-end">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M6.54077 1.06637C6.71432 0.663388 7.28569 0.663389 7.45923 1.06637L9.04562 4.75014C9.11801 4.91822 9.27644 5.03333 9.45867 5.05024L13.4524 5.42064C13.8892 5.46116 14.0658 6.00457 13.7362 6.29414L10.7229 8.94124C10.5854 9.06202 10.5249 9.24828 10.5652 9.42681L11.447 13.3395C11.5435 13.7675 11.0812 14.1034 10.704 13.8794L7.25528 11.8316C7.09792 11.7381 6.90208 11.7381 6.74472 11.8316L3.29604 13.8793C2.91877 14.1034 2.45652 13.7675 2.55299 13.3395L3.43484 9.42681C3.47507 9.24827 3.41456 9.06202 3.27706 8.94124L0.263817 6.29414C-0.0658138 6.00456 0.11075 5.46116 0.547636 5.42064L4.54133 5.05024C4.72356 5.03333 4.88199 4.91822 4.95438 4.75014L6.54077 1.06637Z" fill="white"/>
+                        </svg>
+                        <span>50</span>
+                      </div>
+                    </div>
+                    <a href="#" class="item-events__image">
+                      <img src="@img/events/interesting.png" alt="image">
+                    </a>
+                    <div class="item-events__body">
+                      <a href="#" class="item-events__name">
+                        Полная диагностика дисфункций ВНЧС в ортодонтической практике. Модуль 1, 03-04.02.23, Я.Ю.Дьячкова, Ставрополь
+                      </a>
+                      <div class="item-events__level">
+                        <svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M17.7727 7.81862L9.59091 4.5459L1.40909 7.81862L9.59091 11.0913L17.7727 7.81862V12.7277" stroke="#8A8A8A" stroke-width="1.18182" stroke-linecap="round" stroke-linejoin="round"></path>
+													<path d="M4.68146 9.45508V13.8733C4.68146 15.2289 6.87933 16.3278 9.59055 16.3278C12.3018 16.3278 14.4996 15.2289 14.4996 13.8733V9.45508" stroke="#8A8A8A" stroke-width="1.18182" stroke-linecap="round" stroke-linejoin="round"></path>
+												</svg>
+                        <span>Базовый уровень</span>
+                        <span class="item-events__theme">
+                          <img src="@img/events/partner_1.png" alt="image">
+                        </span>
+                      </div>
+                      <ul class="item-events__info">
+                        <li>Дьячкова Яна Юрьевна</li>
+                        <li>3-5 октября 2022 г. (3 дня)</li>
+                        <li>г. Санкт-Петербург</li>
+                      </ul>
+                      <div class="item-events__footer">
+                        <div class="item-events__prices">
+                          <div class="item-events__price">18 000 <font class="rub">i</font></div>
+                          <div class="item-events__oldprice">18 000 <font class="rub">i</font></div>
+                        </div>
+                        <button class="item-events__button btn btn-lightblue" 
+                          data-popup="#popupEventRegFull" 
+                          data-price='18 000'
+                          data-stars="50"
+                        >
+                          <span>Зарегистрироваться</span>
+                          <svg data-tippy-stars="Вы можете получить скидку 50% за звезды Ormco" data-offset="0, 8" data-position="top-end" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-expanded="false">
+                            <path d="M8.54077 1.06637C8.71432 0.663389 9.28569 0.66339 9.45923 1.06637L11.5864 6.00584C11.6588 6.17393 11.8172 6.28904 11.9994 6.30594L17.3545 6.80261C17.7914 6.84313 17.9679 7.38653 17.6383 7.67611L13.5979 11.2255C13.4604 11.3463 13.3999 11.5326 13.4401 11.7111L14.6226 16.9575C14.719 17.3856 14.2568 17.7214 13.8795 17.4974L9.25528 14.7516C9.09792 14.6581 8.90208 14.6581 8.74472 14.7516L4.12047 17.4974C3.7432 17.7214 3.28095 17.3856 3.37742 16.9575L4.55986 11.7111C4.6001 11.5326 4.53958 11.3463 4.40209 11.2255L0.361705 7.67611C0.0320742 7.38653 0.208637 6.84313 0.645523 6.80261L6.00057 6.30594C6.1828 6.28904 6.34123 6.17393 6.41362 6.00584L8.54077 1.06637Z" fill="white"></path>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="interesting__slide events__item item-events splide__slide" data-event>
+                    <input type="hidden" data-type="hidden" data-name="name" value="Полная диагностика дисфункций ВНЧС в ортодонтической практике. Модуль 1, 03-04.02.23, Я.Ю.Дьячкова, Ставрополь">
+                    <input type="hidden" checked data-type="radio" data-name="discount_1" value="some value" data-black-text="Без скидок - 21 000" data-stars="10">
+                    <input type="hidden" data-type="radio" data-name="discount_1" value="some value" data-black-text="Ординаторам (30%) - 14 700 <font class='rub'>i</font>" data-grey-text="Предложение действует до 01.02.23" data-stars="10">
+                    <input type="hidden" data-type="radio" data-name="discount_1" value="some value" data-black-text='Врачам 1-2 года (30%) - 14 700 <font class="rub">i</font>' data-grey-text="Предложение действует до 01.02.23" data-stars="10">
+                    <input type="hidden" data-type="radio" data-name="discount_1" value="some value" data-black-text='Преподаватель (30%) - 14 700 <font class="rub">i</font>' data-stars="10">
+                    <input type="hidden" data-type="radio" data-name="discount_1" value="some value" data-black-text='Звездами (50%) - 14 700 <font class="rub">i</font>' data-grey-text="Звездами вы можете оплатить не более 50% от стоимости курса. <br>Подробнее про звезды читайте <a href='#'>на странице</a>" data-stars="10">
+                    <div class="item-events__head">
+                      <span>Клуб Ormco</span>
+                      <div class="item-events__stars" data-tippy-stars="Количество звезд, которое вы получите за участие в мероприятии" data-position="bottom-end">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M6.54077 1.06637C6.71432 0.663388 7.28569 0.663389 7.45923 1.06637L9.04562 4.75014C9.11801 4.91822 9.27644 5.03333 9.45867 5.05024L13.4524 5.42064C13.8892 5.46116 14.0658 6.00457 13.7362 6.29414L10.7229 8.94124C10.5854 9.06202 10.5249 9.24828 10.5652 9.42681L11.447 13.3395C11.5435 13.7675 11.0812 14.1034 10.704 13.8794L7.25528 11.8316C7.09792 11.7381 6.90208 11.7381 6.74472 11.8316L3.29604 13.8793C2.91877 14.1034 2.45652 13.7675 2.55299 13.3395L3.43484 9.42681C3.47507 9.24827 3.41456 9.06202 3.27706 8.94124L0.263817 6.29414C-0.0658138 6.00456 0.11075 5.46116 0.547636 5.42064L4.54133 5.05024C4.72356 5.03333 4.88199 4.91822 4.95438 4.75014L6.54077 1.06637Z" fill="white"/>
+                        </svg>
+                        <span>50</span>
+                      </div>
+                    </div>
+                    <a href="#" class="item-events__image">
+                      <img src="@img/events/interesting.png" alt="image">
+                    </a>
+                    <div class="item-events__body">
+                      <a href="#" class="item-events__name">
+                        Полная диагностика дисфункций ВНЧС в ортодонтической практике. Модуль 1, 03-04.02.23, Я.Ю.Дьячкова, Ставрополь
+                      </a>
+                      <div class="item-events__level">
+                        <svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M17.7727 7.81862L9.59091 4.5459L1.40909 7.81862L9.59091 11.0913L17.7727 7.81862V12.7277" stroke="#8A8A8A" stroke-width="1.18182" stroke-linecap="round" stroke-linejoin="round"></path>
+													<path d="M4.68146 9.45508V13.8733C4.68146 15.2289 6.87933 16.3278 9.59055 16.3278C12.3018 16.3278 14.4996 15.2289 14.4996 13.8733V9.45508" stroke="#8A8A8A" stroke-width="1.18182" stroke-linecap="round" stroke-linejoin="round"></path>
+												</svg>
+                        <span>Базовый уровень</span>
+                        <span class="item-events__theme">
+                          <img src="@img/events/partner_1.png" alt="image">
+                        </span>
+                      </div>
+                      <ul class="item-events__info">
+                        <li>Дьячкова Яна Юрьевна</li>
+                        <li>3-5 октября 2022 г. (3 дня)</li>
+                        <li>г. Санкт-Петербург</li>
+                      </ul>
+                      <div class="item-events__footer">
+                        <div class="item-events__prices">
+                          <div class="item-events__price">18 000 <font class="rub">i</font></div>
+                          <div class="item-events__oldprice">18 000 <font class="rub">i</font></div>
+                        </div>
+                        <button class="item-events__button btn btn-lightblue" 
+                          data-popup="#popupEventRegFull" 
+                          data-price='18 000'
+                          data-stars="50"
+                        >
+                          <span>Зарегистрироваться</span>
+                          <svg data-tippy-stars="Вы можете получить скидку 50% за звезды Ormco" data-offset="0, 8" data-position="top-end" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-expanded="false">
+                            <path d="M8.54077 1.06637C8.71432 0.663389 9.28569 0.66339 9.45923 1.06637L11.5864 6.00584C11.6588 6.17393 11.8172 6.28904 11.9994 6.30594L17.3545 6.80261C17.7914 6.84313 17.9679 7.38653 17.6383 7.67611L13.5979 11.2255C13.4604 11.3463 13.3999 11.5326 13.4401 11.7111L14.6226 16.9575C14.719 17.3856 14.2568 17.7214 13.8795 17.4974L9.25528 14.7516C9.09792 14.6581 8.90208 14.6581 8.74472 14.7516L4.12047 17.4974C3.7432 17.7214 3.28095 17.3856 3.37742 16.9575L4.55986 11.7111C4.6001 11.5326 4.53958 11.3463 4.40209 11.2255L0.361705 7.67611C0.0320742 7.38653 0.208637 6.84313 0.645523 6.80261L6.00057 6.30594C6.1828 6.28904 6.34123 6.17393 6.41362 6.00584L8.54077 1.06637Z" fill="white"></path>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="interesting__slide events__item item-events splide__slide" data-event>
+                    <input type="hidden" data-type="hidden" data-name="name" value="Полная диагностика дисфункций ВНЧС в ортодонтической практике. Модуль 1, 03-04.02.23, Я.Ю.Дьячкова, Ставрополь">
+                    <input type="hidden" checked data-type="radio" data-name="discount_1" value="some value" data-black-text="Без скидок - 21 000" data-stars="10">
+                    <input type="hidden" data-type="radio" data-name="discount_1" value="some value" data-black-text="Ординаторам (30%) - 14 700 <font class='rub'>i</font>" data-grey-text="Предложение действует до 01.02.23" data-stars="10">
+                    <input type="hidden" data-type="radio" data-name="discount_1" value="some value" data-black-text='Врачам 1-2 года (30%) - 14 700 <font class="rub">i</font>' data-grey-text="Предложение действует до 01.02.23" data-stars="10">
+                    <input type="hidden" data-type="radio" data-name="discount_1" value="some value" data-black-text='Преподаватель (30%) - 14 700 <font class="rub">i</font>' data-stars="10">
+                    <input type="hidden" disabled data-type="radio" data-name="discount_1" value="some value" data-black-text='Звездами (50%) - 14 700 <font class="rub">i</font>' data-grey-text="У вас недостаточно звезд чтобы воспользоваться скидкой <br>Подробнее про звезды читайте <a href='#'>на странице</a>" data-stars="10">
+                    <div class="item-events__head">
+                      <span>Клуб Ormco</span>
+                      <div class="item-events__stars" data-tippy-stars="Количество звезд, которое вы получите за участие в мероприятии" data-position="bottom-end">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M6.54077 1.06637C6.71432 0.663388 7.28569 0.663389 7.45923 1.06637L9.04562 4.75014C9.11801 4.91822 9.27644 5.03333 9.45867 5.05024L13.4524 5.42064C13.8892 5.46116 14.0658 6.00457 13.7362 6.29414L10.7229 8.94124C10.5854 9.06202 10.5249 9.24828 10.5652 9.42681L11.447 13.3395C11.5435 13.7675 11.0812 14.1034 10.704 13.8794L7.25528 11.8316C7.09792 11.7381 6.90208 11.7381 6.74472 11.8316L3.29604 13.8793C2.91877 14.1034 2.45652 13.7675 2.55299 13.3395L3.43484 9.42681C3.47507 9.24827 3.41456 9.06202 3.27706 8.94124L0.263817 6.29414C-0.0658138 6.00456 0.11075 5.46116 0.547636 5.42064L4.54133 5.05024C4.72356 5.03333 4.88199 4.91822 4.95438 4.75014L6.54077 1.06637Z" fill="white"/>
+                        </svg>
+                        <span>50</span>
+                      </div>
+                    </div>
+                    <a href="#" class="item-events__image">
+                      <img src="@img/events/interesting.png" alt="image">
+                    </a>
+                    <div class="item-events__body">
+                      <a href="#" class="item-events__name">
+                        Полная диагностика дисфункций ВНЧС в ортодонтической практике. Модуль 1, 03-04.02.23, Я.Ю.Дьячкова, Ставрополь
+                      </a>
+                      <div class="item-events__level">
+                        <svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M17.7727 7.81862L9.59091 4.5459L1.40909 7.81862L9.59091 11.0913L17.7727 7.81862V12.7277" stroke="#8A8A8A" stroke-width="1.18182" stroke-linecap="round" stroke-linejoin="round"></path>
+													<path d="M4.68146 9.45508V13.8733C4.68146 15.2289 6.87933 16.3278 9.59055 16.3278C12.3018 16.3278 14.4996 15.2289 14.4996 13.8733V9.45508" stroke="#8A8A8A" stroke-width="1.18182" stroke-linecap="round" stroke-linejoin="round"></path>
+												</svg>
+                        <span>Базовый уровень</span>
+                        <span class="item-events__theme">
+                          <img src="@img/events/partner_1.png" alt="image">
+                        </span>
+                      </div>
+                      <ul class="item-events__info">
+                        <li>Дьячкова Яна Юрьевна</li>
+                        <li>3-5 октября 2022 г. (3 дня)</li>
+                        <li>г. Санкт-Петербург</li>
+                      </ul>
+                      <div class="item-events__footer">
+                        <div class="item-events__prices">
+                          <div class="item-events__price">18 000 <font class="rub">i</font></div>
+                          <div class="item-events__oldprice">18 000 <font class="rub">i</font></div>
+                        </div>
+                        <button class="item-events__button btn btn-lightblue" 
+                          data-popup="#popupEventRegFull" 
+                          data-price='18 000'
+                          data-stars="50"
+                        >
+                          <span>Зарегистрироваться</span>
+                          <svg data-tippy-stars="Вы можете получить скидку 50% за звезды Ormco" data-offset="0, 8" data-position="top-end" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-expanded="false">
+                            <path d="M8.54077 1.06637C8.71432 0.663389 9.28569 0.66339 9.45923 1.06637L11.5864 6.00584C11.6588 6.17393 11.8172 6.28904 11.9994 6.30594L17.3545 6.80261C17.7914 6.84313 17.9679 7.38653 17.6383 7.67611L13.5979 11.2255C13.4604 11.3463 13.3999 11.5326 13.4401 11.7111L14.6226 16.9575C14.719 17.3856 14.2568 17.7214 13.8795 17.4974L9.25528 14.7516C9.09792 14.6581 8.90208 14.6581 8.74472 14.7516L4.12047 17.4974C3.7432 17.7214 3.28095 17.3856 3.37742 16.9575L4.55986 11.7111C4.6001 11.5326 4.53958 11.3463 4.40209 11.2255L0.361705 7.67611C0.0320742 7.38653 0.208637 6.84313 0.645523 6.80261L6.00057 6.30594C6.1828 6.28904 6.34123 6.17393 6.41362 6.00584L8.54077 1.06637Z" fill="white"></path>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="interesting__slide events__item item-events splide__slide" data-event>
+                    <input type="hidden" data-type="hidden" data-name="name" value="Полная диагностика дисфункций ВНЧС в ортодонтической практике. Модуль 1, 03-04.02.23, Я.Ю.Дьячкова, Ставрополь">
+                    <input type="hidden" checked data-type="radio" data-name="discount_1" value="some value" data-black-text="Без скидок - 21 000" data-stars="10">
+                    <input type="hidden" data-type="radio" data-name="discount_1" value="some value" data-black-text="Ординаторам (30%) - 14 700 <font class='rub'>i</font>" data-grey-text="Предложение действует до 01.02.23" data-stars="10">
+                    <input type="hidden" data-type="radio" data-name="discount_1" value="some value" data-black-text='Врачам 1-2 года (30%) - 14 700 <font class="rub">i</font>' data-grey-text="Предложение действует до 01.02.23" data-stars="10">
+                    <input type="hidden" data-type="radio" data-name="discount_1" value="some value" data-black-text='Преподаватель (30%) - 14 700 <font class="rub">i</font>' data-stars="10">
+                    <div class="item-events__head">
+                      <span>Клуб Ormco</span>
+                      <div class="item-events__stars" data-tippy-stars="Количество звезд, которое вы получите за участие в мероприятии" data-position="bottom-end">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M6.54077 1.06637C6.71432 0.663388 7.28569 0.663389 7.45923 1.06637L9.04562 4.75014C9.11801 4.91822 9.27644 5.03333 9.45867 5.05024L13.4524 5.42064C13.8892 5.46116 14.0658 6.00457 13.7362 6.29414L10.7229 8.94124C10.5854 9.06202 10.5249 9.24828 10.5652 9.42681L11.447 13.3395C11.5435 13.7675 11.0812 14.1034 10.704 13.8794L7.25528 11.8316C7.09792 11.7381 6.90208 11.7381 6.74472 11.8316L3.29604 13.8793C2.91877 14.1034 2.45652 13.7675 2.55299 13.3395L3.43484 9.42681C3.47507 9.24827 3.41456 9.06202 3.27706 8.94124L0.263817 6.29414C-0.0658138 6.00456 0.11075 5.46116 0.547636 5.42064L4.54133 5.05024C4.72356 5.03333 4.88199 4.91822 4.95438 4.75014L6.54077 1.06637Z" fill="white"/>
+                        </svg>
+                        <span>50</span>
+                      </div>
+                    </div>
+                    <a href="#" class="item-events__image">
+                      <img src="@img/events/interesting.png" alt="image">
+                    </a>
+                    <div class="item-events__body">
+                      <a href="#" class="item-events__name">
+                        Полная диагностика дисфункций ВНЧС в ортодонтической практике. Модуль 1, 03-04.02.23, Я.Ю.Дьячкова, Ставрополь
+                      </a>
+                      <div class="item-events__level">
+                        <svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M17.7727 7.81862L9.59091 4.5459L1.40909 7.81862L9.59091 11.0913L17.7727 7.81862V12.7277" stroke="#8A8A8A" stroke-width="1.18182" stroke-linecap="round" stroke-linejoin="round"></path>
+													<path d="M4.68146 9.45508V13.8733C4.68146 15.2289 6.87933 16.3278 9.59055 16.3278C12.3018 16.3278 14.4996 15.2289 14.4996 13.8733V9.45508" stroke="#8A8A8A" stroke-width="1.18182" stroke-linecap="round" stroke-linejoin="round"></path>
+												</svg>
+                        <span>Базовый уровень</span>
+                        <span class="item-events__theme">
+                          <img src="@img/events/partner_1.png" alt="image">
+                        </span>
+                      </div>
+                      <ul class="item-events__info">
+                        <li>Дьячкова Яна Юрьевна</li>
+                        <li>3-5 октября 2022 г. (3 дня)</li>
+                        <li>г. Санкт-Петербург</li>
+                      </ul>
+                      <div class="item-events__footer">
+                        <div class="item-events__prices">
+                          <div class="item-events__price">18 000 <font class="rub">i</font></div>
+                          <div class="item-events__oldprice">18 000 <font class="rub">i</font></div>
+                        </div>
+                        <button class="item-events__button btn btn-lightblue" 
+                          data-popup="#popupEventRegFull" 
+                          data-price='18 000'
+                          data-stars="50"
+                        >
+                          <span>Зарегистрироваться</span>
+                          <svg data-tippy-stars="Вы можете получить скидку 50% за звезды Ormco" data-offset="0, 8" data-position="top-end" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-expanded="false">
+                            <path d="M8.54077 1.06637C8.71432 0.663389 9.28569 0.66339 9.45923 1.06637L11.5864 6.00584C11.6588 6.17393 11.8172 6.28904 11.9994 6.30594L17.3545 6.80261C17.7914 6.84313 17.9679 7.38653 17.6383 7.67611L13.5979 11.2255C13.4604 11.3463 13.3999 11.5326 13.4401 11.7111L14.6226 16.9575C14.719 17.3856 14.2568 17.7214 13.8795 17.4974L9.25528 14.7516C9.09792 14.6581 8.90208 14.6581 8.74472 14.7516L4.12047 17.4974C3.7432 17.7214 3.28095 17.3856 3.37742 16.9575L4.55986 11.7111C4.6001 11.5326 4.53958 11.3463 4.40209 11.2255L0.361705 7.67611C0.0320742 7.38653 0.208637 6.84313 0.645523 6.80261L6.00057 6.30594C6.1828 6.28904 6.34123 6.17393 6.41362 6.00584L8.54077 1.06637Z" fill="white"></path>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="interesting__slide events__item item-events splide__slide" data-event>
+                    <input type="hidden" data-type="hidden" data-name="name" value="Полная диагностика дисфункций ВНЧС в ортодонтической практике. Модуль 1, 03-04.02.23, Я.Ю.Дьячкова, Ставрополь">
+                    <div class="item-events__head">
+                      <span>Клуб Ormco</span>
+                      <div class="item-events__stars" data-tippy-stars="Количество звезд, которое вы получите за участие в мероприятии" data-position="bottom-end">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M6.54077 1.06637C6.71432 0.663388 7.28569 0.663389 7.45923 1.06637L9.04562 4.75014C9.11801 4.91822 9.27644 5.03333 9.45867 5.05024L13.4524 5.42064C13.8892 5.46116 14.0658 6.00457 13.7362 6.29414L10.7229 8.94124C10.5854 9.06202 10.5249 9.24828 10.5652 9.42681L11.447 13.3395C11.5435 13.7675 11.0812 14.1034 10.704 13.8794L7.25528 11.8316C7.09792 11.7381 6.90208 11.7381 6.74472 11.8316L3.29604 13.8793C2.91877 14.1034 2.45652 13.7675 2.55299 13.3395L3.43484 9.42681C3.47507 9.24827 3.41456 9.06202 3.27706 8.94124L0.263817 6.29414C-0.0658138 6.00456 0.11075 5.46116 0.547636 5.42064L4.54133 5.05024C4.72356 5.03333 4.88199 4.91822 4.95438 4.75014L6.54077 1.06637Z" fill="white"/>
+                        </svg>
+                        <span>50</span>
+                      </div>
+                    </div>
+                    <a href="#" class="item-events__image">
+                      <img src="@img/events/interesting.png" alt="image">
+                    </a>
+                    <div class="item-events__body">
+                      <a href="#" class="item-events__name">
+                        Полная диагностика дисфункций ВНЧС в ортодонтической практике. Модуль 1, 03-04.02.23, Я.Ю.Дьячкова, Ставрополь
+                      </a>
+                      <div class="item-events__level">
+                        <svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M17.7727 7.81862L9.59091 4.5459L1.40909 7.81862L9.59091 11.0913L17.7727 7.81862V12.7277" stroke="#8A8A8A" stroke-width="1.18182" stroke-linecap="round" stroke-linejoin="round"></path>
+													<path d="M4.68146 9.45508V13.8733C4.68146 15.2289 6.87933 16.3278 9.59055 16.3278C12.3018 16.3278 14.4996 15.2289 14.4996 13.8733V9.45508" stroke="#8A8A8A" stroke-width="1.18182" stroke-linecap="round" stroke-linejoin="round"></path>
+												</svg>
+                        <span>Базовый уровень</span>
+                        <span class="item-events__theme">
+                          <img src="@img/events/partner_1.png" alt="image">
+                        </span>
+                      </div>
+                      <ul class="item-events__info">
+                        <li>Дьячкова Яна Юрьевна</li>
+                        <li>3-5 октября 2022 г. (3 дня)</li>
+                        <li>г. Санкт-Петербург</li>
+                      </ul>
+                      <div class="item-events__footer">
+                        <div class="item-events__prices">
+                          <div class="item-events__price">18 000 <font class="rub">i</font></div>
+                          <div class="item-events__oldprice">18 000 <font class="rub">i</font></div>
+                        </div>
+                        <button class="item-events__button btn btn-lightblue" 
+                          data-popup="#popupEventRegFull" 
+                          data-price='18 000'
+                          data-stars="50"
+                        >
+                          <span>Зарегистрироваться</span>
+                          <svg data-tippy-stars="Вы можете получить скидку 50% за звезды Ormco" data-offset="0, 8" data-position="top-end" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-expanded="false">
+                            <path d="M8.54077 1.06637C8.71432 0.663389 9.28569 0.66339 9.45923 1.06637L11.5864 6.00584C11.6588 6.17393 11.8172 6.28904 11.9994 6.30594L17.3545 6.80261C17.7914 6.84313 17.9679 7.38653 17.6383 7.67611L13.5979 11.2255C13.4604 11.3463 13.3999 11.5326 13.4401 11.7111L14.6226 16.9575C14.719 17.3856 14.2568 17.7214 13.8795 17.4974L9.25528 14.7516C9.09792 14.6581 8.90208 14.6581 8.74472 14.7516L4.12047 17.4974C3.7432 17.7214 3.28095 17.3856 3.37742 16.9575L4.55986 11.7111C4.6001 11.5326 4.53958 11.3463 4.40209 11.2255L0.361705 7.67611C0.0320742 7.38653 0.208637 6.84313 0.645523 6.80261L6.00057 6.30594C6.1828 6.28904 6.34123 6.17393 6.41362 6.00584L8.54077 1.06637Z" fill="white"></path>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="splide__arrows interesting__arrows">
+                <button class="splide__arrow splide__arrow--prev interesting__arrow interesting__arrow--prev">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15.375 5.25L8.625 12L15.375 18.75" stroke="#8E8E93" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+                <button class="splide__arrow splide__arrow--next interesting__arrow interesting__arrow--next">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.625 18.75L15.375 12L8.625 5.25" stroke="#8E8E93" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+        @@include('html/_subscribe.htm',{})
+        @@include('html/_ormcoban.htm',{})
+        @@include('html/_contacts.htm',{})
+        @@include('html/_partners.htm',{})
+        @@include('html/_application.htm',{})
+			</main>
+			@@include('html/_footer.htm',{
+        "top":"_top"
+      })
+		</div>
+		@@include('html/_popup.htm',{})
+		@@include('html/_popup_auth.htm',{})
+		@@include('html/_popup_question.htm',{})
+		@@include('html/_popup_events.htm',{})
+		@@include('html/_popup_course.htm',{})
+		@@include('html/_js.htm',{})
+	</body>
+</html>

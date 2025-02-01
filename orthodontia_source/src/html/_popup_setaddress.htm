@@ -1,0 +1,49 @@
+<!-- 
+  В переменную пишем установлен ли адрес у пользователя. 
+  Также управлять можно через кукис(https://skr.sh/sNsTQnhwE4r). 
+  Если хоть один из параметров равен false то окно откроется 
+-->
+
+<!-- <script>
+  window.isAddressSet = true;
+</script> -->
+
+
+<!-- кнопка обязательная, без неё модалка не откроется -->
+<a href="#" data-popup="#setAddressPopup" data-nohash></a>
+<!-- В атрибут data-delay пишем задержку открытия в мс. Если указать 0 то и задержка будет 0, если ничего не указать то задержка по умолчанию 10 секунд. Если атрибута нет то окно не откроется -->
+<div id="setAddressPopup" aria-hidden="true" class="popup setAddressPopup" data-noclose data-nohash data-delay="2000">
+	<div class="popup__wrapper setAddressPopup__wrapper">
+		<div class="popup__content setAddressPopup__content">
+			<div class="popup__text setAddressPopup__text">
+        <div class="authPopup__head">
+          <h2 class="authPopup__title">Обновление адреса</h2>
+        </div>
+        <!-- Если на форме есть атрибут data-set-errors то ошибки будут накидываться(элементы стилизоваться в зависимости от ошибок), в противном случае не будут -->
+        <!-- Если на этой форме есть атрибут data-set-cookie то при её отправке в куки запишется isAddressSet=true, со временем жизни равное значению атрибута в днях либо один день. Если атрибута нет то записывать придётся самостоятельно -->
+        <!-- <form action="#" data-dev method="post" class="authPopup__form form-authPopup" data-validate="change, focusout" data-set-errors data-set-cookie="1"> -->
+        <form action="#" data-dev method="post" class="authPopup__form form-authPopup" data-validate="change, focusout" data-set-errors>
+          <div class="form-authPopup__item form-authPopup__item_input">
+            <span class="authPopup__subtitle">Чтобы продолжить пользоваться сайтом, укажите адрес вашей клиники</span>
+          </div>
+          <div class="form-authPopup__item form-authPopup__item_input" data-setaddress-country>
+            <input type="text" class="form-authPopup__input" data-required>
+            <label class="form-authPopup__label">Страна*</label>
+          </div>
+          <div class="form-authPopup__item form-authPopup__item_input" hidden data-setaddress-city>
+            <!-- Указываем атрибут data-need-required если нужно сделать поле обязательным. Если указать атрибут по умолчанию то форма не пройдёт валидацию -->
+            <input type="text" class="form-authPopup__input" data-need-required>
+            <label class="form-authPopup__label">Город*</label>
+          </div>
+          <div class="form-authPopup__item form-authPopup__item_input" hidden data-setaddress-address>
+            <input type="text" class="form-authPopup__input" data-need-required>
+            <label class="form-authPopup__label">Адрес*</label>
+          </div>
+          <div class="form-authPopup__item form-authPopup__item_btn">
+            <button type="submit" class="form-authPopup__button btn btn-lightblue" disabled>Сохранить</button>
+          </div>
+        </form>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,41 @@
+<div id="consultPopup" aria-hidden="true" class="popup consultPopup @@event">
+	<div class="popup__wrapper consultPopup__wrapper">
+		<div class="popup__content consultPopup__content">
+			<button data-close type="button" class="popup__close consultPopup__close popupEventRegFull__close"></button>
+			<!-- <button data-drag-close type="button" class="popup__close consultPopup__close popupEventRegFull__close _mmd3dn"></button> -->
+			<div class="popup__text consultPopup__text">
+        <div class="consultPopup__head">
+          <h2 class="consultPopup__title">Запись на консультацию</h2>
+        </div>
+        <form action="#" data-dev class="consultPopup__body">
+          <div class="consultPopup__row consultPopup__row_file">
+            <div class="consultPopup__subtitle">Ваши вопросы для консультации*</div>
+            <textarea data-required placeholder="Не более 1 000 символов" class="consultPopup__textarea"></textarea>
+          </div>
+          <div class="consultPopup__row">
+            <div class="consultPopup__subtitle">Файл*</div>
+            <div class="consultPopup__liefile">
+              <input type="file" class="consultPopup__file" data-required data-maxsize="128"> <!-- data-maxsize в мегабайтах -->
+              <button type="button" class="consultPopup__filebtn">Выберите файл</button>
+              <span class="consultPopup__filespan">Файл не выбран</span>
+            </div>
+            <div class="consultPopup__info">Максимальный размер загружаемого файла 128 Mb</div>
+          </div>
+          <div class="form-popupEventRegFull__row form-popupEventRegFull__row_agree consultPopup__row_agree">
+            <input type="checkbox" data-required data-error="Что бы продолжить согласитесь с условиями" id="form-consultPopup__checkbox" class="form-popupEventRegFull__checkbox">
+            <label for="form-consultPopup__checkbox" class="form-popupEventRegFull__label">
+              <span>
+                Согласен с условиями <a href="#">Политики Конфиденциальности</a>, на обработку предоставленных данных <br>
+                ООО «Ормко», передачу данных аффилированным лицам, получение информационных рассылок и принимаю условия <a href="#">договора-оферты</a>. *
+              </span>
+            </label>
+          </div>
+          <div class="consultPopup__row consultPopup__row_footer">
+            <div class="consultPopup__price _mmd3dn">от 3 000 <font class='rub'>i</font></div>
+            <button type="submit" class="consultPopup__button btn btn-lightblue">Записаться</button>
+          </div>
+        </form>
+			</div>
+		</div>
+	</div>
+</div>

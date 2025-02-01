@@ -1,0 +1,17 @@
+[data-showmore] {
+}
+[data-showmore-content] {
+}
+[data-showmore-button] {
+	span {
+		&:last-of-type {
+			display: none;
+		}
+		._showmore-active & {
+			display: none;
+			&:last-of-type {
+				display: block;
+			}
+		}
+	}
+}

@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('html/_head.htm',{
+	"title":"Отзывы разноцветные"
+	})
+	<body>
+		<div class="wrapper">
+			@@include('html/_loader.htm',{})
+			@@include('html/_header.htm',{
+        "active_events": "_inpage"
+      })
+			<main class="page">
+        <section class="breadcumps" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <div class="breadcumps__container container">
+              <ul class="breadcumps__body">
+                <li class="breadcumps__item" itemscope itemprop="itemListElement" itemtype="http://schema.org/ListItem">
+                  <a href="home.html" itemprop="item">
+                    <span itemprop="name">Главная страница</span>
+                    <div itemprop="item.name" class="breadcumps_onhover">Главная страница</div>
+                    <meta itemprop="position" content="1">
+                  </a>
+                </li>
+                <li class="breadcumps__item" itemscope itemprop="itemListElement" itemtype="http://schema.org/ListItem">
+                  <span itemprop="item">
+                    <span itemprop="name">Отзывы</span>
+                    <div itemprop="item.name" class="breadcumps_onhover">Отзывы</div>
+                    <meta itemprop="position" content="2">
+                  </span>
+                </li>
+              </ul>
+          </div>
+        </section>
+        <section class="common-head">
+          <div class="common-head__container">
+            <h1 class="common-head__title">Отзывы</h1>
+          </div>
+        </section>
+        <section class="filters">
+          <div class="filters__container spollers-filters" data-spollers data-one-spoller data-spollers-speed="300">
+            <div class="spollers-filters__item" data-filter-item="Город">
+              <button type="button" data-spoller data-spoller-close class="spollers-filters__title">Город</button>
+              <div class="spollers-filters__body" hidden>
+                <div class="spollers-filters__mobile _mmd3dn">
+                  <div class="spollers-filters__close"></div>
+                </div>
+                <div class="spollers-filters__name _mmd3dn">
+                  Город
+                </div>
+                <form action="#" data-dev data-noclean class="spollers-filters__form">
+                  <div class="spollers-filters__rows">
+                    <label class="spollers-filters__row">
+                      <input type="checkbox" name="Город" value="Архангельск" class="spollers-filters__checkbox">
+                      <div class="spollers-filters__label">Архангельск</div>
+                    </label>
+                    <label class="spollers-filters__row">
+                      <input type="checkbox" name="Город" value="Владивосток" class="spollers-filters__checkbox">
+                      <div class="spollers-filters__label">Владивосток</div>
+                    </label>
+                    <label class="spollers-filters__row">
+                      <input type="checkbox" name="Город" value="Владикавказ" class="spollers-filters__checkbox">
+                      <div class="spollers-filters__label">Владикавказ</div>
+                    </label>
+                    <label class="spollers-filters__row">
+                      <input type="checkbox" name="Город" value="Воронеж" class="spollers-filters__checkbox">
+                      <div class="spollers-filters__label">Воронеж</div>
+                    </label>
+                    <label class="spollers-filters__row">
+                      <input type="checkbox" name="Город" value="Грозный" class="spollers-filters__checkbox">
+                      <div class="spollers-filters__label">Грозный</div>
+                    </label>
+                    <label class="spollers-filters__row">
+                      <input type="checkbox" name="Город" value="Екатеринбург" class="spollers-filters__checkbox">
+                      <div class="spollers-filters__label">Екатеринбург</div>
+                    </label>
+                    <label class="spollers-filters__row">
+                      <input type="checkbox" name="Город" value="Иркутск" class="spollers-filters__checkbox">
+                      <div class="spollers-filters__label">Иркутск</div>
+                    </label>
+                  </div>
+                  <button type="submit" class="spollers-filters__submit btn btn-lightblue" hidden>Применить</button>
+                </form>
+              </div>
+            </div>
+            <div class="spollers-filters__item" data-filter-item="Тематика">
+              <button type="button" data-spoller data-spoller-close class="spollers-filters__title">Тематика</button>
+              <div class="spollers-filters__body" hidden>
+                <div class="spollers-filters__mobile _mmd3dn">
+                  <div class="spollers-filters__close"></div>
+                </div>
+                <div class="spollers-filters__name _mmd3dn">
+                  Тематика
+                </div>
+                <form action="#" data-dev data-noclean class="spollers-filters__form">
+                  <div class="spollers-filters__rows">
+                    <label class="spollers-filters__row">
+                      <input type="checkbox" name="Тематика" value="Damon system" class="spollers-filters__checkbox">
+                      <div class="spollers-filters__label">Damon system</div>
+                    </label>
+                    <label class="spollers-filters__row">
+                      <input type="checkbox" name="Тематика" value="Абсолютный анкораж (Vector TAS)" class="spollers-filters__checkbox">
+                      <div class="spollers-filters__label">Абсолютный анкораж (Vector TAS)</div>
+                    </label>
+                    <label class="spollers-filters__row">
+                      <input type="checkbox" name="Тематика" value="ВНЧС" class="spollers-filters__checkbox">
+                      <div class="spollers-filters__label">ВНЧС</div>
+                    </label>
+                    <label class="spollers-filters__row">
+                      <input type="checkbox" name="Тематика" value="Диагностика" class="spollers-filters__checkbox">
+                      <div class="spollers-filters__label">Диагностика</div>
+                    </label>
+                    <label class="spollers-filters__row">
+                      <input type="checkbox" name="Тематика" value="Другое" class="spollers-filters__checkbox">
+                      <div class="spollers-filters__label">Другое</div>
+                    </label>
+                  </div>
+                  <button type="submit" class="spollers-filters__submit btn btn-lightblue" hidden>Применить</button>
+                </form>
+              </div>
+            </div>
+            <div class="spollers-filters__item" data-filter-item="Спикер">
+              <button type="button" data-spoller data-spoller-close class="spollers-filters__title">Спикер</button>
+              <div class="spollers-filters__body" hidden>
+                <div class="spollers-filters__mobile _mmd3dn">
+                  <div class="spollers-filters__close"></div>
+                </div>
+                <div class="spollers-filters__name _mmd3dn">
+                  Спикер
+                </div>
+                <form action="#" data-dev data-noclean class="spollers-filters__form">
+                  <div class="spollers-filters__rows">
+                    <label class="spollers-filters__row">
+                      <input type="checkbox" name="Спикер" value="Бадмаева А. Н." class="spollers-filters__checkbox">
+                      <div class="spollers-filters__label">Бадмаева А. Н.</div>
+                    </label>
+                    <label class="spollers-filters__row">
+                      <input type="checkbox" name="Спикер" value="Бородина Е. Г." class="spollers-filters__checkbox">
+                      <div class="spollers-filters__label">Бородина Е. Г.</div>
+                    </label>
+                    <label class="spollers-filters__row">
+                      <input type="checkbox" name="Спикер" value="Вологина М. В." class="spollers-filters__checkbox">
+                      <div class="spollers-filters__label">Вологина М. В.</div>
+                    </label>
+                    <label class="spollers-filters__row">
+                      <input type="checkbox" name="Спикер" value="Дьячкова Я. Ю." class="spollers-filters__checkbox">
+                      <div class="spollers-filters__label">Дьячкова Я. Ю.</div>
+                    </label>
+                    <label class="spollers-filters__row">
+                      <input type="checkbox" name="Спикер" value="Есипович М. А." class="spollers-filters__checkbox">
+                      <div class="spollers-filters__label">Есипович М. А.</div>
+                    </label>
+                    <label class="spollers-filters__row">
+                      <input type="checkbox" name="Спикер" value="Зернов К. и Морозов М." class="spollers-filters__checkbox">
+                      <div class="spollers-filters__label">Зернов К. и Морозов М.</div>
+                    </label>
+                    <label class="spollers-filters__row">
+                      <input type="checkbox" name="Спикер" value="Ивашова Н. А." class="spollers-filters__checkbox">
+                      <div class="spollers-filters__label">Ивашова Н. А.</div>
+                    </label>
+                  </div>
+                  <button type="submit" class="spollers-filters__submit btn btn-lightblue" hidden>Применить</button>
+                </form>
+              </div>
+            </div>
+            <div class="spollers-filters__item" data-filter-item="Уровень">
+              <button type="button" data-spoller data-spoller-close class="spollers-filters__title">Уровень</button>
+              <div class="spollers-filters__body" hidden>
+                <div class="spollers-filters__mobile _mmd3dn">
+                  <div class="spollers-filters__close"></div>
+                </div>
+                <div class="spollers-filters__name _mmd3dn">
+                  Уровень
+                </div>
+                <form action="#" data-dev data-noclean class="spollers-filters__form">
+                  <div class="spollers-filters__rows">
+                    <label class="spollers-filters__row">
+                      <input type="checkbox" name="Уровень" value="Базовый уровень" class="spollers-filters__checkbox">
+                      <div class="spollers-filters__label">Базовый уровень</div>
+                    </label>
+                    <label class="spollers-filters__row">
+                      <input type="checkbox" name="Уровень" value="Средний уровень" class="spollers-filters__checkbox">
+                      <div class="spollers-filters__label">Средний уровень</div>
+                    </label>
+                    <label class="spollers-filters__row">
+                      <input type="checkbox" name="Уровень" value="Продвинутый уровень" class="spollers-filters__checkbox">
+                      <div class="spollers-filters__label">Продвинутый уровень</div>
+                    </label>
+                  </div>
+                  <button type="submit" class="spollers-filters__submit btn btn-lightblue" hidden>Применить</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="checked-filters">
+          <div class="checked-filters__container">
+            <div class="checked-filters__wrapper"></div>
+            <button type="button" class="checked-filters__button" hidden>Очистить фильтры</button>
+          </div>
+        </section>
+        <section class="reviewsfull">
+          <div class="reviewsfull__container">
+            <div class="reviewsfull__item">
+              <div class="reviewsfull__head" style="background-color: #FFA1C9;">
+                <span>Онлайн курс</span>
+              </div>
+              <div class="reviewsfull__body">
+                <div class="reviewsfull__title">
+                  Полная диагностика дисфункций ВНЧС в ортодонтической практике. Модуль 1, 03-04.02.23, Я.Ю.Дьячкова, Ставрополь
+                </div>
+                <div class="reviewsfull__level">
+                  Базовый уровень
+                </div>
+                <ul class="main-event__info reviewsfull__info">
+                  <li>
+                    <svg width="18" height="22" viewBox="0 0 18 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="2.58325" y="5.2959" width="13.037" height="13.037" rx="1.62963" stroke="#111111" stroke-width="1.19167" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M12.3615 3.66663V6.92589" stroke="#111111" stroke-width="1.19167" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M5.84271 3.66663V6.92589" stroke="#111111" stroke-width="1.19167" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M2.58325 10.1855H15.6203" stroke="#111111" stroke-width="1.19167" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>2 октября 2022 г. (1 день)</span>
+                  </li>
+                  <li>
+                    <svg width="18" height="22" viewBox="0 0 18 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <ellipse cx="8.30274" cy="10.2684" rx="2.30298" ry="2.30298" stroke="#111111" stroke-width="1.19167" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M12.8172 14.611L9.56001 17.8682C8.96055 18.467 7.98928 18.467 7.38983 17.8682L4.13188 14.611C1.73365 12.2127 1.73372 8.32428 4.13203 5.92602C6.53034 3.52775 10.4187 3.52775 12.817 5.92602C15.2153 8.32428 15.2154 12.2127 12.8172 14.611V14.611Z" stroke="#111111" stroke-width="1.19167" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>г. Уфа, ул.Ленина, 25/29, гостиница «Башкирия», Конференц-зал «Янган-Тау»</span>
+                  </li>
+                </ul>
+                <div class="reviewsfull__speaker speaker-event">
+                  <div class="speaker-event__avatar">
+                    <img src="@img/events/speaker.png" alt="image">
+                  </div>
+                  <div class="speaker-event__name">
+                    Дьячкова Яна Юрьевна
+                  </div>
+                  <div class="speaker-event__info">
+                    Стоматолог-ортодонт, опытный специалист, эксперт по системе Insignia
+                  </div>
+                  <a href="#" class="speaker-event__more">
+                    <span>Все мероприятия спикера</span>
+                    <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M7.71826 6.71191C7.71826 6.52881 7.64502 6.36035 7.50586 6.22852L1.70508 0.544922C1.57324 0.42041 1.41211 0.354492 1.22168 0.354492C0.848145 0.354492 0.555176 0.640137 0.555176 1.021C0.555176 1.2041 0.628418 1.37256 0.745605 1.49707L6.07764 6.71191L0.745605 11.9268C0.628418 12.0513 0.555176 12.2124 0.555176 12.4028C0.555176 12.7837 0.848145 13.0693 1.22168 13.0693C1.41211 13.0693 1.57324 13.0034 1.70508 12.8716L7.50586 7.19531C7.64502 7.05615 7.71826 6.89502 7.71826 6.71191Z" fill="#2CA5F5"/>
+                    </svg>
+                  </a>
+                </div>
+                <div data-showmore="items" class="reviewsfull__showmore showmore-reviewsfull">
+                  <ul data-showmore-content="1" class="showmore-reviewsfull__content">
+                    <li class="showmore-reviewsfull__item">
+                      <p>“Лектор мастер своего дела на все 200%,выложился по полной, была очень дружелюбная, приятная атмосфера на семинаре. Я осталась в полном восторге!)“</p>
+                      <span>— Дибиргаджиев М. А.</span>
+                    </li>
+                    <li class="showmore-reviewsfull__item">
+                      <p>“Лектор мастер своего дела на все 200%,выложился по полной, была очень дружелюбная, приятная атмосфера на семинаре. Я осталась в полном восторге!)“</p>
+                      <span>— Дибиргаджиев М. А.</span>
+                    </li>
+                    <li class="showmore-reviewsfull__item">
+                      <p>“Лектор мастер своего дела на все 200%,выложился по полной, была очень дружелюбная, приятная атмосфера на семинаре. Я осталась в полном восторге!)“</p>
+                      <span>— Дибиргаджиев М. А.</span>
+                    </li>
+                  </ul>
+                  <button hidden data-showmore-button type="button" class="showmore-reviewsfull__more">
+                    <span>
+                      Показать все отзывы о мероприятии
+                    </span>
+                    <span>
+                      Скрыть
+                    </span>
+                    <svg width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 1L7.75 7.75L14.5 0.999999" stroke="#8A8A8A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="reviewsfull__item">
+              <div class="reviewsfull__head" style="background-color: #FF8585;">
+                <span>Вебинар</span>
+              </div>
+              <div class="reviewsfull__body">
+                <div class="reviewsfull__title">
+                  Полная диагностика дисфункций ВНЧС в ортодонтической практике. Модуль 1, 03-04.02.23, Я.Ю.Дьячкова, Ставрополь
+                </div>
+                <div class="reviewsfull__level">
+                  Базовый уровень
+                </div>
+                <ul class="main-event__info reviewsfull__info">
+                  <li>
+                    <svg width="18" height="22" viewBox="0 0 18 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="2.58325" y="5.2959" width="13.037" height="13.037" rx="1.62963" stroke="#111111" stroke-width="1.19167" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M12.3615 3.66663V6.92589" stroke="#111111" stroke-width="1.19167" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M5.84271 3.66663V6.92589" stroke="#111111" stroke-width="1.19167" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M2.58325 10.1855H15.6203" stroke="#111111" stroke-width="1.19167" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>2 октября 2022 г. (1 день)</span>
+                  </li>
+                  <li>
+                    <svg width="18" height="22" viewBox="0 0 18 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <ellipse cx="8.30274" cy="10.2684" rx="2.30298" ry="2.30298" stroke="#111111" stroke-width="1.19167" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M12.8172 14.611L9.56001 17.8682C8.96055 18.467 7.98928 18.467 7.38983 17.8682L4.13188 14.611C1.73365 12.2127 1.73372 8.32428 4.13203 5.92602C6.53034 3.52775 10.4187 3.52775 12.817 5.92602C15.2153 8.32428 15.2154 12.2127 12.8172 14.611V14.611Z" stroke="#111111" stroke-width="1.19167" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>г. Уфа, ул.Ленина, 25/29, гостиница «Башкирия», Конференц-зал «Янган-Тау»</span>
+                  </li>
+                </ul>
+                <div class="reviewsfull__speaker speaker-event">
+                  <div class="speaker-event__avatar">
+                    <img src="@img/events/speaker.png" alt="image">
+                  </div>
+                  <div class="speaker-event__name">
+                    Дьячкова Яна Юрьевна
+                  </div>
+                  <div class="speaker-event__info">
+                    Стоматолог-ортодонт, опытный специалист, эксперт по системе Insignia
+                  </div>
+                  <a href="#" class="speaker-event__more">
+                    <span>Все мероприятия спикера</span>
+                    <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M7.71826 6.71191C7.71826 6.52881 7.64502 6.36035 7.50586 6.22852L1.70508 0.544922C1.57324 0.42041 1.41211 0.354492 1.22168 0.354492C0.848145 0.354492 0.555176 0.640137 0.555176 1.021C0.555176 1.2041 0.628418 1.37256 0.745605 1.49707L6.07764 6.71191L0.745605 11.9268C0.628418 12.0513 0.555176 12.2124 0.555176 12.4028C0.555176 12.7837 0.848145 13.0693 1.22168 13.0693C1.41211 13.0693 1.57324 13.0034 1.70508 12.8716L7.50586 7.19531C7.64502 7.05615 7.71826 6.89502 7.71826 6.71191Z" fill="#2CA5F5"/>
+                    </svg>
+                  </a>
+                </div>
+                <div class="reviewsfull__speaker speaker-event">
+                  <div class="speaker-event__avatar">
+                    <img src="@img/events/speaker.png" alt="image">
+                  </div>
+                  <div class="speaker-event__name">
+                    Дьячкова Яна Юрьевна
+                  </div>
+                  <div class="speaker-event__info">
+                    Стоматолог-ортодонт, опытный специалист, эксперт по системе Insignia
+                  </div>
+                  <a href="#" class="speaker-event__more">
+                    <span>Все мероприятия спикера</span>
+                    <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M7.71826 6.71191C7.71826 6.52881 7.64502 6.36035 7.50586 6.22852L1.70508 0.544922C1.57324 0.42041 1.41211 0.354492 1.22168 0.354492C0.848145 0.354492 0.555176 0.640137 0.555176 1.021C0.555176 1.2041 0.628418 1.37256 0.745605 1.49707L6.07764 6.71191L0.745605 11.9268C0.628418 12.0513 0.555176 12.2124 0.555176 12.4028C0.555176 12.7837 0.848145 13.0693 1.22168 13.0693C1.41211 13.0693 1.57324 13.0034 1.70508 12.8716L7.50586 7.19531C7.64502 7.05615 7.71826 6.89502 7.71826 6.71191Z" fill="#2CA5F5"/>
+                    </svg>
+                  </a>
+                </div>
+                <div data-showmore="items" class="reviewsfull__showmore showmore-reviewsfull">
+                  <ul data-showmore-content="1" class="showmore-reviewsfull__content">
+                    <li class="showmore-reviewsfull__item">
+                      <p>“Лектор мастер своего дела на все 200%,выложился по полной, была очень дружелюбная, приятная атмосфера на семинаре. Я осталась в полном восторге!)“</p>
+                      <span>— Дибиргаджиев М. А.</span>
+                    </li>
+                    <li class="showmore-reviewsfull__item">
+                      <p>“Лектор мастер своего дела на все 200%,выложился по полной, была очень дружелюбная, приятная атмосфера на семинаре. Я осталась в полном восторге!)“</p>
+                      <span>— Дибиргаджиев М. А.</span>
+                    </li>
+                    <li class="showmore-reviewsfull__item">
+                      <p>“Лектор мастер своего дела на все 200%,выложился по полной, была очень дружелюбная, приятная атмосфера на семинаре. Я осталась в полном восторге!)“</p>
+                      <span>— Дибиргаджиев М. А.</span>
+                    </li>
+                  </ul>
+                  <button hidden data-showmore-button type="button" class="showmore-reviewsfull__more">
+                    <span>
+                      Показать все отзывы о мероприятии
+                    </span>
+                    <span>
+                      Скрыть
+                    </span>
+                    <svg width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 1L7.75 7.75L14.5 0.999999" stroke="#8A8A8A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="reviewsfull__item">
+              <div class="reviewsfull__head" style="background-color: #FFCB79;">
+                <span>Семинар партнера</span>
+              </div>
+              <div class="reviewsfull__body">
+                <div class="reviewsfull__title">
+                  Полная диагностика дисфункций ВНЧС в ортодонтической практике. Модуль 1, 03-04.02.23, Я.Ю.Дьячкова, Ставрополь
+                </div>
+                <div class="reviewsfull__level">
+                  Базовый уровень
+                </div>
+                <ul class="main-event__info reviewsfull__info">
+                  <li>
+                    <svg width="18" height="22" viewBox="0 0 18 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="2.58325" y="5.2959" width="13.037" height="13.037" rx="1.62963" stroke="#111111" stroke-width="1.19167" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M12.3615 3.66663V6.92589" stroke="#111111" stroke-width="1.19167" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M5.84271 3.66663V6.92589" stroke="#111111" stroke-width="1.19167" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M2.58325 10.1855H15.6203" stroke="#111111" stroke-width="1.19167" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>2 октября 2022 г. (1 день)</span>
+                  </li>
+                  <li>
+                    <svg width="18" height="22" viewBox="0 0 18 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <ellipse cx="8.30274" cy="10.2684" rx="2.30298" ry="2.30298" stroke="#111111" stroke-width="1.19167" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M12.8172 14.611L9.56001 17.8682C8.96055 18.467 7.98928 18.467 7.38983 17.8682L4.13188 14.611C1.73365 12.2127 1.73372 8.32428 4.13203 5.92602C6.53034 3.52775 10.4187 3.52775 12.817 5.92602C15.2153 8.32428 15.2154 12.2127 12.8172 14.611V14.611Z" stroke="#111111" stroke-width="1.19167" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>г. Уфа, ул.Ленина, 25/29, гостиница «Башкирия», Конференц-зал «Янган-Тау»</span>
+                  </li>
+                </ul>
+                <div class="reviewsfull__speaker speaker-event">
+                  <div class="speaker-event__avatar">
+                    <img src="@img/events/speaker.png" alt="image">
+                  </div>
+                  <div class="speaker-event__name">
+                    Дьячкова Яна Юрьевна
+                  </div>
+                  <div class="speaker-event__info">
+                    Стоматолог-ортодонт, опытный специалист, эксперт по системе Insignia
+                  </div>
+                  <a href="#" class="speaker-event__more">
+                    <span>Все мероприятия спикера</span>
+                    <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M7.71826 6.71191C7.71826 6.52881 7.64502 6.36035 7.50586 6.22852L1.70508 0.544922C1.57324 0.42041 1.41211 0.354492 1.22168 0.354492C0.848145 0.354492 0.555176 0.640137 0.555176 1.021C0.555176 1.2041 0.628418 1.37256 0.745605 1.49707L6.07764 6.71191L0.745605 11.9268C0.628418 12.0513 0.555176 12.2124 0.555176 12.4028C0.555176 12.7837 0.848145 13.0693 1.22168 13.0693C1.41211 13.0693 1.57324 13.0034 1.70508 12.8716L7.50586 7.19531C7.64502 7.05615 7.71826 6.89502 7.71826 6.71191Z" fill="#2CA5F5"/>
+                    </svg>
+                  </a>
+                </div>
+                <div class="reviewsfull__speaker speaker-event">
+                  <div class="speaker-event__avatar">
+                    <img src="@img/events/speaker.png" alt="image">
+                  </div>
+                  <div class="speaker-event__name">
+                    Дьячкова Яна Юрьевна
+                  </div>
+                  <div class="speaker-event__info">
+                    Стоматолог-ортодонт, опытный специалист, эксперт по системе Insignia
+                  </div>
+                  <a href="#" class="speaker-event__more">
+                    <span>Все мероприятия спикера</span>
+                    <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M7.71826 6.71191C7.71826 6.52881 7.64502 6.36035 7.50586 6.22852L1.70508 0.544922C1.57324 0.42041 1.41211 0.354492 1.22168 0.354492C0.848145 0.354492 0.555176 0.640137 0.555176 1.021C0.555176 1.2041 0.628418 1.37256 0.745605 1.49707L6.07764 6.71191L0.745605 11.9268C0.628418 12.0513 0.555176 12.2124 0.555176 12.4028C0.555176 12.7837 0.848145 13.0693 1.22168 13.0693C1.41211 13.0693 1.57324 13.0034 1.70508 12.8716L7.50586 7.19531C7.64502 7.05615 7.71826 6.89502 7.71826 6.71191Z" fill="#2CA5F5"/>
+                    </svg>
+                  </a>
+                </div>
+                <div class="reviewsfull__speaker speaker-event">
+                  <div class="speaker-event__avatar">
+                    <img src="@img/events/speaker.png" alt="image">
+                  </div>
+                  <div class="speaker-event__name">
+                    Дьячкова Яна Юрьевна
+                  </div>
+                  <div class="speaker-event__info">
+                    Стоматолог-ортодонт, опытный специалист, эксперт по системе Insignia
+                  </div>
+                  <a href="#" class="speaker-event__more">
+                    <span>Все мероприятия спикера</span>
+                    <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M7.71826 6.71191C7.71826 6.52881 7.64502 6.36035 7.50586 6.22852L1.70508 0.544922C1.57324 0.42041 1.41211 0.354492 1.22168 0.354492C0.848145 0.354492 0.555176 0.640137 0.555176 1.021C0.555176 1.2041 0.628418 1.37256 0.745605 1.49707L6.07764 6.71191L0.745605 11.9268C0.628418 12.0513 0.555176 12.2124 0.555176 12.4028C0.555176 12.7837 0.848145 13.0693 1.22168 13.0693C1.41211 13.0693 1.57324 13.0034 1.70508 12.8716L7.50586 7.19531C7.64502 7.05615 7.71826 6.89502 7.71826 6.71191Z" fill="#2CA5F5"/>
+                    </svg>
+                  </a>
+                </div>
+                <div data-showmore="items" class="reviewsfull__showmore showmore-reviewsfull">
+                  <ul data-showmore-content="1" class="showmore-reviewsfull__content">
+                    <li class="showmore-reviewsfull__item">
+                      <p>“Лектор мастер своего дела на все 200%,выложился по полной, была очень дружелюбная, приятная атмосфера на семинаре. Я осталась в полном восторге!)“</p>
+                      <span>— Дибиргаджиев М. А.</span>
+                    </li>
+                    <li class="showmore-reviewsfull__item">
+                      <p>“Лектор мастер своего дела на все 200%,выложился по полной, была очень дружелюбная, приятная атмосфера на семинаре. Я осталась в полном восторге!)“</p>
+                      <span>— Дибиргаджиев М. А.</span>
+                    </li>
+                    <li class="showmore-reviewsfull__item">
+                      <p>“Лектор мастер своего дела на все 200%,выложился по полной, была очень дружелюбная, приятная атмосфера на семинаре. Я осталась в полном восторге!)“</p>
+                      <span>— Дибиргаджиев М. А.</span>
+                    </li>
+                  </ul>
+                  <button hidden data-showmore-button type="button" class="showmore-reviewsfull__more">
+                    <span>
+                      Показать все отзывы о мероприятии
+                    </span>
+                    <span>
+                      Скрыть
+                    </span>
+                    <svg width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 1L7.75 7.75L14.5 0.999999" stroke="#8A8A8A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="eventsfull__banner banner-eventsfull">
+            <div class="event-banner__container">
+              <div class="event-banner__content">
+                <div class="event-banner__title">Современные инструменты врача-ортодонта </div>
+                <div class="event-banner__text">Современный взгляд на решение старых проблем, 02.12.22, А.В. Спесивцев, Хабаровск</div>
+                <div class="event-banner__footer">
+                  <div class="event-banner__prices">
+                    <div class="event-banner__price">35 000 <font class='rub'>i</font></div>
+                    <div class="event-banner__stars"
+                      data-tippy-stars="Количество звезд, которое вы получите за участие в мероприятии" 
+                      data-position="right"
+                    >
+                      <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.77039 1.03318C3.85716 0.831694 4.14284 0.831695 4.22961 1.03319L5.02281 2.87507C5.059 2.95911 5.13822 3.01667 5.22934 3.02512L7.22618 3.21032C7.44462 3.23058 7.53291 3.50228 7.36809 3.64707L5.86147 4.97062C5.79272 5.03101 5.76246 5.12414 5.78258 5.2134L6.2235 7.16975C6.27174 7.38376 6.04061 7.55168 5.85198 7.43968L4.12764 6.41579C4.04896 6.36907 3.95104 6.36907 3.87236 6.41579L2.14802 7.43967C1.95939 7.55168 1.72826 7.38376 1.7765 7.16975L2.21742 5.2134C2.23754 5.12414 2.20728 5.03101 2.13853 4.97062L0.631909 3.64707C0.467093 3.50228 0.555375 3.23058 0.773818 3.21032L2.77066 3.02512C2.86178 3.01667 2.941 2.95911 2.97719 2.87507L3.77039 1.03318Z" fill="white"/>
+                      </svg>
+                      <span>50</span>
+                    </div>
+                    <div class="event-banner__oldprice">38 600 <font class='rub'>i</font></div>
+                  </div>
+                  <a href="#" class="event-banner__button btn">Подробнее</a>
+                </div>
+              </div>
+              <div class="event-banner__image">
+                <img src="@img/home/hero_1.png" alt="image">
+              </div>
+            </div>
+          </div>
+          <div class="reviewsfull__container">
+            <div class="reviewsfull__item">
+              <div class="reviewsfull__head">
+                <span>Семинар партнера</span>
+              </div>
+              <div class="reviewsfull__body">
+                <div class="reviewsfull__title">
+                  Полная диагностика дисфункций ВНЧС в ортодонтической практике. Модуль 1, 03-04.02.23, Я.Ю.Дьячкова, Ставрополь
+                </div>
+                <div class="reviewsfull__level">
+                  Базовый уровень
+                </div>
+                <ul class="main-event__info reviewsfull__info">
+                  <li>
+                    <svg width="18" height="22" viewBox="0 0 18 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="2.58325" y="5.2959" width="13.037" height="13.037" rx="1.62963" stroke="#111111" stroke-width="1.19167" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M12.3615 3.66663V6.92589" stroke="#111111" stroke-width="1.19167" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M5.84271 3.66663V6.92589" stroke="#111111" stroke-width="1.19167" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M2.58325 10.1855H15.6203" stroke="#111111" stroke-width="1.19167" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>2 октября 2022 г. (1 день)</span>
+                  </li>
+                  <li>
+                    <svg width="18" height="22" viewBox="0 0 18 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <ellipse cx="8.30274" cy="10.2684" rx="2.30298" ry="2.30298" stroke="#111111" stroke-width="1.19167" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M12.8172 14.611L9.56001 17.8682C8.96055 18.467 7.98928 18.467 7.38983 17.8682L4.13188 14.611C1.73365 12.2127 1.73372 8.32428 4.13203 5.92602C6.53034 3.52775 10.4187 3.52775 12.817 5.92602C15.2153 8.32428 15.2154 12.2127 12.8172 14.611V14.611Z" stroke="#111111" stroke-width="1.19167" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>г. Уфа, ул.Ленина, 25/29, гостиница «Башкирия», Конференц-зал «Янган-Тау»</span>
+                  </li>
+                </ul>
+                <div class="reviewsfull__speaker speaker-event">
+                  <div class="speaker-event__avatar">
+                    <img src="@img/events/speaker.png" alt="image">
+                  </div>
+                  <div class="speaker-event__name">
+                    Дьячкова Яна Юрьевна
+                  </div>
+                  <div class="speaker-event__info">
+                    Стоматолог-ортодонт, опытный специалист, эксперт по системе Insignia
+                  </div>
+                  <a href="#" class="speaker-event__more">
+                    <span>Все мероприятия спикера</span>
+                    <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M7.71826 6.71191C7.71826 6.52881 7.64502 6.36035 7.50586 6.22852L1.70508 0.544922C1.57324 0.42041 1.41211 0.354492 1.22168 0.354492C0.848145 0.354492 0.555176 0.640137 0.555176 1.021C0.555176 1.2041 0.628418 1.37256 0.745605 1.49707L6.07764 6.71191L0.745605 11.9268C0.628418 12.0513 0.555176 12.2124 0.555176 12.4028C0.555176 12.7837 0.848145 13.0693 1.22168 13.0693C1.41211 13.0693 1.57324 13.0034 1.70508 12.8716L7.50586 7.19531C7.64502 7.05615 7.71826 6.89502 7.71826 6.71191Z" fill="#2CA5F5"/>
+                    </svg>
+                  </a>
+                </div>
+                <div data-showmore="items" class="reviewsfull__showmore showmore-reviewsfull">
+                  <ul data-showmore-content="1" class="showmore-reviewsfull__content">
+                    <li class="showmore-reviewsfull__item">
+                      <p>“Лектор мастер своего дела на все 200%,выложился по полной, была очень дружелюбная, приятная атмосфера на семинаре. Я осталась в полном восторге!)“</p>
+                      <span>— Дибиргаджиев М. А.</span>
+                    </li>
+                    <li class="showmore-reviewsfull__item">
+                      <p>“Лектор мастер своего дела на все 200%,выложился по полной, была очень дружелюбная, приятная атмосфера на семинаре. Я осталась в полном восторге!)“</p>
+                      <span>— Дибиргаджиев М. А.</span>
+                    </li>
+                    <li class="showmore-reviewsfull__item">
+                      <p>“Лектор мастер своего дела на все 200%,выложился по полной, была очень дружелюбная, приятная атмосфера на семинаре. Я осталась в полном восторге!)“</p>
+                      <span>— Дибиргаджиев М. А.</span>
+                    </li>
+                  </ul>
+                  <button hidden data-showmore-button type="button" class="showmore-reviewsfull__more">
+                    <span>
+                      Показать все отзывы о мероприятии
+                    </span>
+                    <span>
+                      Скрыть
+                    </span>
+                    <svg width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 1L7.75 7.75L14.5 0.999999" stroke="#8A8A8A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="reviewsfull__item">
+              <div class="reviewsfull__head" style="background-color: #CE97E4;">
+                <span>Конференция</span>
+              </div>
+              <div class="reviewsfull__body">
+                <div class="reviewsfull__title">
+                  Полная диагностика дисфункций ВНЧС в ортодонтической практике. Модуль 1, 03-04.02.23, Я.Ю.Дьячкова, Ставрополь
+                </div>
+                <div class="reviewsfull__level">
+                  Базовый уровень
+                </div>
+                <ul class="main-event__info reviewsfull__info">
+                  <li>
+                    <svg width="18" height="22" viewBox="0 0 18 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="2.58325" y="5.2959" width="13.037" height="13.037" rx="1.62963" stroke="#111111" stroke-width="1.19167" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M12.3615 3.66663V6.92589" stroke="#111111" stroke-width="1.19167" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M5.84271 3.66663V6.92589" stroke="#111111" stroke-width="1.19167" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M2.58325 10.1855H15.6203" stroke="#111111" stroke-width="1.19167" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>2 октября 2022 г. (1 день)</span>
+                  </li>
+                  <li>
+                    <svg width="18" height="22" viewBox="0 0 18 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <ellipse cx="8.30274" cy="10.2684" rx="2.30298" ry="2.30298" stroke="#111111" stroke-width="1.19167" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M12.8172 14.611L9.56001 17.8682C8.96055 18.467 7.98928 18.467 7.38983 17.8682L4.13188 14.611C1.73365 12.2127 1.73372 8.32428 4.13203 5.92602C6.53034 3.52775 10.4187 3.52775 12.817 5.92602C15.2153 8.32428 15.2154 12.2127 12.8172 14.611V14.611Z" stroke="#111111" stroke-width="1.19167" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>г. Уфа, ул.Ленина, 25/29, гостиница «Башкирия», Конференц-зал «Янган-Тау»</span>
+                  </li>
+                </ul>
+                <div class="reviewsfull__speaker speaker-event">
+                  <div class="speaker-event__avatar">
+                    <img src="@img/events/speaker.png" alt="image">
+                  </div>
+                  <div class="speaker-event__name">
+                    Дьячкова Яна Юрьевна
+                  </div>
+                  <div class="speaker-event__info">
+                    Стоматолог-ортодонт, опытный специалист, эксперт по системе Insignia
+                  </div>
+                  <a href="#" class="speaker-event__more">
+                    <span>Все мероприятия спикера</span>
+                    <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M7.71826 6.71191C7.71826 6.52881 7.64502 6.36035 7.50586 6.22852L1.70508 0.544922C1.57324 0.42041 1.41211 0.354492 1.22168 0.354492C0.848145 0.354492 0.555176 0.640137 0.555176 1.021C0.555176 1.2041 0.628418 1.37256 0.745605 1.49707L6.07764 6.71191L0.745605 11.9268C0.628418 12.0513 0.555176 12.2124 0.555176 12.4028C0.555176 12.7837 0.848145 13.0693 1.22168 13.0693C1.41211 13.0693 1.57324 13.0034 1.70508 12.8716L7.50586 7.19531C7.64502 7.05615 7.71826 6.89502 7.71826 6.71191Z" fill="#2CA5F5"/>
+                    </svg>
+                  </a>
+                </div>
+                <div class="reviewsfull__speaker speaker-event">
+                  <div class="speaker-event__avatar">
+                    <img src="@img/events/speaker.png" alt="image">
+                  </div>
+                  <div class="speaker-event__name">
+                    Дьячкова Яна Юрьевна
+                  </div>
+                  <div class="speaker-event__info">
+                    Стоматолог-ортодонт, опытный специалист, эксперт по системе Insignia
+                  </div>
+                  <a href="#" class="speaker-event__more">
+                    <span>Все мероприятия спикера</span>
+                    <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M7.71826 6.71191C7.71826 6.52881 7.64502 6.36035 7.50586 6.22852L1.70508 0.544922C1.57324 0.42041 1.41211 0.354492 1.22168 0.354492C0.848145 0.354492 0.555176 0.640137 0.555176 1.021C0.555176 1.2041 0.628418 1.37256 0.745605 1.49707L6.07764 6.71191L0.745605 11.9268C0.628418 12.0513 0.555176 12.2124 0.555176 12.4028C0.555176 12.7837 0.848145 13.0693 1.22168 13.0693C1.41211 13.0693 1.57324 13.0034 1.70508 12.8716L7.50586 7.19531C7.64502 7.05615 7.71826 6.89502 7.71826 6.71191Z" fill="#2CA5F5"/>
+                    </svg>
+                  </a>
+                </div>
+                <div data-showmore="items" class="reviewsfull__showmore showmore-reviewsfull">
+                  <ul data-showmore-content="1" class="showmore-reviewsfull__content">
+                    <li class="showmore-reviewsfull__item">
+                      <p>“Лектор мастер своего дела на все 200%,выложился по полной, была очень дружелюбная, приятная атмосфера на семинаре. Я осталась в полном восторге!)“</p>
+                      <span>— Дибиргаджиев М. А.</span>
+                    </li>
+                    <li class="showmore-reviewsfull__item">
+                      <p>“Лектор мастер своего дела на все 200%,выложился по полной, была очень дружелюбная, приятная атмосфера на семинаре. Я осталась в полном восторге!)“</p>
+                      <span>— Дибиргаджиев М. А.</span>
+                    </li>
+                    <li class="showmore-reviewsfull__item">
+                      <p>“Лектор мастер своего дела на все 200%,выложился по полной, была очень дружелюбная, приятная атмосфера на семинаре. Я осталась в полном восторге!)“</p>
+                      <span>— Дибиргаджиев М. А.</span>
+                    </li>
+                  </ul>
+                  <button hidden data-showmore-button type="button" class="showmore-reviewsfull__more">
+                    <span>
+                      Показать все отзывы о мероприятии
+                    </span>
+                    <span>
+                      Скрыть
+                    </span>
+                    <svg width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 1L7.75 7.75L14.5 0.999999" stroke="#8A8A8A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="reviewsfull__item">
+              <div class="reviewsfull__head" style="background-color: #86D5C4;">
+                <span>Клуб Damon</span>
+              </div>
+              <div class="reviewsfull__body">
+                <div class="reviewsfull__title">
+                  Полная диагностика дисфункций ВНЧС в ортодонтической практике. Модуль 1, 03-04.02.23, Я.Ю.Дьячкова, Ставрополь
+                </div>
+                <div class="reviewsfull__level">
+                  Базовый уровень
+                </div>
+                <ul class="main-event__info reviewsfull__info">
+                  <li>
+                    <svg width="18" height="22" viewBox="0 0 18 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="2.58325" y="5.2959" width="13.037" height="13.037" rx="1.62963" stroke="#111111" stroke-width="1.19167" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M12.3615 3.66663V6.92589" stroke="#111111" stroke-width="1.19167" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M5.84271 3.66663V6.92589" stroke="#111111" stroke-width="1.19167" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M2.58325 10.1855H15.6203" stroke="#111111" stroke-width="1.19167" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>2 октября 2022 г. (1 день)</span>
+                  </li>
+                  <li>
+                    <svg width="18" height="22" viewBox="0 0 18 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <ellipse cx="8.30274" cy="10.2684" rx="2.30298" ry="2.30298" stroke="#111111" stroke-width="1.19167" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M12.8172 14.611L9.56001 17.8682C8.96055 18.467 7.98928 18.467 7.38983 17.8682L4.13188 14.611C1.73365 12.2127 1.73372 8.32428 4.13203 5.92602C6.53034 3.52775 10.4187 3.52775 12.817 5.92602C15.2153 8.32428 15.2154 12.2127 12.8172 14.611V14.611Z" stroke="#111111" stroke-width="1.19167" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>г. Уфа, ул.Ленина, 25/29, гостиница «Башкирия», Конференц-зал «Янган-Тау»</span>
+                  </li>
+                </ul>
+                <div class="reviewsfull__speaker speaker-event">
+                  <div class="speaker-event__avatar">
+                    <img src="@img/events/speaker.png" alt="image">
+                  </div>
+                  <div class="speaker-event__name">
+                    Дьячкова Яна Юрьевна
+                  </div>
+                  <div class="speaker-event__info">
+                    Стоматолог-ортодонт, опытный специалист, эксперт по системе Insignia
+                  </div>
+                  <a href="#" class="speaker-event__more">
+                    <span>Все мероприятия спикера</span>
+                    <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M7.71826 6.71191C7.71826 6.52881 7.64502 6.36035 7.50586 6.22852L1.70508 0.544922C1.57324 0.42041 1.41211 0.354492 1.22168 0.354492C0.848145 0.354492 0.555176 0.640137 0.555176 1.021C0.555176 1.2041 0.628418 1.37256 0.745605 1.49707L6.07764 6.71191L0.745605 11.9268C0.628418 12.0513 0.555176 12.2124 0.555176 12.4028C0.555176 12.7837 0.848145 13.0693 1.22168 13.0693C1.41211 13.0693 1.57324 13.0034 1.70508 12.8716L7.50586 7.19531C7.64502 7.05615 7.71826 6.89502 7.71826 6.71191Z" fill="#2CA5F5"/>
+                    </svg>
+                  </a>
+                </div>
+                <div class="reviewsfull__speaker speaker-event">
+                  <div class="speaker-event__avatar">
+                    <img src="@img/events/speaker.png" alt="image">
+                  </div>
+                  <div class="speaker-event__name">
+                    Дьячкова Яна Юрьевна
+                  </div>
+                  <div class="speaker-event__info">
+                    Стоматолог-ортодонт, опытный специалист, эксперт по системе Insignia
+                  </div>
+                  <a href="#" class="speaker-event__more">
+                    <span>Все мероприятия спикера</span>
+                    <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M7.71826 6.71191C7.71826 6.52881 7.64502 6.36035 7.50586 6.22852L1.70508 0.544922C1.57324 0.42041 1.41211 0.354492 1.22168 0.354492C0.848145 0.354492 0.555176 0.640137 0.555176 1.021C0.555176 1.2041 0.628418 1.37256 0.745605 1.49707L6.07764 6.71191L0.745605 11.9268C0.628418 12.0513 0.555176 12.2124 0.555176 12.4028C0.555176 12.7837 0.848145 13.0693 1.22168 13.0693C1.41211 13.0693 1.57324 13.0034 1.70508 12.8716L7.50586 7.19531C7.64502 7.05615 7.71826 6.89502 7.71826 6.71191Z" fill="#2CA5F5"/>
+                    </svg>
+                  </a>
+                </div>
+                <div class="reviewsfull__speaker speaker-event">
+                  <div class="speaker-event__avatar">
+                    <img src="@img/events/speaker.png" alt="image">
+                  </div>
+                  <div class="speaker-event__name">
+                    Дьячкова Яна Юрьевна
+                  </div>
+                  <div class="speaker-event__info">
+                    Стоматолог-ортодонт, опытный специалист, эксперт по системе Insignia
+                  </div>
+                  <a href="#" class="speaker-event__more">
+                    <span>Все мероприятия спикера</span>
+                    <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M7.71826 6.71191C7.71826 6.52881 7.64502 6.36035 7.50586 6.22852L1.70508 0.544922C1.57324 0.42041 1.41211 0.354492 1.22168 0.354492C0.848145 0.354492 0.555176 0.640137 0.555176 1.021C0.555176 1.2041 0.628418 1.37256 0.745605 1.49707L6.07764 6.71191L0.745605 11.9268C0.628418 12.0513 0.555176 12.2124 0.555176 12.4028C0.555176 12.7837 0.848145 13.0693 1.22168 13.0693C1.41211 13.0693 1.57324 13.0034 1.70508 12.8716L7.50586 7.19531C7.64502 7.05615 7.71826 6.89502 7.71826 6.71191Z" fill="#2CA5F5"/>
+                    </svg>
+                  </a>
+                </div>
+                <div data-showmore="items" class="reviewsfull__showmore showmore-reviewsfull">
+                  <ul data-showmore-content="1" class="showmore-reviewsfull__content">
+                    <li class="showmore-reviewsfull__item">
+                      <p>“Лектор мастер своего дела на все 200%,выложился по полной, была очень дружелюбная, приятная атмосфера на семинаре. Я осталась в полном восторге!)“</p>
+                      <span>— Дибиргаджиев М. А.</span>
+                    </li>
+                    <li class="showmore-reviewsfull__item">
+                      <p>“Лектор мастер своего дела на все 200%,выложился по полной, была очень дружелюбная, приятная атмосфера на семинаре. Я осталась в полном восторге!)“</p>
+                      <span>— Дибиргаджиев М. А.</span>
+                    </li>
+                    <li class="showmore-reviewsfull__item">
+                      <p>“Лектор мастер своего дела на все 200%,выложился по полной, была очень дружелюбная, приятная атмосфера на семинаре. Я осталась в полном восторге!)“</p>
+                      <span>— Дибиргаджиев М. А.</span>
+                    </li>
+                  </ul>
+                  <button hidden data-showmore-button type="button" class="showmore-reviewsfull__more">
+                    <span>
+                      Показать все отзывы о мероприятии
+                    </span>
+                    <span>
+                      Скрыть
+                    </span>
+                    <svg width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 1L7.75 7.75L14.5 0.999999" stroke="#8A8A8A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="eventsfull__container eventsfull__pagination pagination">
+            <div class="loader">
+              <div class="loader__circle">
+                <img src="@img/common/loader_circle.png" alt="image">
+              </div>
+            </div>
+            <button type="button" class="pagination__more btn btn-border">Показать еще</button>
+            <div class="pagination__numbers">
+              <span class="pagination__number pagination__number_active btn">1</span>
+              <a href="#" class="pagination__number btn">2</a>
+              <a href="#" class="pagination__number btn">3</a>
+              <a href="#" class="pagination__number btn">4</a>
+              <a href="#" class="pagination__number btn">5</a>
+              <a href="#" class="pagination__number pagination__number_prevnext btn">Вперед</a>
+            </div>
+          </div>
+        </section>
+        @@include('html/_interesting.htm',{
+          "title":"Мероприятия спикера"
+        })
+        @@include('html/_subscribe.htm',{})
+        @@include('html/_ormcoban.htm',{})
+        @@include('html/_contacts.htm',{})
+        @@include('html/_partners.htm',{})
+        @@include('html/_application.htm',{})
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_popup.htm',{})
+		@@include('html/_popup_auth.htm',{})
+		@@include('html/_popup_question.htm',{})
+		@@include('html/_js.htm',{})
+	</body>
+</html>
